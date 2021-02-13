@@ -1,0 +1,76 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$zwzbeYx3Qcje$wYJ7Yea3MipNgrUjwHHKVT4kYdw1i3ayeIA3PFDREIQ=",
+        "last_login": "2021-02-11T12:40:50.787Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "bambula86@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-02-11T12:07:50.644Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+        "domain": "winenation.example.com",
+        "name": "Wine Nation"
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "email": "bambula86@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2021-02-11T12:19:06.546Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "object_id": "1",
+        "object_repr": "winenation.example.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2021-02-11T12:39:27.755Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "object_id": "1",
+        "object_repr": "bambula86@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Verified\", \"Primary\"]}}]"
+    }
+}
+]
