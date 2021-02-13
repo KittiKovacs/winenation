@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$216000$zwzbeYx3Qcje$wYJ7Yea3MipNgrUjwHHKVT4kYdw1i3ayeIA3PFDREIQ=",
-        "last_login": "2021-02-11T12:40:50.787Z",
+        "last_login": "2021-02-13T11:25:12.648Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -15,6 +15,14 @@
         "date_joined": "2021-02-11T12:07:50.644Z",
         "groups": [],
         "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "jufdxxzcjrc0v4con35fxyvuw2wgtaon",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAUBf-FtSFQkFKX7vsNzeU-pGogKe3K-O_apAvdnpk5LzXBtuZpa7xMM6mLsur0uyXAB5cd0B3KrWqsZV3mpHdFH7TpsRI_r4f7d5Ch5W8dzp4wBQ9egnU2QOwEowAb58hwkmiQXRiSCKGA8wExOe6gH3pr0Kr3BwHqOOQ:1lAt32:LxOha8-layQSkHcUHbAeh_kq1gmXBoFp9Ca4MJLt0Ow",
+        "expire_date": "2021-02-27T11:25:12.671Z"
     }
 },
 {
@@ -35,6 +43,643 @@
         "email": "bambula86@gmail.com",
         "verified": true,
         "primary": true
+    }
+},
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "red",
+        "friendly_name": "Red"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "white",
+        "friendly_name": "White"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "rose",
+        "friendly_name": "Rosé"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "sparkling_dessert",
+        "friendly_name": "Sparkling and Dessert"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 1,
+    "fields": {
+        "name": "aszu",
+        "friendly_name": "Aszú"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 2,
+    "fields": {
+        "name": "bikaver",
+        "friendly_name": "Bikavér (Bull's Blood)"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 3,
+    "fields": {
+        "name": "cabernet_sauvignon",
+        "friendly_name": "Cabernet Sauvignon"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 4,
+    "fields": {
+        "name": "cuvee",
+        "friendly_name": "Cuvee"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 5,
+    "fields": {
+        "name": "furmint",
+        "friendly_name": "Furmint"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 6,
+    "fields": {
+        "name": "gruner_veltliner",
+        "friendly_name": "Grüner Veltliner"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 7,
+    "fields": {
+        "name": "harslevelu",
+        "friendly_name": "Hárslevelű"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 8,
+    "fields": {
+        "name": "irsai",
+        "friendly_name": "Irsai Olivér"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 9,
+    "fields": {
+        "name": "juhfark",
+        "friendly_name": "Juhfark"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 10,
+    "fields": {
+        "name": "kadarka",
+        "friendly_name": "Kadarka"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 11,
+    "fields": {
+        "name": "kekfrankos",
+        "friendly_name": "Kékfrankos"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 12,
+    "fields": {
+        "name": "merlot",
+        "friendly_name": "Merlot"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 13,
+    "fields": {
+        "name": "olaszrizling",
+        "friendly_name": "Olaszrizling"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 14,
+    "fields": {
+        "name": "pinot_gris",
+        "friendly_name": "Pinot Gris"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 15,
+    "fields": {
+        "name": "pinot_noir",
+        "friendly_name": "Pinot Noir"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 16,
+    "fields": {
+        "name": "portugieser",
+        "friendly_name": "Portugieser"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 17,
+    "fields": {
+        "name": "rajnai_riesling",
+        "friendly_name": "Rajnai Riesling"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 18,
+    "fields": {
+        "name": "sauvignon_blanc",
+        "friendly_name": "Sauvignon Blanc"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 19,
+    "fields": {
+        "name": "siller",
+        "friendly_name": "Siller"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 20,
+    "fields": {
+        "name": "syrah",
+        "friendly_name": "Syrah"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 21,
+    "fields": {
+        "name": "feketeleanyka",
+        "friendly_name": "Feketeleányka"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 22,
+    "fields": {
+        "name": "szamorodni",
+        "friendly_name": "Szamorodni"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 23,
+    "fields": {
+        "name": "tramini",
+        "friendly_name": "Tramini"
+    }
+},
+{
+    "model": "products.variety",
+    "pk": 24,
+    "fields": {
+        "name": "chardonnay",
+        "friendly_name": "Chardonnay"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 1,
+    "fields": {
+        "name": "badacsony",
+        "friendly_name": "Badacsony"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 2,
+    "fields": {
+        "name": "balaton_uplands",
+        "friendly_name": "Balaton Uplands"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 3,
+    "fields": {
+        "name": "balatonboglar",
+        "friendly_name": "Balatonboglár"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 4,
+    "fields": {
+        "name": "balatonfured_csopak",
+        "friendly_name": "Balatonfüred-Csopak"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 5,
+    "fields": {
+        "name": "erdely_szilagysag",
+        "friendly_name": "Erdély-Szilágyság"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 6,
+    "fields": {
+        "name": "eger",
+        "friendly_name": "Eger"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 7,
+    "fields": {
+        "name": "hajos_bajai",
+        "friendly_name": "Hajós-Bajai"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 8,
+    "fields": {
+        "name": "etyek_buda",
+        "friendly_name": "Etyek-Buda"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 9,
+    "fields": {
+        "name": "kali_medence",
+        "friendly_name": "Káli-Medence"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 10,
+    "fields": {
+        "name": "muzsla",
+        "friendly_name": "Muzsla"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 11,
+    "fields": {
+        "name": "pannonhalma",
+        "friendly_name": "Pannonhalma"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 12,
+    "fields": {
+        "name": "somlo",
+        "friendly_name": "Somló"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 13,
+    "fields": {
+        "name": "sopron",
+        "friendly_name": "Sopron"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 14,
+    "fields": {
+        "name": "szekszard",
+        "friendly_name": "Szekszárd"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 15,
+    "fields": {
+        "name": "tihany",
+        "friendly_name": "Tihany"
+    }
+},
+{
+    "model": "products.wine_region",
+    "pk": 16,
+    "fields": {
+        "name": "tokaj_hegyalja",
+        "friendly_name": "Tokaj-hegyalja"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "category": 4,
+        "sku": "1001",
+        "name": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
+        "winery": "Balassa István",
+        "variety": 22,
+        "vintage": 2017,
+        "region": 16,
+        "description": "2017 was an exceptional sweet wine year. The Furmint and Hárslevelű bunches botrytize the nicest when botrytis hits them in complete ripeness. “It was spontaneously fermented in two Trust barrels, one of 300 litres and one of 225 litres, where it was also aged for more than a year. I like Szamorodni when it’s muscly, when it can stand up to an aszú with its thickness and power. This is like that: 200 grams of residual sugar, vibrant acidity, creaminess and powerful Betsek fruitiness.” István Balassa.",
+        "alc_vol": "9.00",
+        "pairing": "desserts",
+        "price": "20.00",
+        "image_url": null,
+        "image": "Balass_Besek_edes_szamorodni_2017.JPG"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "category": 1,
+        "sku": "1002",
+        "name": "BÖJT Kékfrankos 2017",
+        "winery": "Böjt Pincészet",
+        "variety": 11,
+        "vintage": 2017,
+        "region": 6,
+        "description": "Gergő Böjt’s big wine from one of the best recent vintages. It underwent controlled fermentation in tanks, then a few months after the harvest, it continued ageing in the winery’s colourful barrels, mainly in second- and third-fill oak. It’s full of spices, lively red and black fruits, with a long, mineral, linear palate and great acidity.",
+        "alc_vol": "13.00",
+        "pairing": "beef, pork",
+        "price": "10.00",
+        "image_url": null,
+        "image": "Bojt_Kekfrankos_2017.JPG"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "category": 2,
+        "sku": "1003",
+        "name": "CSANÁDI Chardonnay 2020",
+        "winery": "Csanádi Szőlőbirtok",
+        "variety": 24,
+        "vintage": 2020,
+        "region": 7,
+        "description": "The Csanádi family started its work in the Hajós-Baja wine region 20 years ago, between the villages of Hajós and Császártöltés. The consistency of the wine region and winemaking makes it possible for the wines from local and international varieties to be made to the same quality level and style every vintage. The living proof of the latter, the Chardonnay, was made in tanks after hand sorting, in order to present the lighter version of the variety.",
+        "alc_vol": "13.00",
+        "pairing": "seafood, chicken, mushroom, light cheese",
+        "price": "6.20",
+        "image_url": null,
+        "image": "Csanadi_Chardonnay_2020.JPG"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "category": 3,
+        "sku": "1004",
+        "name": "ETYEKI KÚRIA Rosé 2019",
+        "winery": "Etyeki Kúria",
+        "variety": 4,
+        "vintage": 2019,
+        "region": 8,
+        "description": "It’s crispy and sweet like cherries picked freshly from the tree. Rosé has a serious tradition at the Kúria, yet based on our tasting, this is the nicest vintage so far. The red fruits come from the Merlot, the exciting spices from the Kékfrankos, the elegant flavours of rosehip and the cherry from the Pinot Noir. It’s a long, round rosé with tons of fruit flavours and a round finish.",
+        "alc_vol": "12.50",
+        "pairing": "sefood, oriental food",
+        "price": "5.70",
+        "image_url": null,
+        "image": "Etyeki_Kuria_rose_2019.JPG"
+    }
+},
+{
+    "model": "products.events",
+    "pk": 1,
+    "fields": {
+        "sku": "2001",
+        "name": "Wine tasting for beginners-Introduction to wine",
+        "description": "Learn about all the key building blocks of taste including fruit, sweetness, acidity and tannins. We will introduce you to the tools of wine tasting, grape varieties and food matching.\r\n\r\nDuration: 4 hours",
+        "date": "2021-04-03T12:00:00Z",
+        "price": "50.00",
+        "image_url": null,
+        "image": "wine_tasting.jpg"
+    }
+},
+{
+    "model": "products.events",
+    "pk": 2,
+    "fields": {
+        "sku": "2002",
+        "name": "Wine tasting for beginners-Red wines",
+        "description": "In this class we're learning all about red wines, their characteristics and varieties from all around the world.\r\n\r\n10-12 wines tasted per session and a selection of Charcuterie and Cheese will be matched with the wines.",
+        "date": "2021-04-10T12:00:00Z",
+        "price": "50.00",
+        "image_url": null,
+        "image": "red_wine.jpg"
+    }
+},
+{
+    "model": "products.events",
+    "pk": 3,
+    "fields": {
+        "sku": "2003",
+        "name": "Wine tasting for beginners-White wines",
+        "description": "In this class we're learning all about white wines, their characteristics and varieties from all around the world.\r\n\r\n10-12 wines tasted per session and a selection of Charcuterie and Cheese will be matched with the wines.",
+        "date": "2021-04-17T12:00:00Z",
+        "price": "50.00",
+        "image_url": null,
+        "image": "white_wine.jpg"
+    }
+},
+{
+    "model": "products.events",
+    "pk": 4,
+    "fields": {
+        "sku": "2004",
+        "name": "Wine tasting for beginners-Wines for special occasions: Sparkling and dessert wines",
+        "description": "Last but not least, learn all about special kinds of wines and how to choose them for a special occasion. What is the difference between Champagne and Sparkling wine? What types of dessert wines are there and why are they so pricey? \r\n\r\n4-6 samples tasted per session and a selection of Charcuterie and Cheese will be matched with the wines.",
+        "date": "2021-04-24T12:00:00Z",
+        "price": "50.00",
+        "image_url": null,
+        "image": "sparkling_wine.jpg"
+    }
+},
+{
+    "model": "products.events",
+    "pk": 5,
+    "fields": {
+        "sku": "2005",
+        "name": "Wine tasting masterclass",
+        "description": "A 2 day course for those who are serious about wine!\r\n\r\nLearn how and where wine is produced, what are the key factors and criteria of quality. Gain an in-depth understanding of wines around the world.\r\nLearn how to invest and store wine and how to assess ageing potential.\r\n\r\n\r\nAt the end of day 2 there will be an assessment and a certificate is issued.",
+        "date": "2021-04-30T10:00:00Z",
+        "price": "75.00",
+        "image_url": null,
+        "image": "cork-738603_1920.jpg"
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 1,
+    "fields": {
+        "sku": "3001",
+        "name": "12-month Red wine Subscription",
+        "description": "You'll receive 6 bottles of red wine each month for 12 months, all carefully selected by us from the best wineries and varieties of the region. \r\nOur best value offer!",
+        "price": "400.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 2,
+    "fields": {
+        "sku": "3002",
+        "name": "12-month White wine subscription",
+        "description": "You'll receive 6 bottles of white wine each month for 12 months, produced by the best wineries and carefully selected by us!",
+        "price": "375.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 3,
+    "fields": {
+        "sku": "3003",
+        "name": "12-month Rose subscription",
+        "description": "You'll receive 6 bottles of the best rose wines of the latest vintage each month for 12 months,  all recommended and selected by us!",
+        "price": "350.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 4,
+    "fields": {
+        "sku": "3004",
+        "name": "12-month Variety subscription",
+        "description": "Do you love all types of wine? We have an offer for you too!\r\nYou'll receive 6 bottles of red, white and rose wines (2 of each) every month for 12 months!\r\nAs usual, we select the wines from the best winemakers and vintages.",
+        "price": "380.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 5,
+    "fields": {
+        "sku": "3005",
+        "name": "6-month Red wine subscription",
+        "description": "You'll receive 6 bottles of red wine each month for 6 months, all carefully selected by us from the best wineries and varieties of the region.",
+        "price": "240.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 6,
+    "fields": {
+        "sku": "3006",
+        "name": "6-month White wine subscription",
+        "description": "You'll receive 6 bottles of white wine each month for 6 months, all carefully selected by us from the best wineries and varieties of the region.",
+        "price": "190.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 7,
+    "fields": {
+        "sku": "3007",
+        "name": "6-month Rose subscription",
+        "description": "You'll receive 6 bottles of the best rose wines of the latest vintage every month for 6 month, recommended and selected by us!",
+        "price": "175.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 8,
+    "fields": {
+        "sku": "3008",
+        "name": "6-month Variety Subscription",
+        "description": "Do you love all types of wine? We have an offer for you too! You'll receive 6 bottles of red, white and rose wines (2 of each) every month for 6 months! As usual, we select the wines from the best winemakers and vintages.",
+        "price": "200.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 9,
+    "fields": {
+        "sku": "3009",
+        "name": "3-month Red wine subscription",
+        "description": "You'll receive 6 bottles of red wine each month for 3 months, all carefully selected by us from the best wineries and varieties of the region.",
+        "price": "150.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 10,
+    "fields": {
+        "sku": "3010",
+        "name": "3-month white wine subscription",
+        "description": "You'll receive 6 bottles of white wine each month for 3 months, all carefully selected by us from the best wineries and varieties of the region.",
+        "price": "120.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 11,
+    "fields": {
+        "sku": "3011",
+        "name": "3-month Rose wine subscription",
+        "description": "You'll receive 6 bottles of the best rose wines of the latest vintage every month for 3 months, recommended and selected by us!",
+        "price": "100.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.subscriptions",
+    "pk": 12,
+    "fields": {
+        "sku": "3012",
+        "name": "3-month variety subscription",
+        "description": "Do you love all types of wine? We have an offer for you too! You'll receive 6 bottles of red, white and rose wines (2 of each) every month for 3 months! As usual, we select the wines from the best winemakers and vintages.",
+        "price": "115.00",
+        "image_url": null,
+        "image": ""
     }
 },
 {
@@ -71,6 +716,1500 @@
         "object_repr": "bambula86@gmail.com",
         "action_flag": 2,
         "change_message": "[{\"changed\": {\"fields\": [\"Verified\", \"Primary\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2021-02-13T11:26:05.597Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "red",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2021-02-13T11:26:11.949Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "white",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2021-02-13T11:26:37.603Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "rose",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2021-02-13T11:26:54.151Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "sparkling_dessert",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2021-02-13T11:41:52.861Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "1",
+        "object_repr": "Wine tasting for beginners-Introduction to wine",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2021-02-13T11:48:54.432Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "2",
+        "object_repr": "Wine tasting for beginners-Red Wines",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2021-02-13T11:50:27.174Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "3",
+        "object_repr": "Wine tasting for beginners-White wines",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2021-02-13T11:51:00.891Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "2",
+        "object_repr": "Wine tasting for beginners-Red Wines",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2021-02-13T11:51:23.937Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "3",
+        "object_repr": "Wine tasting for beginners-White wines",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2021-02-13T11:51:34.319Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "2",
+        "object_repr": "Wine tasting for beginners-Red wines",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2021-02-13T11:58:55.338Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "4",
+        "object_repr": "Wine tasting for beginners-Wines for special occasions: Sparkling and dessert wines",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2021-02-13T11:59:06.443Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "3",
+        "object_repr": "Wine tasting for beginners-White wines",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2021-02-13T11:59:19.508Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "4",
+        "object_repr": "Wine tasting for beginners-Wines for special occasions: Sparkling and dessert wines",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2021-02-13T12:07:39.160Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "5",
+        "object_repr": "Wine tasting masterclass",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2021-02-13T12:08:04.866Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "4",
+        "object_repr": "Wine tasting for beginners-Wines for special occasions: Sparkling and dessert wines",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2021-02-13T12:08:17.064Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "events"
+        ],
+        "object_id": "3",
+        "object_repr": "Wine tasting for beginners-White wines",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2021-02-13T12:10:43.048Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "1",
+        "object_repr": "aszu",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2021-02-13T12:10:58.526Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "2",
+        "object_repr": "bikaver",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2021-02-13T12:11:17.694Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "3",
+        "object_repr": "cabernet_sauvignon",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2021-02-13T12:11:35.807Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "4",
+        "object_repr": "cuvee",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2021-02-13T12:11:44.180Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "5",
+        "object_repr": "furmint",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2021-02-13T12:12:04.711Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "6",
+        "object_repr": "gruner_veltliner",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2021-02-13T12:12:19.823Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "7",
+        "object_repr": "harslevelu",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2021-02-13T12:13:28.487Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "8",
+        "object_repr": "irsai",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2021-02-13T12:13:44.607Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "9",
+        "object_repr": "juhfark",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2021-02-13T12:13:57.757Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "10",
+        "object_repr": "kadarka",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2021-02-13T12:14:18.180Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "11",
+        "object_repr": "kekfrankos",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2021-02-13T12:14:29.960Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "12",
+        "object_repr": "merlot",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2021-02-13T12:14:45.700Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "13",
+        "object_repr": "olaszrizling",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2021-02-13T12:14:59.252Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "14",
+        "object_repr": "pinot_gris",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2021-02-13T12:15:14.522Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "15",
+        "object_repr": "pinot_noir",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2021-02-13T12:15:31.951Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "16",
+        "object_repr": "portugieser",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2021-02-13T12:15:52.801Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "17",
+        "object_repr": "rajnai_riesling",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2021-02-13T12:16:06.095Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "18",
+        "object_repr": "sauvignon_blanc",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2021-02-13T12:16:37.359Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "19",
+        "object_repr": "siller",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2021-02-13T12:16:45.192Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "20",
+        "object_repr": "syrah",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2021-02-13T12:20:15.229Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "21",
+        "object_repr": "feketeleanyka",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2021-02-13T12:25:14.308Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "22",
+        "object_repr": "szamorodni",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2021-02-13T12:25:22.922Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "23",
+        "object_repr": "tramini",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2021-02-13T12:26:44.020Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "1",
+        "object_repr": "badacsony",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2021-02-13T12:27:02.770Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "2",
+        "object_repr": "balaton_uplands",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2021-02-13T12:27:25.669Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "3",
+        "object_repr": "balatonboglar",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2021-02-13T12:27:40.930Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "4",
+        "object_repr": "balatonfured_csopak",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2021-02-13T12:27:58.383Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "5",
+        "object_repr": "erdely_szilagysag",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2021-02-13T12:28:04.249Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "6",
+        "object_repr": "eger",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2021-02-13T12:28:27.249Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "7",
+        "object_repr": "hajos_bajai",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2021-02-13T12:28:43.636Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "8",
+        "object_repr": "etyek_buda",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2021-02-13T12:29:00.447Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "9",
+        "object_repr": "kali_medence",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2021-02-13T12:29:09.349Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "10",
+        "object_repr": "muzsla",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2021-02-13T12:29:22.472Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "11",
+        "object_repr": "pannonhalma",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2021-02-13T12:29:42.662Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "12",
+        "object_repr": "somlo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2021-02-13T12:29:49.734Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "13",
+        "object_repr": "sopron",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2021-02-13T12:30:14.246Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "14",
+        "object_repr": "szekszard",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2021-02-13T12:30:29.603Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "15",
+        "object_repr": "tihany",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2021-02-13T12:30:51.779Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine_region"
+        ],
+        "object_id": "16",
+        "object_repr": "tokaj_hegyalja",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2021-02-13T12:36:47.392Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "1",
+        "object_repr": "12-month Red wine Subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2021-02-13T12:38:44.464Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "2",
+        "object_repr": "12-month white wine subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2021-02-13T12:38:56.006Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "2",
+        "object_repr": "12-month White wine subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2021-02-13T12:40:55.476Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "3",
+        "object_repr": "12-month Rose subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2021-02-13T12:41:09.660Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "2",
+        "object_repr": "12-month White wine subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2021-02-13T12:44:55.094Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "4",
+        "object_repr": "12-month Variety subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2021-02-13T12:45:48.433Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "5",
+        "object_repr": "6-month red wine subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2021-02-13T12:45:55.030Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "1",
+        "object_repr": "12-month Red wine Subscription",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2021-02-13T12:46:13.089Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "5",
+        "object_repr": "6-month red wine subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2021-02-13T12:47:17.601Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "6",
+        "object_repr": "6-month white wine subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2021-02-13T12:48:23.183Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "7",
+        "object_repr": "6-month Rose subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2021-02-13T12:48:43.170Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "5",
+        "object_repr": "6-month Red wine subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2021-02-13T12:48:49.009Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "6",
+        "object_repr": "6-month White wine subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2021-02-13T12:49:49.350Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "8",
+        "object_repr": "6-month Variety Subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2021-02-13T12:50:24.717Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "7",
+        "object_repr": "6-month Rose subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2021-02-13T12:50:30.868Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "8",
+        "object_repr": "6-month Variety Subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Sku\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2021-02-13T12:51:03.987Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "3",
+        "object_repr": "12-month Rose subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2021-02-13T12:52:12.920Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "9",
+        "object_repr": "3-month Red wine subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2021-02-13T12:52:52.140Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "10",
+        "object_repr": "3-month white wine subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2021-02-13T12:53:42.523Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "11",
+        "object_repr": "3-month Rose wine subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2021-02-13T12:54:22.204Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscriptions"
+        ],
+        "object_id": "12",
+        "object_repr": "3-month variety subscription",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2021-02-13T13:15:08.410Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2021-02-13T13:16:35.275Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2021-02-13T13:18:46.042Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "BÖJT Kékfrankos 2017",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2021-02-13T13:23:24.231Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "3",
+        "object_repr": "CSANÁDI Chardonnay 2020",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2021-02-13T13:23:37.607Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "variety"
+        ],
+        "object_id": "24",
+        "object_repr": "chardonnay",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2021-02-13T13:23:52.120Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "3",
+        "object_repr": "CSANÁDI Chardonnay 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Variety\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2021-02-13T13:27:09.014Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "4",
+        "object_repr": "ETYEKI KÚRIA Rosé 2019",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
     }
 }
 ]
