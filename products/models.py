@@ -2,6 +2,10 @@ from django.db import models
 
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254)
 
@@ -13,6 +17,10 @@ class Category(models.Model):
 
 
 class Variety(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Varieties'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254)
 
@@ -56,7 +64,7 @@ class Product(models.Model):
         return self.name
 
 
-class Events(models.Model):
+class Event(models.Model):
     sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -69,7 +77,7 @@ class Events(models.Model):
         return self.name
 
 
-class Subscriptions(models.Model):
+class Subscription(models.Model):
     sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
     description = models.TextField()
