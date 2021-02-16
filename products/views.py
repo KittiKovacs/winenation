@@ -1,30 +1,30 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product, Event, Subscription
+from .models import Wine, Event, Subscription
 
 # Create your views here.
 
 
-def all_products(request):
+def all_wines(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    wines = Wine.objects.all()
 
     context = {
-        'products': products,
+        'wines': wines,
     }
 
-    return render(request, 'products/products.html', context)
+    return render(request, 'products/wines.html', context)
 
 
-def product_details(request, product_id):
+def wine_details(request, wine_id):
 
-    product = get_object_or_404(Product, pk=product_id)
+    wine = get_object_or_404(Wine, pk=wine_id)
 
     context = {
-        'product': product,
+        'wine': wine,
     }
 
-    return render(request, 'products/product_details.html', context)
+    return render(request, 'products/wine_details.html', context)
 
 
 def all_events(request):
