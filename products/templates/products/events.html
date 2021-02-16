@@ -13,28 +13,24 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 page-title text-center">
-            <h2>All Wines</h2>
+            <h2>Events</h2>
         </div>
     </div>
     <div class="row">
-        {% for product in products %}
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card h-100 border-0">
-                {% if product.image %}
-                <a href="{% url 'product_details' product.id %}">
-                    <img class="card-img-top img-fluid" src="{{ product.image }}" alt="{{ product.name }}">
+        {% for event in events %}
+        <div class="col-sm">
+                {% if event.image %}
+                <a href="{% url 'event_details' event.id %}">
+                    <img class="" src="{{ event.image }}" alt="{{ event.name }}">
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    <img class="" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ event.name }}">
                 </a>
                 {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="card-text" >Winery: <a href=""> {{ product.winery }}</a></p>
-                    <p class="card-text">£ {{ product.price }}</p>
-                </div>
-            </div>
+                    <h5 class="">{{ event.name }}</h5>
+                    <p class="">£ {{ event.description }}</p>
+                    <p class="">£ {{ event.price }}</p>
         </div>
             {% endfor %}
     </div>

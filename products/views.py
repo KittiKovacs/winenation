@@ -36,7 +36,7 @@ def all_events(request):
         'events': events,
     }
 
-    return render(request, 'events/events.html', context)
+    return render(request, 'products/events.html', context)
 
 
 def event_details(request, event_id):
@@ -47,7 +47,7 @@ def event_details(request, event_id):
         'event': event,
     }
 
-    return render(request, 'events/event_details.html', context)
+    return render(request, 'products/event_details.html', context)
 
 
 def all_subscriptions(request):
@@ -70,4 +70,4 @@ def subscription_details(request, subscription_id):
         'subscription': subscription,
     }
 
-    return render(request, 'subscriptions/subscription_details.html', context)
+    return render(request, 'products/subscription_details.html', context)

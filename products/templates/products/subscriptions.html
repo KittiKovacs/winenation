@@ -18,23 +18,19 @@
     </div>
     <div class="row">
         {% for subscription in subscriptions %}
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card h-100 border-0">
+        <div class="col-sm-6">
                 {% if subscription.image %}
                 <a href="{% url 'subscription_details' subscription.id %}">
-                    <img class="card-img-top img-fluid" src="{{ subscription.image }}" alt="{{ subscription.name }}">
+                    <img src="{{ subscription.image }}" alt="{{ subscription.name }}">
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ subscription.name }}">
+                    <img src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ subscription.name }}">
                 </a>
                 {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ subscription.name }}</h5>
-                    <p class="card-text">{{ subscription.description }}</p>
-                    <p class="card-text">£ {{ subscription.price }}</p>
-                </div>
-            </div>
+                    <h5 class="">{{ subscription.name }}</h5>
+                    <p class="">£ {{ subscription.description }}</p>
+                    <p class="">£ {{ subscription.price }}</p>
         </div>
             {% endfor %}
     </div>
