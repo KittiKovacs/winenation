@@ -48,7 +48,6 @@ class EventAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'description',
-        'date',
         'price',
         'image',
     )

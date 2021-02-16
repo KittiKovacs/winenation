@@ -57,7 +57,6 @@ class Product(models.Model):
     alc_vol = models.DecimalField(max_digits=6, decimal_places=2)
     pairing = models.CharField(max_length=254)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
@@ -68,9 +67,7 @@ class Event(models.Model):
     sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
     description = models.TextField()
-    date = models.DateTimeField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
@@ -82,7 +79,6 @@ class Subscription(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
