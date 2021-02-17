@@ -95,6 +95,9 @@ footer{
     background: #520100;
     color: white;
 }
+.btn:hover {
+    color: #F9E784;
+}
 
 .bg-red{
     background:#520100 !important;
@@ -111,4 +114,51 @@ footer{
   .container {
     max-width: 80%;
   }
+}
+
+.card-header{
+    background-color:white;
+    border:none;
+    text-align:center;
+}
+
+/*Subscription table styling*/
+
+/* Style the list */
+.subscription {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.subscription:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Pricing header */
+.subscription .header {
+  background-color: #F9E784;
+  color: #520100;
+  font-size: 25px;
+}
+
+/* List items */
+.subscription li {
+  border-bottom: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.subscription .green {
+  background-color: #1F472F;
+  font-size: 1em;
+  color:white;
+}
+.subscription .white {
+  background-color: #fffff;
+  font-size: 1em;
 }
