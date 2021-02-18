@@ -10,33 +10,34 @@
     </div>
 
     {% for event in events %}
-    <div class="row">
-        <div class="card border-0 event col-sm-12 col-md-6">
-            <div class="card-header">
-                <h5>
-                    {{ event.name }}
-                </h5>
+    <div class="card event">
+        <div class="row event-card-header">
+            <div class="col-sm-6 col-md-4">
+                <p>{{ event.name }}</p>
             </div>
-                <div class="card-body">
-                    <div class="event-details-container col-sm-12 col-md-6">
-                        <p>{{ event.description }}</p>
-                        <p class="event-price">£ {{ event.price }}</p>
-                    </div>
-                    <div class="event-image-container col-sm-12 col-md-6">
-                        {% if event.image %}
-                        <a href="{% url 'event_details' event.id %}">
-                            <img class="event-image" src="{{ event.image }}" alt="{{ event.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="event-image" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ event.name }}">
-                        </a>
-                        {% endif %}
-                    </div>
+            <div class="col-sm-6 col-md-4">
+                <p class="event-price">£ {{ event.price }}</p>
             </div>
         </div>
+        <div class="row card-body">
+            <div class="button-container col-sm-12 col-md-4">
+                <button href="" class="btn">Sign up</button>
+                <button href="" class="btn">Learn more</button>
+            </div>
+            <div class="event-image-container col-sm-12 col-md-6">
+                {% if event.image %}
+                <a href="{% url 'event_details' event.id %}">
+                    <img class="event-image" src="{{ event.image }}" alt="{{ event.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="event-image" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ event.name }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <hr>
     </div>
     {% endfor %}
 </div>
-
 {% endblock %}
