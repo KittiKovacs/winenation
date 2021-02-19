@@ -24,7 +24,7 @@ body {
     top:100px;
 }
 .btn-lg{
-    background: #520100;
+    background: #990705;
     color: white;
     font-size: 30px;
     margin-top:30px;
@@ -76,36 +76,38 @@ footer{
     color:black;
 }
 .nav-link:hover{
-    color:#520100;
+    color:#990705;
 }
 .menu{
     font-size:1.5em;
     color:black !important;
 }
 .menu:hover{
-    color:#520100 !important;
+    color:#990705 !important;
 }
 .menu:active{
-    color:#520100;
+    color:#990705;
 }
 .dropdown-item:hover{
     background: #F9E784;
 }
 .btn {
-    background: #520100;
+    background: #990705;
     color: white;
-    font-size:1.25em;
+
 }
 .btn:hover {
-    color: #F9E784;
+    color: rgb(201, 68, 90);
 }
 
 .bg-red{
-    background:#520100 !important;
+    background:#990705 !important;
 }
 
 .page-title{
-    margin:80px 0;
+    padding:60px 0;
+    background-color:black;
+    color:white;
 }
 
 /* -------------------------------- Media Queries */
@@ -135,10 +137,46 @@ footer{
 .event-price{
     text-align:center;
 }
+.events-intro{
+    font-size:1.35em;
+    margin: 0 30px;
+}
+#events-image{
+    width:100vw;
+}
 .button-container{
     text-align:center;
 }
+@media (min-width: 992px){
 
+.parallax {
+  /* The image used */
+  background-image: url('/media/events-image.jpg');
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-2 {
+  /* The image used */
+  background-image: url('/media/neon_2.jpg');
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+}  
 /*Subscription table styling*/
 
 /* Style the list */
@@ -158,8 +196,8 @@ footer{
 
 /* Pricing header */
 .subscription .header {
-  background-color: #F9E784;
-  color: #520100;
+  background-color: white;
+  color: rgb(201, 68, 90);
   font-size: 25px;
 }
 
@@ -170,8 +208,8 @@ footer{
   text-align: center;
 }
 
-.subscription .green {
-  background-color: #1F472F;
+.subscription .pink {
+  background-color: rgb(201, 68, 90);
   font-size: 1em;
   color:white;
 }

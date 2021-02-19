@@ -60,14 +60,3 @@ def all_subscriptions(request):
     }
 
     return render(request, 'products/subscriptions.html', context)
-
-
-def subscription_details(request, subscription_id):
-
-    subscription = get_object_or_404(Subscription, pk=subscription_id)
-
-    context = {
-        'subscription': subscription,
-    }
-
-    return render(request, 'products/subscription_details.html', context)

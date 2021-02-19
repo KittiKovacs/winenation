@@ -5,19 +5,22 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 page-title text-center">
-            <h2>Subscriptions</h2>
+            <h1>Subscriptions</h1>
         </div>
+            <div class="row parallax">
     </div>
-    <div class="row mx-4">
+    </div>
+    <div class="row mx-5">
         {% for subscription in subscriptions %}
-        <div class="col-sm-12 col-md-3 my-3">
+        <div class="col-sm-12 col-md-3 my-5">
             <ul class="subscription">
                 <li class="header">{{ subscription.name }}</li>
-                <li class="green">£ {{ subscription.price }}</li>
+                <li class="pink">£ {{ subscription.price }}</li>
                 <li class="white">{{ subscription.description }}</li>
                 <li><a href="#" class="btn">Sign Up</a></li>
             </ul>
         </div>
         {% endfor %}
     </div>
+</div>
     {% endblock %}

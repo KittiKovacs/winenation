@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Wine, Event, Subscription
+from .models import Wine, Event
 
 
 class TestProductViews(TestCase):
@@ -35,13 +35,3 @@ class TestProductViews(TestCase):
         response = self.client.get('/products/subscriptions')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/subscriptions.html')
-
-    def test_subscription_details_page(self):
-        subscription_details = Subscription(name="Test subscription",
-                                            price=999.00,
-                                            description="Test subscription d.",
-                                            image="test.jpg")
-        subscription_details.save()
-
-        response = self.client.get("/products/subscriptions/1/")
-        self.assertEqual(response.status_code, 200)
