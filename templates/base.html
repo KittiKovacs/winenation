@@ -33,7 +33,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script  src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -44,6 +44,11 @@
 
 <body>
     <header class="container-fluid">
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-red text-white">
+                <h4 class="logo-font my-1">Free delivery on orders over £{{ free_shipping_threshold }}!</h4>
+            </div>
+        </div>
         <div id="topnav" class="row bg-white justify-content-center pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 py-2 py-lg-2 text-center text-lg-left">
                 <form method="GET" action="{% url 'wines' %}">
@@ -116,11 +121,6 @@
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-red text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over £{{ free_shipping_threshold }}!</h4>
-            </div>
         </div>
     </header>
     {% if messages %}

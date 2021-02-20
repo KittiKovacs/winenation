@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Wine, Event, Subscription
+from .models import Wine, Event, Subscription, Category
 
 # Create your views here.
 
@@ -11,8 +11,14 @@ def all_wines(request):
 
     wines = Wine.objects.all()
     query = None
+    categories = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            wines = wines.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -26,6 +32,7 @@ def all_wines(request):
     context = {
         'wines': wines,
         'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'products/wines.html', context)
@@ -50,7 +57,6 @@ def all_events(request):
     context = {
         'events': events,
     }
-
     return render(request, 'products/events.html', context)
 
 
@@ -62,7 +68,7 @@ def event_details(request, event_id):
         'event': event,
     }
 
-    return render(request, 'products/event_details.html', context)
+    return render(request, 'products/event-details.html', context)
 
 
 def all_subscriptions(request):
