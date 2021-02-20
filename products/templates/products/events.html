@@ -10,8 +10,8 @@
     </div>
     <div class="row parallax-2">
     </div>
-    <div class="row my-5 ">
-        <div class="col-sm-12 events-intro">
+    <div class="row">
+        <div class="col-sm events-intro">
             <p> Join us in our shop for our 2-hours beignners sessions or our masterclasses if you would like to learn
                 about wine in general and about individual types.</p>
                 <p>
@@ -39,10 +39,10 @@
             <div class="event-image-container col-sm-12 col-md-6">
                 {% if event.image %}
                 <a href="{% url 'event_details' event.id %}">
-                    <img class="event-image" src="{{ event.image }}" alt="{{ event.name }}">
+                    <img class="event-image" src="{{ event.image}}" alt="{{ event.name }}">
                 </a>
                 {% else %}
-                <a href="">
+                <a href="{% url 'event_details' event.id %}">
                     <img class="event-image" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ event.name }}">
                 </a>
                 {% endif %}

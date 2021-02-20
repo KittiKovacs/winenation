@@ -1,8 +1,8 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto my-1">
         <li class="nav-item dropdown">
-            <a class="menu font-weight-bold nav-link mr-5" href="#" id="about us" aria-haspopup="true" aria-expanded="false">
-                About us
+            <a class="menu font-weight-bold nav-link mr-5" href="{% url 'about' %}" id="about us" aria-haspopup="true" aria-expanded="false">
+                About
             </a>
         </li>
 
@@ -11,9 +11,9 @@
                 Wines
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="wines">
-                <a href="" class="dropdown-item">Red</a>
-                <a href="" class="dropdown-item">White</a>
-                <a href="" class="dropdown-item">Sparkling &amp; Dessert</a>
+                <a href="{% url 'wines' %}?category=red" class="dropdown-item">Red</a>
+                <a href="{% url 'wines' %}?category=white" class="dropdown-item">White</a>
+                <a href="{% url 'wines' %}?category=sparkling_dessert" class="dropdown-item">Sparkling &amp; Dessert</a>
                 <a href="{% url 'wines' %}" class="dropdown-item">All Wines</a>
             </div>
         </li>
@@ -23,9 +23,12 @@
                 Events
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="events">
-                <a href="" class="dropdown-item">Wine Tasting for beginners</a>
-                <a href="" class="dropdown-item">Wine Tasting masterclass</a>
-                <a href="" class="dropdown-item">Sommelier talks</a>
+                <a href="{% url 'events' %}?name=Wine tasting for beginners-Introduction to wine" class="dropdown-item">Beginners course: Introduction to wine</a>
+                <a href="{% url 'events' %}?name=Wine tasting for beginners-Red wine" class="dropdown-item">Beginners course: Red wine</a>
+                <a href="{% url 'events' %}?name=Wine tasting for beginners-White wine" class="dropdown-item">Beginners course: White wine</a>
+                <a href="{% url 'events' %}?name=Wine tasting for beginners-Sparkling and dessert wines" class="dropdown-item">Beginners course: Introduction to wine</a>
+                <a href="{% url 'events' %}?name=Wine tasting for beginners-Wine tasting masterclass" class="dropdown-item">Wine Tasting masterclass</a>
+                <a href="{% url 'events' %}?name=Wine tasting for beginners-Sommelier talks" class="dropdown-item">Sommelier talks</a>
                 <a href="{% url 'events' %}" class="dropdown-item">See all</a>
             </div>
         </li>
@@ -35,7 +38,7 @@
                 Subscriptions
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="subscriptions">
-                <a href="" class="dropdown-item">Why subscribe?</a>
+                <a href="{% url 'why_subscribe' %}" class="dropdown-item">Why subscribe?</a>
                 <a href="{% url 'subscriptions' %}" class="dropdown-item">Types</a>
             </div>
         </li>

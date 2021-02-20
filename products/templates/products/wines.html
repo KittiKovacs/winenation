@@ -19,17 +19,17 @@
                 </a>
                 {% else %}
                 <a href="{% url 'wine_details' wine.id %}">
-                    <img class="card-img-top" src="media/wine-blank.jpg" alt="{{ wine.name }}">
+                    <img class="card-img-top" src="media /wine-blank.jpg" alt="{{ wine.name }}">
                 </a>
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ wine.name }}</h5>
-                    <p class="card-text" >from: {{ wine.winery }}</p>
+                    <p class="card-text">from: {{ wine.winery }}</p>
                     <p class="card-text">£ {{ wine.price }}</p>
                 </div>
             </div>
         </div>
-            {% endfor %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

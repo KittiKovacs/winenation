@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
 from .models import Wine, Event, Subscription
 
 # Create your views here.
@@ -8,9 +10,22 @@ def all_wines(request):
     """ A view to show all products, including sorting and search queries """
 
     wines = Wine.objects.all()
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request,
+                               "You didn't enter any search criteria!")
+                return redirect(reverse('wines'))
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            wines = wines.filter(queries)
 
     context = {
         'wines': wines,
+        'search_term': query,
     }
 
     return render(request, 'products/wines.html', context)
@@ -60,3 +75,13 @@ def all_subscriptions(request):
     }
 
     return render(request, 'products/subscriptions.html', context)
+
+
+def why_subscribe(request):
+    """ A view to show all events, including sorting and search queries """
+    return render(request, 'info/why_subscribe.html')
+
+
+def about(request):
+    """ A view to show all events, including sorting and search queries """
+    return render(request, 'info/about.html')
