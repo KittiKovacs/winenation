@@ -63,11 +63,12 @@ class Wine(Product):
     winery = models.CharField(max_length=254)
     variety = models.ForeignKey('Variety', null=True, blank=True,
                                 on_delete=models.SET_NULL, max_length=254)
-    vintage = models.IntegerField()
+    vintage = models.IntegerField(null=True, blank=True)
     region = models.ForeignKey('Wine_region', null=True, blank=True,
                                on_delete=models.SET_NULL, max_length=254)
-    alc_vol = models.DecimalField(max_digits=6, decimal_places=2)
-    pairing = models.CharField(max_length=254)
+    alc_vol = models.DecimalField(null=True, blank=True,
+                                  max_digits=6, decimal_places=2)
+    pairing = models.CharField(null=True, blank=True, max_length=254)
 
 
 class Event(Product):

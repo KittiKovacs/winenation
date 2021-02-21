@@ -10,11 +10,11 @@ class TestProductViews(TestCase):
 
     def test_wine_details_page(self):
         wine_details = Wine(name="Test wine", price=999.00,
-                            description="Test wine description",
-                            image="test.jpg")
+                            sku=1,
+                            winery="test", description="Test wine description")
         wine_details.save()
 
-        response = self.client.get("/products/wines/1/")
+        response = self.client.get("/products/wines")
         self.assertEqual(response.status_code, 200)
 
     def test_all_events_page(self):
