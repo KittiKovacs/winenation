@@ -37,6 +37,22 @@ body {
 .btn-lg:hover{
     color:white;
 }
+.up-button {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.up-link {
+    cursor: pointer;
+}
+.up-link >i{
+    font-size:2em;
+    color: #990705;
+}
+
 .intro-text{
     font-size:1.5em;
     margin: 60px 120px;

@@ -132,6 +132,11 @@
 
     {% block content %}
     {% endblock %}
+    <div class="up-button">
+        <a class="up-link d-flex h-100">
+            <i class="fas fa-arrow-up"></i>
+        </a>	
+    </div>
     <footer class="container-fluid bg-red">
         <div class="row">
             <div class="col-sm mt-3">
@@ -158,6 +163,12 @@
         </div>
     </footer>
     {% block postloadjs %}
+        {{ block.super }}
+        <script type="text/javascript">
+		$('.up-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
     {% endblock %}
 
 </body>
