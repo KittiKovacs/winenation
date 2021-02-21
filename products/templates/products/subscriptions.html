@@ -7,20 +7,42 @@
         <div class="col-sm-12 page-title text-center">
             <h1>Subscriptions</h1>
         </div>
-            <div class="row parallax">
-    </div>
-    </div>
-    <div class="row mx-5">
-        {% for subscription in subscriptions %}
-        <div class="col-sm-12 col-md-3 my-5">
-            <ul class="subscription">
-                <li class="header">{{ subscription.name }}</li>
-                <li class="pink">£ {{ subscription.price }}</li>
-                <li class="white">{{ subscription.description }}</li>
-                <li><a href="#" class="btn">Sign Up</a></li>
-            </ul>
+        <div class="row parallax">
+            <div class="col-sm">
+                <p class="subscription-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt
+                    tellus eros, in rutrum nisi
+                    mollis tempus. Proin ut vehicula nisi. Proin eget nisl mattis enim euismod ultricies. Pellentesque
+                    id
+                    hendrerit justo, nec hendrerit dui. Pellentesque elementum, eros sed bibendum vestibulum, metus
+                    massa
+                    viverra tortor, id condimentum libero mi eu neque. Praesent odio nisi, interdum vitae lobortis non,
+                    vehicula egestas nibh. Vivamus elementum in nulla id accumsan. Integer eget eros commodo velit
+                    scelerisque consequat. Nullam aliquam vitae velit sit amet tempus.</p>
+            </div>
         </div>
-        {% endfor %}
+    </div>
+    <div class="row mx-5 my-5">
+        <div class="col-sm benefits">
+            <p class="text-center">5 reasons to subscribe to regular deliveries:</p>
+            <img src="/media/bottle_opener.jpg">Lower prices per bottle than buying individual bottles<br>
+            <img src="/media/bottle_opener.jpg">The longer subscription you purchase the more you save<br>
+            <img src="/media/bottle_opener.jpg">Regular deliveries-never run out of wine!<br>
+            <img src="/media/bottle_opener.jpg">You'll receive wines recommended by our experts<br>
+            <img src="/media/bottle_opener.jpg">Get the chance of trying new wines every month!<br>
+        </div>
     </div>
 </div>
-    {% endblock %}
+<div class="row mx-5">
+    {% for subscription in subscriptions %}
+    <div class="col-sm-12 col-md-3 my-5">
+        <ul class="subscription">
+            <li class="header">{{ subscription.name }}</li>
+            <li class="pink">£ {{ subscription.price }}</li>
+            <li class="white">{{ subscription.description }}</li>
+            <li><a href="#" class="btn">Sign Up</a></li>
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

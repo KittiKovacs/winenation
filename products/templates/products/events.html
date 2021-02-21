@@ -9,47 +9,40 @@
         </div>
     </div>
     <div class="row parallax-2">
-    </div>
-    <div class="row">
         <div class="col-sm events-intro">
-            <p> Join us in our shop for our 2-hours beignners sessions or our masterclasses if you would like to learn
-                about wine in general and about individual types.</p>
-                <p>
-                Beginners sessions start at 2 PM every Saturday afternoon and you can purchase them individually.
-                We also have an advanced course for those who an curious about winemaking, wine auctions and modern
-                winemaking technologies.</p>
+            <p> Join us in our shop on our courses if you want to learn about wine!</p>
+            <p>Beginners sessions start at 2 PM every Saturday.</p>
+            <p>Masterclasses are held on the last weekend of each month.</p>
+            <p>Sommelier talks start at 6 Pm every Friday.</p>
+            <p>Bookings for the weekly classes must be made by Thursday 12Am!</p>
+            <p>Bookings for the monthly masterclasses must be made by the 15th of each month!</p>
         </div>
     </div>
 
     {% for event in events %}
     <div class="card event">
         <div class="row event-card-header">
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm">
                 <p>{{ event.name }}</p>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <p class="event-price">Price: £ {{ event.price }}</p>
             </div>
         </div>
         <div class="row card-body">
-            <div class="button-container col-sm-12 col-md-4">
-                <button href="" class="btn">Sign up</button>
-                <button href="" class="btn">Learn more</button>
+            <div class="col-sm-12 col-md-6">
+                <p class="event-price mt-5">£{{ event.price }}</p>
+                <p class="event-description">{{ event.description }}</p>
+                <button type="button" href="" class="btn">Sign up</button>
             </div>
             <div class="event-image-container col-sm-12 col-md-6">
                 {% if event.image %}
-                <a href="{% url 'event_details' event.id %}">
-                    <img class="event-image" src="{{ event.image}}" alt="{{ event.name }}">
-                </a>
+                <img class="event-image" src="{{ event.image}}" alt="{{ event.name }}">
                 {% else %}
-                <a href="{% url 'event_details' event.id %}">
-                    <img class="event-image" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ event.name }}">
-                </a>
+                <img class="event-image" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ event.name }}">
                 {% endif %}
             </div>
         </div>
-        <hr>
     </div>
-    {% endfor %}
+    <hr>
+</div>
+{% endfor %}
 </div>
 {% endblock %}

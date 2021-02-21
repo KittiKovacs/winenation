@@ -50,7 +50,7 @@ def wine_details(request, wine_id):
 
 
 def all_events(request):
-    """ A view to show all events, including sorting and search queries """
+    """ A view to show all events """
 
     events = Event.objects.all()
 
@@ -60,19 +60,8 @@ def all_events(request):
     return render(request, 'products/events.html', context)
 
 
-def event_details(request, event_id):
-
-    event = get_object_or_404(Event, pk=event_id)
-
-    context = {
-        'event': event,
-    }
-
-    return render(request, 'products/event-details.html', context)
-
-
 def all_subscriptions(request):
-    """ A view to show all events, including sorting and search queries """
+    """ A view to show all subscriptions """
 
     subscriptions = Subscription.objects.all()
 
@@ -81,11 +70,6 @@ def all_subscriptions(request):
     }
 
     return render(request, 'products/subscriptions.html', context)
-
-
-def why_subscribe(request):
-    """ A view to show all events, including sorting and search queries """
-    return render(request, 'info/why_subscribe.html')
 
 
 def about(request):

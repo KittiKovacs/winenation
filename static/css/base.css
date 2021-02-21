@@ -38,8 +38,10 @@ body {
     color:white;
 }
 .intro-text{
-    margin: 100px 60px;
-    line-height: 2em;
+    font-size:1.5em;
+    margin: 60px 120px;
+    color:white;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
 }
 .intro-text-1{
     margin: 100px 60px;
@@ -106,6 +108,9 @@ footer{
     background-color:black;
     color:white;
 }
+.page-subtitle{
+    margin:60px 0;
+}
 
 .titles{
     margin-bottom:30px;
@@ -126,29 +131,26 @@ footer{
     border:none;
     text-align:center;
 }
+.events-intro{
+    font-size:1.5em;
+    margin: 60px 120px;
+    color:white;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
 .event{
     border:none;
     margin:60px;
+    text-align:left;
+    font-size: 1.2em;
 }
 .event-card-header{
-    text-align:center;
+    text-align:left;
     font-size: 1.35em;
     font-weight:bold;
     padding-top: 20px;
 }
-.event-price{
-    text-align:center;
-}
-.events-intro{
-    font-size:1.35em;
-    margin: 60px 120px;
-}
-#events-image{
-    width:100vw;
-}
-.button-container{
-    text-align:center;
-}
+
+
 
 /*Parallax background images*/
 
@@ -159,7 +161,7 @@ footer{
   background-image: url('/media/events-image.jpg');
 
   /* Set a specific height */
-  height: 500px;
+  height: 400px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -173,7 +175,21 @@ footer{
   background-image: url('/media/neon_2.jpg');
 
   /* Set a specific height */
-  height: 500px;
+  height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-3 {
+  /* The image used */
+  background-image: url('/media/about.jpg');
+
+  /* Set a specific height */
+  height: 400px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -213,6 +229,8 @@ footer{
 .subscription-intro{
     font-size:1.35em;
     margin: 60px 120px;
+    color:white;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
 }
 .subscription li {
   border-bottom: none;

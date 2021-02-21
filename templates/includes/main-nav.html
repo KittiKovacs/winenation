@@ -18,26 +18,16 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="menu font-weight-bold nav-link mr-5" href="#" id="events" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="menu font-weight-bold nav-link mr-5" href="{% url 'events' %}" id="events"aria-haspopup="true" aria-expanded="false">
                 Events
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="events">
-                <a href="{% url 'events' %}" class="dropdown-item">Beginners courses: Introduction to wine</a>
-                <a href="{% url 'events' %}" class="dropdown-item">Wine Tasting masterclass</a>
-                <a href="{% url 'events' %}" class="dropdown-item">Sommelier talks</a>
-                <a href="{% url 'events' %}" class="dropdown-item">See all</a>
-            </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="menu font-weight-bold nav-link" href="#" id="subscriptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="menu font-weight-bold nav-link" href="{% url 'subscriptions' %}" id="subscriptions"aria-haspopup="true" aria-expanded="false">
                 Subscriptions
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="subscriptions">
-                <a href="{% url 'why_subscribe' %}" class="dropdown-item">Why subscribe?</a>
-                <a href="{% url 'subscriptions' %}" class="dropdown-item">Types</a>
-            </div>
         </li>
     </ul>
 </div>

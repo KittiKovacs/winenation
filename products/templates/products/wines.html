@@ -6,8 +6,16 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 page-title text-center">
-            <h2>All Wines</h2>
+            <h2>Wines from stock</h2>
         </div>
+        {% for category in current_categories %}
+        <div class="row">
+            <div class="col-sm-12 page-subtitle text-center">
+                <h3>{{ category.friendly_name }}</h3>
+            </div>
+        </div>
+        {% endfor %}
+
     </div>
     <div class="row wine-body">
         {% for wine in wines %}
@@ -15,15 +23,17 @@
             <div class="card border-0">
                 {% if wine.image %}
                 <a href="{% url 'wine_details' wine.id %}">
-                    <img class="card-img-top" src="{{ wine.image }}" alt="{{ wine.name }}">
+                    <img class="card-img-top" src="{{ MEDIA_URL }}{{ wine.image }}" alt="{{ wine.name }}">
                 </a>
                 {% else %}
                 <a href="{% url 'wine_details' wine.id %}">
-                    <img class="card-img-top" src="media /wine-blank.jpg" alt="{{ wine.name }}">
+                    <img class="card-img-top" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}">
                 </a>
                 {% endif %}
                 <div class="card-body">
-                    <h5 class="card-title">{{ wine.name }}</h5>
+                    <a href="{% url 'wine_details' wine.id %}">
+                        <h5 class="card-title">{{ wine.name }}</h5>
+                    </a>
                     <p class="card-text">from: {{ wine.winery }}</p>
                     <p class="card-text">£ {{ wine.price }}</p>
                 </div>
