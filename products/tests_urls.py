@@ -1,7 +1,7 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from products.views import (all_wines, wine_details, all_events,
-                            event_details, all_subscriptions)
+                            all_subscriptions)
 
 
 class TestServiceUrls(SimpleTestCase):
@@ -17,10 +17,6 @@ class TestServiceUrls(SimpleTestCase):
     def test_all_events_url_resolves(self):
         url = reverse('events')
         self.assertEquals(resolve(url).func, all_events)
-
-    def test_event_details_url_resolves(self):
-        url = reverse('event_details', args=('2'))
-        self.assertEquals(resolve(url).func, event_details)
 
     def test_all_subscriptions_url_resolves(self):
         url = reverse('subscriptions')

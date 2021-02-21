@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Wine, Event
+from .models import Wine
 
 
 class TestProductViews(TestCase):
@@ -21,15 +21,6 @@ class TestProductViews(TestCase):
         response = self.client.get('/products/events')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/events.html')
-
-    def test_event_details_page(self):
-        event_details = Event(name="Test event", price=999.00,
-                              description="Test event description",
-                              image="test.jpg")
-        event_details.save()
-
-        response = self.client.get("/products/events/1/")
-        self.assertEqual(response.status_code, 200)
 
     def test_all_subscriptions_page(self):
         response = self.client.get('/products/subscriptions')
