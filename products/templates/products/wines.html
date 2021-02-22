@@ -15,8 +15,8 @@
             </div>
             <div class="row mx-3">
             {% if search_term or current_categories or current_sorting != 'None_None' %}
-            <div class="col-sm text-left">
-                <a href="{% url 'wines' %}"><i class="fas fa-arrow-left">All wines</i></a>
+            <div class="col-sm text-left back-arrow">
+                <a href="{% url 'wines' %}"><i class="fas fa-arrow-left"></i>All wines</a>
                 </div>
             </div>
             {% endif %}
@@ -28,7 +28,7 @@
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
-                        <select id="sort-selector"
+                        <select id="sort-selector mt-5"
                             class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
                             </option>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
-                    <p class="text-muted mt-3 text-center text-md-left">
+                    <p class="text-muted mt-5 text-center text-md-left">
                         {{ wines|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
@@ -62,11 +62,11 @@
             <div class="card border-0">
                 {% if wine.image %}
                 <a href="{% url 'wine_details' wine.id %}">
-                    <img class="card-img-top" src="{{ MEDIA_URL }}{{ wine.image }}" alt="{{ wine.name }}">
+                    <img class="card-img" src="{{ MEDIA_URL }}{{ wine.image }}" alt="{{ wine.name }}">
                 </a>
                 {% else %}
                 <a href="{% url 'wine_details' wine.id %}">
-                    <img class="card-img-top" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}">
+                    <img class="card-img" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}">
                 </a>
                 {% endif %}
                 <div class="card-body">
