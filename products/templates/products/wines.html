@@ -8,21 +8,29 @@
         <div class="col-sm-12 page-title text-center">
             <h2>Our wines</h2>
         </div>
+
         {% for category in current_categories %}
         <div class="row">
             <div class="col-sm-12 page-subtitle text-center">
                 <h3>{{ category.friendly_name }} wines</h3>
             </div>
             <div class="row mx-3">
-            {% if search_term or current_categories or current_sorting != 'None_None' %}
-            <div class="col-sm text-left back-arrow">
-                <a href="{% url 'wines' %}"><i class="fas fa-arrow-left"></i>All wines</a>
+
+                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <div class="col-sm text-left back-arrow">
+                    <a href="{% url 'wines' %}"><i class="fas fa-arrow-left"></i>All wines</a>
                 </div>
             </div>
             {% endif %}
+
         </div>
         {% endfor %}
+
     </div>
+
+    <div class="row parallax-2">
+    </div>
+
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
@@ -62,11 +70,11 @@
             <div class="card h-100 border-0">
                 {% if wine.image %}
                 <a href="{% url 'wine_details' wine.id %}">
-                    <img class="card-img-top img-fluid" src="{{ wine.image.url }}" alt="{{ wine.name }}">
+                    <img class="card-img-top img-fluid" src="{{ wine.image.url }}"  alt="{{ wine.name }}">
                 </a>
                 {% else %}
                 <a href="{% url 'wine_details' wine.id %}">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}wine-blank.jpg"  alt="{{ wine.name }}">
                 </a>
                 {% endif %}
                 <div class="card-body">
@@ -90,27 +98,27 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+{{ block.super }}
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
 
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
 
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
 
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}

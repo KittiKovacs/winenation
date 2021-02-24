@@ -73,14 +73,6 @@ class Wine(Product):
     pairing = models.CharField(null=True, blank=True, max_length=254)
 
 
-class Event(Product):
-    sku = models.CharField(max_length=254)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(null=True, blank=True)
-
-
 class Subscription(Product):
     sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)

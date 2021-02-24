@@ -17,11 +17,6 @@ class TestProductViews(TestCase):
         response = self.client.get("/products/wines")
         self.assertEqual(response.status_code, 200)
 
-    def test_all_events_page(self):
-        response = self.client.get('/products/events')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'products/events.html')
-
     def test_all_subscriptions_page(self):
         response = self.client.get('/products/subscriptions')
         self.assertEqual(response.status_code, 200)

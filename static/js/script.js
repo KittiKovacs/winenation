@@ -1,1 +1,0 @@
-$('#eventModal').modal(focus)

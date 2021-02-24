@@ -6,9 +6,10 @@
         <div class="row">
             <div class="col">           
             <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>             
+            <h2 class="logo-font mb-4">Shopping Bag</h2>             
             <hr>
-             </div>
+             
+        </div>
                 </div>
         <div class="row">
              <div class="col">
@@ -42,6 +43,27 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.wine.price }}</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                    {% for item in bag_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            <img class="img-fluid rounded" src="{{ item.subscription.image.url }}">
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.subscription.name }}</strong></p>
+                            <p class="my-0 small text-muted">SKU: {{ item.subscription.sku|upper }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.subscription.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="my-0">{{ item.quantity }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.subscription.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -84,4 +106,4 @@
             {% endif %}
         </div>
     </div>
-{% endblock %}
+    {% endblock %}

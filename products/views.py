@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Wine, Event, Subscription, Category
+from .models import Wine, Subscription, Category
 from django.db.models.functions import Lower
 
 # Create your views here.
@@ -69,17 +69,6 @@ def wine_details(request, wine_id):
     return render(request, 'products/wine_details.html', context)
 
 
-def all_events(request):
-    """ A view to show all events """
-
-    events = Event.objects.all()
-
-    context = {
-        'events': events,
-    }
-    return render(request, 'products/events.html', context)
-
-
 def all_subscriptions(request):
     """ A view to show all subscriptions """
 
@@ -93,5 +82,5 @@ def all_subscriptions(request):
 
 
 def about(request):
-    """ A view to show all events, including sorting and search queries """
+
     return render(request, 'info/about.html')
