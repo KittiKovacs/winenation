@@ -7,10 +7,8 @@
             <div class="col">           
             <hr>
             <h2 class="logo-font mb-4">Shopping Bag</h2>             
-            <hr>
-             
+            <hr>   
         </div>
-                </div>
         <div class="row">
              <div class="col">
              {% if bag_items %}
@@ -26,44 +24,44 @@
                         </tr>
                     </thead>
 
-                    {% for item in bag_items %}
+                    {% for wine in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="{{ item.wine.image.url }}">
+                            <img class="img-fluid rounded" src="{{ wine.image.url }}">
                         </td>
                         <td class="py-3">
-                            <p class="my-0"><strong>{{ item.wine.name }}</strong></p>
-                            <p class="my-0 small text-muted">SKU: {{ item.wine.sku|upper }}</p>
+                            <p class="my-0"><strong>{{ wine.name }}</strong></p>
+                            <p class="my-0 small text-muted">SKU: {{ wine.sku|upper }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.wine.price }}</p>
+                            <p class="my-0">${{ wine.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-0">{{ item.quantity }}</p>
+                            <p class="my-0">{{ quantity }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.wine.price }}</p>
+                            <p class="my-0">${{ wine.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}
 
-                    {% for item in bag_items %}
+                    {% for subscription in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="{{ item.subscription.image.url }}">
+                            <img class="img-fluid rounded" src="{{ subscription.image.url }}">
                         </td>
                         <td class="py-3">
-                            <p class="my-0"><strong>{{ item.subscription.name }}</strong></p>
-                            <p class="my-0 small text-muted">SKU: {{ item.subscription.sku|upper }}</p>
+                            <p class="my-0"><strong>{{ subscription.name }}</strong></p>
+                            <p class="my-0 small text-muted">SKU: {{ subscription.sku|upper }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.subscription.price }}</p>
+                            <p class="my-0">${{ subscription.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-0">{{ item.quantity }}</p>
+                            <p class="my-0">{{ subscription.quantity }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.subscription.price }}</p>
+                            <p class="my-0">${{ subscription.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}

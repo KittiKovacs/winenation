@@ -8,16 +8,16 @@
         <div class="col-sm-12 page-title text-center">
             <h2>Our wines</h2>
         </div>
-
+    </div>
         {% for category in current_categories %}
-        <div class="row">
-            <div class="col-sm-12 page-subtitle text-center">
+        <div class="row mx-3">
+            <div class="col-sm-12 text-center page-subtitle">
                 <h3>{{ category.friendly_name }} wines</h3>
             </div>
             <div class="row mx-3">
 
                 {% if search_term or current_categories or current_sorting != 'None_None' %}
-                <div class="col-sm text-left back-arrow">
+                <div class="col-sm-12 text-center back-arrow">
                     <a href="{% url 'wines' %}"><i class="fas fa-arrow-left"></i>All wines</a>
                 </div>
             </div>
@@ -25,12 +25,6 @@
 
         </div>
         {% endfor %}
-
-    </div>
-
-    <div class="row parallax-2">
-    </div>
-
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
