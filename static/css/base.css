@@ -61,7 +61,7 @@ body {
 
 .intro-text{
     font-size:1.5em;
-    margin: 60px 120px;
+    margin: 60px;
     color:white;
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
 }
@@ -73,6 +73,7 @@ body {
     margin: 30px 60px;
     line-height: 2em;
 }
+
 #map{
     max-height: 500px;
 }
@@ -81,6 +82,7 @@ body {
 }
 #landing-image-2{
     max-height: 500px;
+    margin: 60px;
 }
 footer{
     align-items:center;

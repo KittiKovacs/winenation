@@ -2,17 +2,15 @@
 {% load static %}
 
 {% block content %}
-    <div class="container mb-2">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">           
-            <hr>
-            <h2 class="logo-font mb-4">Shopping Bag</h2>             
-            <hr>   
+            <div class="col-sm-12 page-title text-center">           
+            <h2>Shopping Bag</h2>             
         </div>
         <div class="row">
-             <div class="col">
+             <div class="col-sm-12">
              {% if bag_items %}
-               <div class="table-responsive rounded">
+               <div class="table-responsive rounded px-5">
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
                         <tr>
@@ -30,17 +28,17 @@
                             <img class="img-fluid rounded" src="{{ wine.image.url }}">
                         </td>
                         <td class="py-3">
-                            <p class="my-0"><strong>{{ wine.name }}</strong></p>
+                            <p class="my-0"><strong>{{ item.wine.name }}</strong></p>
                             <p class="my-0 small text-muted">SKU: {{ wine.sku|upper }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ wine.price }}</p>
+                            <p class="my-0">£{{ wine.price }}</p>
                         </td>
                         <td class="py-3 w-25">
                             <p class="my-0">{{ quantity }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ wine.price }}</p>
+                            <p class="my-0">£{{ wine.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -55,38 +53,38 @@
                             <p class="my-0 small text-muted">SKU: {{ subscription.sku|upper }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ subscription.price }}</p>
+                            <p class="my-0">£{{ subscription.price }}</p>
                         </td>
                         <td class="py-3 w-25">
                             <p class="my-0">{{ subscription.quantity }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ subscription.price }}</p>
+                            <p class="my-0">£{{ subscription.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                        <td colspan="5" class="pt-5 px-5 text-right">
+                            <h6><strong>Total: £{{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
-                                more!
+                                Add <strong>£{{ free_delivery_delta }}</strong>
+                                more for free delivery!
                             </p>
                             {% endif %}
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-right">
-                            <a href="{% url 'wines' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <td colspan="5" class="text-right px-5 ">
+                            <a href="{% url 'wines' %}" class="btn">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <a href="" class="btn btn-black rounded-0 btn-lg">
+                            <a href="" class="btn">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
