@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your views here.
 
@@ -8,7 +8,6 @@ def view_bag(request):
 
 
 def add_wine_to_bag(request, wine_id):
-    """ Add a quantity of the specified product to the shopping bag """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -25,7 +24,6 @@ def add_wine_to_bag(request, wine_id):
 
 
 def add_subscription_to_bag(request, subscription_id):
-    """ Add a quantity of the specified product to the shopping bag """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -39,3 +37,58 @@ def add_subscription_to_bag(request, subscription_id):
     request.session['bag'] = bag
     print(request.session['bag'])
     return redirect(redirect_url)
+
+
+def adjust_wine_in_bag(request, wine_id):
+
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    if quantity > 0:
+        bag[wine_id] = quantity
+    else:
+        bag.pop(wine_id)
+
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
+
+
+def adjust_subscription_in_bag(request, subscription_id):
+
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    if quantity > 0:
+        bag[subscription_id] = quantity
+    else:
+        bag.pop(subscription_id)
+
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
+
+
+def remove_wine_from_bag(request, wine_id):
+    """Remove the item from the shopping bag"""
+    bag = request.session.get('bag', {})
+
+    try:
+        bag.pop(wine_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
+
+def remove_subscription_from_bag(request, subscription_id):
+    """Remove the item from the shopping bag"""
+    bag = request.session.get('bag', {})
+
+    try:
+        bag.pop(subscription_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
