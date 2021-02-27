@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-sm-12 page-title text-center">
             <h1>Subscriptions</h1>
@@ -49,22 +49,39 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <form class="form text-center" action="{% url 'add_subscription_to_bag' subscription.id %}" method="POST">
+                <div class="col-sm-12">
+                    <form class="form text-center" action="{% url 'add_subscription_to_bag' subscription.id %}"
+                        method="POST">
                         {% csrf_token %}
-                        <div class="form-row  text-center">
-                            <div class="col-sm-12">
+                        <div class="form-row">
+                            <div class="col-sm-12 text-center">
                                 <p class="col mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
+                                <div class="form-group">
                                     <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn" data-item_id="{{ subscription.id }}"
+                                                id="decrement-qty_{{ subscription.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
                                         <input class="form-control qty_input" type="number" name="quantity" value="1"
                                             min="1" max="99" data-item_id="{{ subscription.id }}"
                                             id="id_qty_{{ subscription.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn" data-item_id="{{ subscription.id }}"
+                                                id="increment-qty_{{ subscription.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <input type="submit" class="btn text-uppercase mt-2" value="Subscribe">
+                                <input type="submit" class="btn mt-2" value="Subscribe">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
                         </div>
@@ -76,4 +93,10 @@
     </div>
 </div>
 
-{% endblock %}
+
+    {% endblock %}
+
+    {% block postloadjs %}
+    {{ block.super }}
+    {% include 'products/includes/quantity_input_script.html' %}
+    {% endblock %}

@@ -51,7 +51,9 @@ body {
     right: 10px;
 }
 
-.up-link {
+.up-link,
+.update-link,
+.remove-item{
     cursor: pointer;
 }
 .up-link >i{
@@ -202,22 +204,18 @@ footer{
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  height:400px;
+  height:350px;
 }
 
-/* Add shadows on hover */
 .subscription:hover {
   box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
 }
-
-/* Pricing header */
 .subscription .header {
   background-color: white;
   color: rgb(201, 68, 90);
   font-size: 25px;
+  padding: 20px;
 }
-
-/* List items */
 
 .subscription-intro{
     font-size:1.35em;
@@ -227,19 +225,23 @@ footer{
 }
 .subscription li {
   border-bottom: none;
-  padding: 20px;
   text-align: center;
 }
-
 .subscription .pink {
   background-color: rgb(201, 68, 90);
   font-size: 1em;
   color:white;
+  padding: 20px;
 }
 .subscription .white {
   background-color: #ffffff;
   font-size: 1em;
   text-align: left;
+  padding: 10px 20px 0 20px;
+}
+
+.form-group{
+    margin: 10px 50px;
 }
 .benefits{
     font-size: 1.5em;    

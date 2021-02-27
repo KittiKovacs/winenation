@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$216000$zwzbeYx3Qcje$wYJ7Yea3MipNgrUjwHHKVT4kYdw1i3ayeIA3PFDREIQ=",
-        "last_login": "2021-02-13T11:25:12.648Z",
+        "last_login": "2021-02-27T12:49:43.980Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -19,10 +19,10 @@
 },
 {
     "model": "sessions.session",
-    "pk": "jufdxxzcjrc0v4con35fxyvuw2wgtaon",
+    "pk": "2gqyz4yx7a3uioa8371ragi3no86with",
     "fields": {
-        "session_data": ".eJxVjMsOwiAUBf-FtSFQkFKX7vsNzeU-pGogKe3K-O_apAvdnpk5LzXBtuZpa7xMM6mLsur0uyXAB5cd0B3KrWqsZV3mpHdFH7TpsRI_r4f7d5Ch5W8dzp4wBQ9egnU2QOwEowAb58hwkmiQXRiSCKGA8wExOe6gH3pr0Kr3BwHqOOQ:1lAt32:LxOha8-layQSkHcUHbAeh_kq1gmXBoFp9Ca4MJLt0Ow",
-        "expire_date": "2021-02-27T11:25:12.671Z"
+        "session_data": ".eJxVjksOgzAMRO_iNYoSkgaaZfc9A7IdG2grkPisEHcvSCza7byZ0dugwXXpmnWWqekzJHBQ_GaE_JbhBPmFQzsaHodl6smcFXPR2TzHLJ_H1f076HDujnW8hcwUAwaNzruIdalcK4r1PlshrS2Lj3dSzazoQ2QmLyVW98pZPq0IW0gblJBccWgmt-9fob09nQ:1lF1Qo:VCZE8HtnQZbpqGCKXF-QYL0N8Xlqr7znHysCwdcnPkg",
+        "expire_date": "2021-03-10T21:10:50.305Z"
     }
 },
 {
@@ -421,7 +421,7 @@
         "name": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
         "description": "2017 was an exceptional sweet wine year. The Furmint and Hárslevelű bunches botrytize the nicest when botrytis hits them in complete ripeness. “It was spontaneously fermented in two Trust barrels, one of 300 litres and one of 225 litres, where it was also aged for more than a year. I like Szamorodni when it’s muscly, when it can stand up to an aszú with its thickness and power. This is like that: 200 grams of residual sugar, vibrant acidity, creaminess and powerful Betsek fruitiness.” István Balassa.",
         "price": "20.00",
-        "image_url": "https://github.com/KittiKovacs/winenation/blob/c997e4fd4cf0c36cdb2b414761ead440926b45d5/media/Balass_Besek_edes_szamorodni_2017.JPG",
+        "image_url": null,
         "image": "Balass_Besek_edes_szamorodni_2017.JPG",
         "category": 4,
         "winery": "Balassa István",
@@ -1630,78 +1630,6 @@
     }
 },
 {
-    "model": "products.event",
-    "pk": 1,
-    "fields": {
-        "image_url": null,
-        "sku": "2001",
-        "name": "Wine tasting for beginners-Introduction to wine",
-        "description": "Learn about all the key building blocks of taste including fruit, sweetness, acidity and tannins. We will introduce you to the tools of wine tasting, grape varieties and food matching.\r\n\r\nDuration: 4 hours",
-        "price": "50.00",
-        "image": "wine_tasting.jpg"
-    }
-},
-{
-    "model": "products.event",
-    "pk": 2,
-    "fields": {
-        "image_url": null,
-        "sku": "2002",
-        "name": "Wine tasting for beginners-Red wines",
-        "description": "In this class we're learning all about red wines, their characteristics and varieties from all around the world.\r\n\r\n10-12 wines tasted per session and a selection of Charcuterie and Cheese will be matched with the wines.",
-        "price": "50.00",
-        "image": "red_wine.jpg"
-    }
-},
-{
-    "model": "products.event",
-    "pk": 3,
-    "fields": {
-        "image_url": null,
-        "sku": "2003",
-        "name": "Wine tasting for beginners-White wines",
-        "description": "In this class we're learning all about white wines, their characteristics and varieties from all around the world.\r\n\r\n10-12 wines tasted per session and a selection of Charcuterie and Cheese will be matched with the wines.",
-        "price": "50.00",
-        "image": "white_wine.jpg"
-    }
-},
-{
-    "model": "products.event",
-    "pk": 4,
-    "fields": {
-        "image_url": null,
-        "sku": "2004",
-        "name": "Wine tasting for beginners-Wines for special occasions: Sparkling and dessert wines",
-        "description": "Last but not least, learn all about special kinds of wines and how to choose them for a special occasion. What is the difference between Champagne and Sparkling wine? What types of dessert wines are there and why are they so pricey? \r\n\r\n4-6 samples tasted per session and a selection of Charcuterie and Cheese will be matched with the wines.",
-        "price": "50.00",
-        "image": "sparkling_wine.jpg"
-    }
-},
-{
-    "model": "products.event",
-    "pk": 5,
-    "fields": {
-        "image_url": null,
-        "sku": "2005",
-        "name": "Wine tasting masterclass",
-        "description": "A 2 day course for those who are serious about wine!\r\n\r\nLearn how and where wine is produced, what are the key factors and criteria of quality. Gain an in-depth understanding of wines around the world.\r\nLearn how to invest and store wine and how to assess ageing potential.\r\n\r\n\r\nAt the end of day 2 there will be an assessment and a certificate is issued.",
-        "price": "75.00",
-        "image": "cork-738603_1920.jpg"
-    }
-},
-{
-    "model": "products.event",
-    "pk": 6,
-    "fields": {
-        "image_url": null,
-        "sku": "2006",
-        "name": "Sommelier talks",
-        "description": "We invite sommeliers to our shop to share their thoughts and knowledge about wine.\r\n\r\nDuration: 1 hour, followed by a 30 min Q&A session and buffet with wine tasting.",
-        "price": "100.00",
-        "image": "pexels-pixabay-33265-glasses.jpg"
-    }
-},
-{
     "model": "products.subscription",
     "pk": 1,
     "fields": {
@@ -1744,7 +1672,7 @@
         "image_url": null,
         "sku": "3004",
         "name": "12-month Variety subscription",
-        "description": "Do you love all types of wine? We have an offer for you too!\r\nYou'll receive 6 bottles of red, white and rose wines (2 of each) every month for 12 months!\r\nAs usual, we select the wines from the best winemakers and vintages.",
+        "description": "Do you love all types of wine? We have an offer for you too!\r\nYou'll receive 6 bottles of red, white and rose wines (2 of each) every month for 12 months!",
         "price": "380.00",
         "image": ""
     }
@@ -1792,7 +1720,7 @@
         "image_url": null,
         "sku": "3008",
         "name": "6-month Variety Subscription",
-        "description": "Do you love all types of wine? We have an offer for you too! You'll receive 6 bottles of red, white and rose wines (2 of each) every month for 6 months! As usual, we select the wines from the best winemakers and vintages.",
+        "description": "Do you love all types of wine? We have an offer for you too! You'll receive 6 bottles of red, white and rose wines (2 of each) every month for 6 months!",
         "price": "200.00",
         "image": ""
     }
@@ -1840,7 +1768,7 @@
         "image_url": null,
         "sku": "3012",
         "name": "3-month variety subscription",
-        "description": "Do you love all types of wine? We have an offer for you too! You'll receive 6 bottles of red, white and rose wines (2 of each) every month for 3 months! As usual, we select the wines from the best winemakers and vintages.",
+        "description": "Do you love all types of wine? We have an offer for you too! You'll receive 6 bottles of red, white and rose wines (2 of each) every month for 3 months!",
         "price": "115.00",
         "image": ""
     }
@@ -4705,6 +4633,96 @@
         "object_repr": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
         "action_flag": 2,
         "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 160,
+    "fields": {
+        "action_time": "2021-02-22T20:24:52.007Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "1",
+        "object_repr": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 161,
+    "fields": {
+        "action_time": "2021-02-22T20:29:14.089Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "1",
+        "object_repr": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 162,
+    "fields": {
+        "action_time": "2021-02-27T12:50:03.240Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscription"
+        ],
+        "object_id": "12",
+        "object_repr": "3-month variety subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 163,
+    "fields": {
+        "action_time": "2021-02-27T12:50:11.045Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscription"
+        ],
+        "object_id": "8",
+        "object_repr": "6-month Variety Subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 164,
+    "fields": {
+        "action_time": "2021-02-27T12:50:24.757Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "subscription"
+        ],
+        "object_id": "4",
+        "object_repr": "12-month Variety subscription",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
     }
 }
 ]
