@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block content %}
     <div class="container-fluid">
@@ -123,7 +124,7 @@
                                     id="remove_{{ item.subscription_id }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">£{{ subscription.price }}</p>
+                                <p class="my-0">${{ item.subscription.price | calc_subtotal:item.quantity }}</p>
                             </td>
                         </tr>
                         {% endfor %}

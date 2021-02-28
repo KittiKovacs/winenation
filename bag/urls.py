@@ -10,6 +10,8 @@ urlpatterns = [
          name='adjust_wine_in_bag'),
     path('adjust/<int:subscription_id>/', views.adjust_subscription_in_bag,
          name='adjust_subscription_in_bag'),
-    path('remove/<int:wine_id>/', views.remove_wine_from_bag, name='remove_wine_from_bag'),
-    path('remove/<int:subscription_id>/', views.remove_subscription_from_bag, name='remove_subscription_from_bag'),
+    path('remove/<int:wine_id>/', views.remove_wine_from_bag,
+         name='remove_wine_from_bag'),
+    path('remove/<int:subscription_id>/', views.remove_subscription_from_bag,
+         name='remove_subscription_from_bag'),
 ]

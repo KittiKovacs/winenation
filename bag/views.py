@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, \
+ reverse, HttpResponse
+
 
 # Create your views here.
 
@@ -44,13 +46,17 @@ def adjust_wine_in_bag(request, wine_id):
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
-    if quantity > 0:
-        bag[wine_id] = quantity
-    else:
-        bag.pop(wine_id)
+    try:
+        if quantity > 0:
+            bag[wine_id] = quantity
+        else:
+            bag.pop(wine_id)
 
-    request.session['bag'] = bag
-    return redirect(reverse('view_bag'))
+        request.session['bag'] = bag
+        return redirect(reverse('view_bag'))
+
+    except Exception as e:
+        return HttpResponse(status=500)
 
 
 def adjust_subscription_in_bag(request, subscription_id):
@@ -58,13 +64,17 @@ def adjust_subscription_in_bag(request, subscription_id):
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
-    if quantity > 0:
-        bag[subscription_id] = quantity
-    else:
-        bag.pop(subscription_id)
+    try:
+        if quantity > 0:
+            bag[subscription_id] = quantity
+        else:
+            bag.pop(subscription_id)
 
-    request.session['bag'] = bag
-    return redirect(reverse('view_bag'))
+        request.session['bag'] = bag
+        return redirect(reverse('view_bag'))
+
+    except Exception as e:
+        return HttpResponse(status=500)
 
 
 def remove_wine_from_bag(request, wine_id):
@@ -79,6 +89,7 @@ def remove_wine_from_bag(request, wine_id):
 
     except Exception as e:
         return HttpResponse(status=500)
+
 
 def remove_subscription_from_bag(request, subscription_id):
     """Remove the item from the shopping bag"""
