@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$216000$zwzbeYx3Qcje$wYJ7Yea3MipNgrUjwHHKVT4kYdw1i3ayeIA3PFDREIQ=",
-        "last_login": "2021-02-27T12:49:43.980Z",
+        "last_login": "2021-02-28T17:07:38.415Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -15,6 +15,14 @@
         "date_joined": "2021-02-11T12:07:50.644Z",
         "groups": [],
         "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "22cbi6yh4n740gaskr03cagq8m4csmay",
+    "fields": {
+        "session_data": "eyJiYWciOnsiMyI6MX19:1lFzfb:x3B2zegeK2mRMfArboJjjCOP2Ern6WfmbeW4bGgOD3k",
+        "expire_date": "2021-03-13T13:30:07.939Z"
     }
 },
 {
@@ -421,7 +429,7 @@
         "name": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
         "description": "2017 was an exceptional sweet wine year. The Furmint and Hárslevelű bunches botrytize the nicest when botrytis hits them in complete ripeness. “It was spontaneously fermented in two Trust barrels, one of 300 litres and one of 225 litres, where it was also aged for more than a year. I like Szamorodni when it’s muscly, when it can stand up to an aszú with its thickness and power. This is like that: 200 grams of residual sugar, vibrant acidity, creaminess and powerful Betsek fruitiness.” István Balassa.",
         "price": "20.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Balass_Besek_edes_szamorodni_2017.JPG",
         "image": "Balass_Besek_edes_szamorodni_2017.JPG",
         "category": 4,
         "winery": "Balassa István",
@@ -440,7 +448,7 @@
         "name": "BÖJT Kékfrankos 2017",
         "description": "Gergő Böjt’s big wine from one of the best recent vintages. It underwent controlled fermentation in tanks, then a few months after the harvest, it continued ageing in the winery’s colourful barrels, mainly in second- and third-fill oak. It’s full of spices, lively red and black fruits, with a long, mineral, linear palate and great acidity.",
         "price": "10.00",
-        "image_url": "https://ee981017-701d-40c4-a57d-243f02f117b1.ws-eu03.gitpod.io/files/download/?id=56f38734-37ce-434b-9018-f19411813b41",
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Bojt_Kekfrankos_2017.JPG",
         "image": "Bojt_Kekfrankos_2017.JPG",
         "category": 1,
         "winery": "Böjt Pincészet",
@@ -459,7 +467,7 @@
         "name": "CSANÁDI Chardonnay 2020",
         "description": "The Csanádi family started its work in the Hajós-Baja wine region 20 years ago, between the villages of Hajós and Császártöltés. The consistency of the wine region and winemaking makes it possible for the wines from local and international varieties to be made to the same quality level and style every vintage. The living proof of the latter, the Chardonnay, was made in tanks after hand sorting, in order to present the lighter version of the variety.",
         "price": "6.20",
-        "image_url": "https://ee981017-701d-40c4-a57d-243f02f117b1.ws-eu03.gitpod.io/files/download/?id=8f084ffe-df93-46ce-8f0e-593cf4af132a",
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Csanadi_Chardonnay_2020.JPG",
         "image": "Csanadi_Chardonnay_2020.JPG",
         "category": 2,
         "winery": "Csanádi Szőlőbirtok",
@@ -478,7 +486,7 @@
         "name": "ETYEKI KÚRIA Rosé 2019",
         "description": "It’s crispy and sweet like cherries picked freshly from the tree. Rosé has a serious tradition at the Kúria, yet based on our tasting, this is the nicest vintage so far. The red fruits come from the Merlot, the exciting spices from the Kékfrankos, the elegant flavours of rosehip and the cherry from the Pinot Noir. It’s a long, round rosé with tons of fruit flavours and a round finish.",
         "price": "5.70",
-        "image_url": "https://ee981017-701d-40c4-a57d-243f02f117b1.ws-eu03.gitpod.io/files/download/?id=41709b0c-7cab-4e2c-a255-d986e3fb4266",
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Etyeki_Kuria_rose_2019.JPG",
         "image": "Etyeki_Kuria_rose_2019.JPG",
         "category": 3,
         "winery": "Etyeki Kúria",
@@ -497,7 +505,7 @@
         "name": "LÉGLI Villa Boclar 2015",
         "description": "The Léglis have been selecting the grapes for their traditional method sparkling base wine from the cool, tried and tested vineyard for years. In 2015, the Furmint and Riesling blend was put into the lean bottles, then the secondary fermentation was followed by long ageing. The bottles that have arrived now were disgorged after 37 months of ageing, and the mature traditional method sparkling wine is called Villa Boclar. The bubbles didn’t disappear during the long ageing, the wine only changed as the structure became layered, the palate creamy, and the mousse is now very nice.",
         "price": "15.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Legli_pezsgo_villa_Boclar_2015.JPG",
         "image": "Legli_pezsgo_villa_Boclar_2015.JPG",
         "category": 4,
         "winery": "Légli Ottó",
@@ -516,7 +524,7 @@
         "name": "BALASSA Édes Szamorodni Bomboly 2017",
         "description": "The lighter side of szamorodni: airy, floral and lively. That’s possibly why it required the least time in the 300-litre oak barrels and why it was the earliest to be ready. It comes from diverse soil, from light rhyolite tuff, quartz and andesite, which bring a real multitude of scintillation into the Bomboly. Mango, pineapple, fruit bomb aromas, youthful, easy to appreciate character.",
         "price": "21.35",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Balassa_Edes_szamorodni__bomboly_2017.JPG",
         "image": "Balassa_Edes_szamorodni__bomboly_2017.JPG",
         "category": 4,
         "winery": "Balassa István",
@@ -535,7 +543,7 @@
         "name": "BALLA Sziklabor Feketeleányka 2017",
         "description": "An indigenous Moldovan black grape variety from Géza Balla’s old-vine plantation that lies at 500 metres above sea level, spontaneously fermented and aged for 16 months in 225-litre barrels. The variety’s typical fruitiness, sour cherry, blackcurrant, blueberry, with soft, round tannins, and deep, intense and vibrant flavours.",
         "price": "14.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Balla_Sziklabor_Feketeleanyka_2017.JPG",
         "image": "Balla_Sziklabor_Feketeleanyka_2017.JPG",
         "category": 1,
         "winery": "Balla Géza",
@@ -554,7 +562,7 @@
         "name": "Rosé Cuvée 2019 Ménes",
         "description": "Crispy and thick at the same time, with sweet fruits and fresh acidity. Géza Balla’s Ménes rosé nicely fuses the complexity of early-harvest and riper bunches.",
         "price": "6.95",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Balla_rose_cuvee_2019.JPG",
         "image": "Balla_rose_cuvee_2019.JPG",
         "category": 3,
         "winery": "Balla Géza",
@@ -573,7 +581,7 @@
         "name": "Bock  Kadarka 2019",
         "description": "A light red wine made from the produce of the Fekete-hegy vineyard, which after traditional fermentation is matured for six months as the third occupant of an oak barrel. It is characterized by a pale intensity; in its bouquet and taste can be discovered spices and aromas reminiscent of raspberry and strawberries.",
         "price": "8.99",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Bock_Kadarka_2019.JPG",
         "image": "Bock_Kadarka_2019.JPG",
         "category": 1,
         "winery": "Bock József",
@@ -592,7 +600,7 @@
         "name": "BOLYKI Rosé 2020",
         "description": "Indicative blend: Kekfrankos and Merlot",
         "price": "4.35",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Bolyki_Rose_2020.JPG",
         "image": "Bolyki_Rose_2020.JPG",
         "category": 3,
         "winery": "Bolyki János",
@@ -611,7 +619,7 @@
         "name": "Bolyki sauvignon Blanc 2020",
         "description": "Aromatic and vivacious, this has notes of peach kernel and spice, and is a quirky weekday choice for Sauvignon Blanc fans who want to branch out and try something different. Made by first-generation winemaker János Bolyki who inherited a quarry from his father and decided to transform it into a winery. Gradually he acquired vineyards, and now produces a characterful range of wines, including this blend of Sauvignon Blanc with native Hungarian white grapes and Riesling makes up the remainder of the blend.",
         "price": "6.90",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Bolyki_Sauvignon_Blanc_2020.JPG",
         "image": "Bolyki_Sauvignon_Blanc_2020.JPG",
         "category": 2,
         "winery": "Bolyki János",
@@ -630,7 +638,7 @@
         "name": "BOTT FRIGYES Just Enjoy Red Cuvée 2019",
         "description": "The natural version of Bott’s refined, Burgundy-style reds with the fresh fruit notes of whole-bunch fermentation, bitable, juicy flavours, fresh acidity and a light palate. A real ‘table red’ with the richness in detail of big reds.",
         "price": "11.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Bott_Frigyes_Just_enjoy_cuvee_2019.JPG",
         "image": "Bott_Frigyes_Just_enjoy_cuvee_2019.JPG",
         "category": 1,
         "winery": "Bott Frigyes",
@@ -649,7 +657,7 @@
         "name": "CSANÁDI Sauvignon Blanc 2020",
         "description": "A pleasant Sauvignon Blanc with Intense and very fresh aromas on the nose, mainly green apple, kiwi along with citrus and mango on the nose. Medium+ acidity, slight oily feeling on the palate. Refreshing flavors of mango, citrus fresh banana along with dill and green herbs on the palate. Finish is medium with vegetal notes along with dill and anise.",
         "price": "4.95",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Csanadi_Sauvignon_Blanc_2020.JPG",
         "image": "Csanadi_Sauvignon_Blanc_2020.JPG",
         "category": 2,
         "winery": "Csanádi Szőlőbirtok",
@@ -668,7 +676,7 @@
         "name": "DEMETER ZOLTÁN Rosé Brut",
         "description": "The continuation of the first, that is last year’s lighter, fruitier rosé traditional method sparkling wine from the 2018 vintage. Pure fruit, lively, elegant, a real ‘one more glass’ type, with strawberry, cherry, delicious brioche, gentle minerality and very subtle bubbles. A classic, small-producer’s traditional method sparkler made completely in Tokaj by Zoltán Demeter, from a blend of Furmint (Újhegy and Kakas vineyards) and Cabernet Franc (Kakas vineyard, where this non-local variety grows on 700 square metres).",
         "price": "19.55",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Demeter_Zoltan_Rose_brut.JPG",
         "image": "Demeter_Zoltan_Rose_brut.JPG",
         "category": 4,
         "winery": "Demeter Zoltán",
@@ -687,7 +695,7 @@
         "name": "DEMETER ZOLTÁN Anett 2018 (0,5 l)",
         "description": "An astonishing szamorodni, or as it says on the cork: a főbor (main wine) made with the aszú’s sweetness, and the complexity of the botrytised bunches that were vinified together. It’s a twinkling, pristinely pure wine with the vibrant play of the residual sugar and the acidity of the ripe fruit. Apricot, grape, dried apricot and a huge smile on the face. A big wine.",
         "price": "25.55",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Demeter_Zoltan_Anett.JPG",
         "image": "Demeter_Zoltan_Anett.JPG",
         "category": 4,
         "winery": "Demeter Zoltán",
@@ -706,7 +714,7 @@
         "name": "DÚZSI Rosé Cuvée 2020",
         "description": "A fresh, lively wine with only a little CO2, lots of fruit, strawberry and raspberry. It’s flavoursome and jolly, with a touch of bitterness on the finish.",
         "price": "6.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Duzsi_uj_Rose_2020.JPG",
         "image": "Duzsi_uj_Rose_2020.JPG",
         "category": 3,
         "winery": "Dúzsi Tamás",
@@ -725,7 +733,7 @@
         "name": "ETYEKI KÚRIA Pinot Noir Válogatás 2016",
         "description": "Delicate flower notes (rose, violet), raspberry and rosehip, a slightly spicier character, ripe fig and dried cranberries in the finish",
         "price": "19.55",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Etyeki_Kuria_Pinot_Noir_valogatas_2016.JPG",
         "image": "Etyeki_Kuria_Pinot_Noir_valogatas_2016.JPG",
         "category": 1,
         "winery": "Etyeki Kúria",
@@ -744,7 +752,7 @@
         "name": "Figula Rosé Cuvée 2020",
         "description": "The winery’s fresh rosé is made from the deeper coloured Merlot and Kékfrankos varieties. Based on its appearance and structure, it’s a somewhat heavier rosé than the usual new wine category. Deep berry fruits, lively acidity and an exciting palate.",
         "price": "7.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Figula_Rose_Cuvee.JPG",
         "image": "Figula_Rose_Cuvee.JPG",
         "category": 3,
         "winery": "Figula Mihály",
@@ -763,7 +771,7 @@
         "name": "Sáfrán Olaszrizling 2019",
         "description": "The 2019 vintage hands an even more serious role to this popular variety. Owing to the early ripening, it made it into the cellar before the autumn rains, and this way, from the excellent raw material, great wines could be made with steady hands. It’s an aromatically restrained, elegant, balanced and sophisticated version that reveals the wild white notes of the variety that can be discovered more in the Old Word wines, with their place-of-growth character. It’s a tank-made wine that retains the fresh fruit and the vibrant acidity.",
         "price": "12.75",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Figula_Safran_olaszrizling_2019.JPG",
         "image": "Figula_Safran_olaszrizling_2019.JPG",
         "category": 2,
         "winery": "Figula Mihály",
@@ -779,10 +787,10 @@
     "pk": 20,
     "fields": {
         "sku": "1020",
-        "name": "Gal Tibor Kadarka 2019",
+        "name": "Gál Tibor Kadarka 2019",
         "description": "Aromatic and elegant wine with earthy notes, mushroom and cherry.",
         "price": "9.99",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/GAl_Tibor_Kadarka_2019.JPG",
         "image": "GAl_Tibor_Kadarka_2019.JPG",
         "category": 1,
         "winery": "GÁL TIBOR",
@@ -801,7 +809,7 @@
         "name": "Gere Olaszrizling 2020",
         "description": "Olaszrizling is not a typical variety in Villány, from where it comes with green apple, peach, floral and honey notes. A wine with good acidity and moderate alcohol.",
         "price": "7.25",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Gere_Olaszrizling_2020.JPG",
         "image": "Gere_Olaszrizling_2020.JPG",
         "category": 2,
         "winery": "Gere Attila",
@@ -820,7 +828,7 @@
         "name": "GERE Organic Portugieser 2019",
         "description": "Portugieser is one of Villány’s most planted grape varieties. This grape has a long tradition in the region, and  produces easy-drinking, spicy, and somehow rustic reds, which are mostly consumed locally by the field workers. This Organic Selection Portugieser comes from four prestigious vineyards: Csillagvölgy, Fekete-hegy, Konkoly, and Ördögárok. This wine was fermented in stainless steel tanks, followed by four months of aging in used 5,000 liter oak casks. In the glass, this Portugieser has a beautiful opaque purple color. On the nose, it has flavors of juicy cherries, violets, sweet spices, and a hint of animality.",
         "price": "11.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Gere_A_Bio_Portugieser_2019.JPG",
         "image": "Gere_A_Bio_Portugieser_2019.JPG",
         "category": 1,
         "winery": "Gere Attila",
@@ -839,7 +847,7 @@
         "name": "GÜNZER Lezser 2020",
         "description": "Interesting and complex wine. Acidity with a touch of minerality.",
         "price": "6.25",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Gunzer_Lezser_2020.JPG",
         "image": "Gunzer_Lezser_2020.JPG",
         "category": 2,
         "winery": "Günzer Családi Birtok",
@@ -858,7 +866,7 @@
         "name": "GÜNZER Lezser Portugieser 2019",
         "description": "Swabians brought this grape type, together with dedication and diligence, to Villány already at the beginning of the 1700’s. A vivid red Portugieser with fascinating violet aroma made from grapes harvested from three slopes (Bocor, Csillag- völgy and Jammertal).\r\n\r\nThis vin de primeur made in Beaujolais-style with great care and whole grape fermentation is truly full of fruits: each sip is full of plums, blackberries and cranberries. Beautiful, clear, mild with the characteristics typical for this vine variety. Don’t shelve it for too long.",
         "price": "9.65",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Gunzer_lezser_Portugieser.JPG",
         "image": "Gunzer_lezser_Portugieser.JPG",
         "category": 1,
         "winery": "Günzer Családi Birtok",
@@ -877,7 +885,7 @@
         "name": "HOMONNA Rány Furmint 2018",
         "description": "Rich, textured Furmint. Brioche, white and yellow peaches, lightly cooked apples, candied lemon peel, nutmeg, long finish. Fantastic, balanced wine.",
         "price": "8.75",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Homonna_Furmint_2018.JPG",
         "image": "Homonna_Furmint_2018.JPG",
         "category": 2,
         "winery": "Homonna Attila",
@@ -896,8 +904,8 @@
         "name": "IKON Tulipán 2017",
         "description": "The Syrah that had been the main component of the iconic Tulipán during earlier vintages is not part of the blend from this vintage onwards. After the first 2008 vintage, the winery reverted to the classic Bordeaux blend. The most beautiful grapes – half of it is from Merlot, plus Cabernet Sauvignon and 15% Cabernet Franc – selected from a plot on the top of Diós, behind the winery. Following the 28 days of skin contact, it spent a bit more than a year in 225-litre Hungarian oak barrels, out of which one-third were new. The outcome is a wine that has a posture and character. It’s a vibrant, subtly tannic wine with elegant flavours, black berry fruits and a touch of chocolate and cigar.",
         "price": "17.55",
-        "image_url": null,
-        "image": "",
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Ikon_Tulipan_2017.JPG",
+        "image": "Ikon_Tulipan_2017.JPG",
         "category": 1,
         "winery": "Ikon Pincészet",
         "variety": 4,
@@ -915,7 +923,7 @@
         "name": "GYÖRGYKOVÁCS Nagy-Somlói Tramini 2017",
         "description": "It’s an aroma bomb but there are no intrusive notes in it; classic rose water and honey. Lovely, long and thirst-quenching on the palate. The mineral place of growth and the barrel nicely come through.",
         "price": "12.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Gyorgykovacs_Nagy-Somlio_Tramini.JPG",
         "image": "Gyorgykovacs_Nagy-Somlio_Tramini.JPG",
         "category": 2,
         "winery": "Györgykovács Imre",
@@ -934,7 +942,7 @@
         "name": "JÁSDI Rosé Cuvée 2020",
         "description": "The usual kékfrankos-merlot blend. One brings freshness, the other is responsible for sophisticated scents. In sunset, drinking it from a humid glass under the big walnut tree with a pretty woman (or boy).",
         "price": "6.75",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Jasdi_Rose_cuvee_2020.JPG",
         "image": "Jasdi_Rose_cuvee_2020.JPG",
         "category": 3,
         "winery": "Jásdi Winery",
@@ -953,7 +961,7 @@
         "name": "Jasdi Pinot Gris 2020",
         "description": "The first Jásdi wine from 2020 with the St Martin’s Day geese, which look like the well-known wild geese of Nils Holgersson, on the label. It has a dry, substantial palate with apple and peach, accompanied by a touch of minerality. It gives a lot more than a new wine.",
         "price": "6.75",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Jasdi_Pinot_Gris_2020.JPG",
         "image": "Jasdi_Pinot_Gris_2020.JPG",
         "category": 2,
         "winery": "Jásdi Winery",
@@ -972,7 +980,7 @@
         "name": "KALÁKA Báthori Cuvée (Hárslevelű-Furmint) 2018",
         "description": "A huge wine. It’s layered in the same way as its fermentation happened – it was made from several small harvests with the musts piled on top of each other. Amazing purity and richness, with the minerality of the place of growth in Tállya. Vibrant and expansive with high acidity.",
         "price": "16.75",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Kalaka_BAthory_Cuvee_HArslevelu-Furmint_2018.JPG",
         "image": "Kalaka_BAthory_Cuvee_HArslevelu-Furmint_2018.JPG",
         "category": 4,
         "winery": "Kaláka Pince",
@@ -991,7 +999,7 @@
         "name": "KÁRÁSZTELEK Carassia Classic Brut 2017",
         "description": "A traditional method sparkling wine that’s a blend of 60% Chardonnay and 40% Pinot Noir, which spent 22 months on lees, with 6g/l dosage.\r\n\r\nA shiny pale-yellow colour, with apricot, green pear and citrus fruit on the nose, mixed with the aromas of fresh bread from the ageing on lees. Fruity and yeasty notes on the palate, lemon oil, apricot, brioche and yeast. A very long, creamy mousse, with fresh acidity.",
         "price": "14.45",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Karasztelek_Carassia_Classic_Brut_2017.JPG",
         "image": "Karasztelek_Carassia_Classic_Brut_2017.JPG",
         "category": 4,
         "winery": "Kárásztelek Pincészet",
@@ -1010,7 +1018,7 @@
         "name": "KISS GÁBOR 364 Rosé 2020",
         "description": "A young, crispy rose with a lot of fruit and aromas, perfect for a romantic dinner!",
         "price": "6.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Kiss_Gabor_364_Rose_2020.JPG",
         "image": "Kiss_Gabor_364_Rose_2020.JPG",
         "category": 3,
         "winery": "Kiss Gábor",
@@ -1029,7 +1037,7 @@
         "name": "KONYÁRI Fecske Vörös 2019",
         "description": "Dani Konyári’s medium-bodied, ‘bistro’ red, made from the two Cabernet varieties with a touch of Syrah. Its youthful colour is purplish and full of life, with fresh fruits on the nose, then a light structure. The palate and its weight are spot on, with the lighter fruity notes alongside the touch of oak and round flavours.",
         "price": "7.95",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Konyari_Fecske_Voros_2019.JPG",
         "image": "Konyari_Fecske_Voros_2019.JPG",
         "category": 1,
         "winery": "Konyári Pincészet",
@@ -1048,7 +1056,7 @@
         "name": "Kreinbacher Prestige Brut",
         "description": "Lime, flowers, sweetbread and stone-fruit on the nose. Well-structured, balanced and fresh. A soft and gentle blend with tiny bubbles, grapefruit and mineral saltiness on the long finish.",
         "price": "16.65",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Kreinbacher_Prestige_Brut.JPG",
         "image": "Kreinbacher_Prestige_Brut.JPG",
         "category": 4,
         "winery": "Kreinbacher Estate",
@@ -1067,7 +1075,7 @@
         "name": "KREINBACHER Nagy-Somlói Juhfark 2019",
         "description": "Attractive nose with citrus, sweet pear aromas and mineral tones characteristic of the Somló terroir, youthful but complex at the same time. Herbs and spice on the palate, with refreshing acidity amplifying the flavours of citrus fruits and a hint saltiness. Long mineral finish, soft and rounded mouthfeel.",
         "price": "17.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Kreinbacher_Nagy-Somloi_Juhfark_2019.JPG",
         "image": "Kreinbacher_Nagy-Somloi_Juhfark_2019.JPG",
         "category": 2,
         "winery": "Kreinbacher Estate",
@@ -1086,7 +1094,7 @@
         "name": "LAPOSA Rosé 2020",
         "description": "Lots of fruit: strawberry, raspberry and wild strawberry. Long finish, pronounced acids and vibrant flavours.",
         "price": "7.75",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Laposa_Rose.JPG",
         "image": "Laposa_Rose.JPG",
         "category": 3,
         "winery": "Laposa Borbirtok",
@@ -1105,7 +1113,7 @@
         "name": "LAPOSA Hableány Brut 2019",
         "description": "A Furmint-based sparkling wine made via the Charmat (tank) method, blended with a touch of Olaszrizling, from the Laposa family’s newly-built cellar, from the foot of Badacsony Hill. Shiny yellow colour with greenish tints and tonnes of tiny bubbles. Green apple, lime, citrus fruit, a waxy-minty character, with minerality also appearing with time. Really delicious acidity, dry palate, refreshing feel, millions of tiny bubbles. Apple and pomelo on the palate, lime and slightly salty minerality on the very long finish. After a few minutes and a few sips – quince and medlar notes, reminiscent of Furmint, also appear.",
         "price": "10.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Laposa_HAbleany_Brut_2019.JPG",
         "image": "Laposa_HAbleany_Brut_2019.JPG",
         "category": 4,
         "winery": "Laposa Borbirtok",
@@ -1124,7 +1132,7 @@
         "name": "LAPOSA Szürkebarát 2020",
         "description": "They say that after France Pinot Gris found his second home in Badacsony. This one provides the best of two worlds: well-known softness and elegance. The aroma of the 2020 vintage evokes white flowers, a delicate spiciness, but in its flavor it shows a full, complex wine.\r\n\r\nA real princess that is worth all efforts and can make even a Monday evening special.",
         "price": "9.60",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Laposa_szurkebarat_2020.JPG",
         "image": "Laposa_szurkebarat_2020.JPG",
         "category": 2,
         "winery": "Laposa Borbirtok",
@@ -1143,7 +1151,7 @@
         "name": "LÉGLI Blanc 2020",
         "description": "In accordance with the vintage, it’s a rich and exciting blend from Ottó Légli’s family winery in Balatonboglár. A vivacious Sauvignon Blanc with pure aromas, fresh green herbs, grape flower and green apple. The palate is also exciting and long, with the taut acidity and lively flavours of Sauvignon Blanc also playing an important role.",
         "price": "5.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Legli_Blanc.JPG",
         "image": "Legli_Blanc.JPG",
         "category": 2,
         "winery": "Légli Ottó",
@@ -1162,7 +1170,7 @@
         "name": "LUKA Kékfrankos 2019",
         "description": "After a short break, the Kékfrankos of Enikő Luka is available once again. Half a hectare of the 3.5-hectare ‘estate’ is Kékfrankos in the Spern Steiner vineyard. That’s where they harvested a small amount of bunches that were spontaneously fermented after destemming, and rounded out in used barrels. As per usual, it’s become warm, thick and spicy with good drinkability. It’s the face of Kékfrankos that’s easy to love.",
         "price": "15.55",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Luka_Kekfrankos_2019.JPG",
         "image": "Luka_Kekfrankos_2019.JPG",
         "category": 1,
         "winery": "Luka Pincészet",
@@ -1181,7 +1189,7 @@
         "name": "MÁRKVÁRT Cabernet Sauvignon 2018",
         "description": "Subtly oaky, sour cherry, spicy aromas, then a juicy, pleasantly rustic palate, with the used large barrels’ and the variety’s exciting tannins. A taut, lovable, long wine from a tiny cellar, where every move from the grapes to bottling is the work of the Márkvárt family.",
         "price": "7.90",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Markvart_Cabernet_Sauvignon_2018.JPG",
         "image": "Markvart_Cabernet_Sauvignon_2018.JPG",
         "category": 1,
         "winery": "Márkvárt János Ifj.",
@@ -1200,7 +1208,7 @@
         "name": "OREMUS 3 Puttonyos Aszú 2013",
         "description": "From Oremus’s first growth, hillside vineyards in the heart of the Tokaj-Hegyalja appellation, the grapes for this wine were grown in volcanic tufa soils, similar to the Loire. Aszu (which means “noble rot” in Hungarian) wine production starts with specialized picking of botrytis affected grapes, which are then pounded into a paste and stored in 20-25kg tubs, called puttonyos. The tub’s contents are then mixed with the base wine in specific proportions; so this wine is three puttonyos per 136 liter cask of base wine.\r\n\r\nPlenty of cinnamon and orange highlight this rich, firmly structured wine. The intense sweetness is balanced by lively acidity, with a lingering aftertaste of orange and vanilla.\r\n\r\n(50cl bottle)",
         "price": "16.55",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Oremus_3_puttonyos_aszu_2013.JPG",
         "image": "Oremus_3_puttonyos_aszu_2013.JPG",
         "category": 4,
         "winery": "Oremus",
@@ -1219,7 +1227,7 @@
         "name": "PÁLFFY Káli Rajnai Rizling 2019",
         "description": "One of the winery's favourite wines, riesling is a light-skinned, aromatic grape of German origin which is – if the majority of top wine critics are to be believed – the world's finest white wine grape variety.",
         "price": "8.85",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Palffy_rajnai_riesling_2019.JPG",
         "image": "Palffy_rajnai_riesling_2019.JPG",
         "category": 2,
         "winery": "Pálffy Pince",
@@ -1238,7 +1246,7 @@
         "name": "Pannonhalmi St. Martinus 2020",
         "description": "The Királyleányka and Gewürtztraminer (Fűszeres Tramini) grapes of the south- to southwest-facing Széldomb and Packalló vineyards blended in a half-half proportion. Grapefruit, pomelo, white flowers, feel-good acidity. It has a broad, flavoursome, long, substantial palate and 4 grams of residual sugar that makes it even rounder.",
         "price": "10.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Pannonhalmi_St_Martinus_2020.JPG",
         "image": "Pannonhalmi_St_Martinus_2020.JPG",
         "category": 2,
         "winery": "Pannonhalmi Főapátság",
@@ -1257,7 +1265,7 @@
         "name": "ROYAL TOKAJI Late Harvest Cuvée 2017",
         "description": "This wine's sweetness is achieved by allowing the grapes extended ripening time on the vine. Pale green-gold colour. The nose is more delicate than many a Tokaji, with aromas of ripe peach, exotic fruit and blossom. Moderate palate weight, with a fine balance of intense sweetness and acidic lift.",
         "price": "12.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Royal_Tokai_late_harvest_cuvee_2017.JPG",
         "image": "Royal_Tokai_late_harvest_cuvee_2017.JPG",
         "category": 4,
         "winery": "Royal Tokaji",
@@ -1276,7 +1284,7 @@
         "name": "Ruppert Cabernet Sauvignon 2017",
         "description": "Cabernet Sauvignon is rarely – only in the best vintages – made as a separate wine at the cellar. Usually, it’s the Merlot and the Franc that do better on the hill, hence that’s why we associate these two varieties with the Rupperts. In 2017, however, out of the two Cabernet Sauvignon plots, the lower location with the better water supply yielded the best fruit at the end of the harvest, better than what the Franc or Merlot could give at the time. That’s how after a five-year long hiatus, the pure Sauvignon was made for the first time since 2012. Its palate is even broader than the Franc’s, with less spice, more oak and dark fruit notes. It’s a ripe, rich wine for long tables and big dinners. \r\n\r\nIt was fermented on the skins in tanks, then most of it was put into new barrels where it was aged for a year and a half.",
         "price": "16.45",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Rupper_Cab_Sav_2017.JPG",
         "image": "Rupper_Cab_Sav_2017.JPG",
         "category": 1,
         "winery": "Ruppert Pince",
@@ -1295,7 +1303,7 @@
         "name": "sauska Merlot Konkoly 2016",
         "description": "Lively ruby red. Rich floral aromas along with some spices, tobacco, cacao, and black currant. At first crispy, jumpy, and vibrant on the palate, showcasing great complexity, depth, and finesse as time goes on. Please decant if you can.",
         "price": "22.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Sauska_Merlot_Konkoly_2016.JPG",
         "image": "Sauska_Merlot_Konkoly_2016.JPG",
         "category": 1,
         "winery": "Sauska - Villány",
@@ -1314,7 +1322,7 @@
         "name": "Sauska Siller 2020",
         "description": "Elegant ruby with an intense nose of forest berries, cherry and freshly-cut vines. The palate is fresh and tart with current and blackthorn. An earthy and pretty wine just like the Villány locals like it: simple and tight, borderline red but luckily not.\r\n\r\nVarietal composition:\tcabernet sauvignon,merlot,kékfrankos,pinot noir,portugieser,kadarka",
         "price": "7.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Sauska_Siller_2020.JPG",
         "image": "Sauska_Siller_2020.JPG",
         "category": 3,
         "winery": "Sauska - Villány",
@@ -1333,7 +1341,7 @@
         "name": "PÁLFFY Pinot Noir Brut Fehér Methode Traditionelle 2017",
         "description": "A small-producer brut made by the traditional method from the Köveskál vine-dresser family’s Mál plots. 100% Pinot Noir, ripe fruit nose, apple and black cherry on the slowly unfolding palate, with subtle bubbles, mushroom, forest floor and a long finish.",
         "price": "21.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Palffy_Pinot_Noir_Brut_Feher_2017.JPG",
         "image": "Palffy_Pinot_Noir_Brut_Feher_2017.JPG",
         "category": 4,
         "winery": "Pálffy Pince",
@@ -1352,7 +1360,7 @@
         "name": "SAUSKA TOKAJ 6 puttonyos Aszú 2017",
         "description": "Picked from 30-35-year old Sárgamuskotály, Furmint and Hárslevelű vines, from the Medve, the Úrágya and the Birsalmás vineyards. The botrytised ‘aszú’ berries were hand harvested one-by-one, selected, then macerated in the fermenting must for 24 hours. After gentle pressing, it was aged in barrels for 20 months. A healthy, pure botrytis nose, alongside the dried apricot and saffron aromas. The vibrant acids are in perfect harmony with the 228 g/l of residual sugar.",
         "price": "32.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Sauska_Tokaj_6_puttonyos_szsu_2017.JPG",
         "image": "Sauska_Tokaj_6_puttonyos_szsu_2017.JPG",
         "category": 4,
         "winery": "Sauska Tokaj",
@@ -1371,7 +1379,7 @@
         "name": "Sauska Tokaj extra brut",
         "description": "Citrus yellow gold with a regular stream of bubbles. Alluring on the nose, intense, with notes of juicy peaches, apricot and honey. Beautiful aromatic complexity. A great presence in the mouth, with structure, intensity and an elegant acidity. Ripe citrus and tropical fruits, with a touch of tobacco and honey.",
         "price": "18.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Sauska_Tokaj_Extra_brut.JPG",
         "image": "Sauska_Tokaj_Extra_brut.JPG",
         "category": 4,
         "winery": "Sauska Tokaj",
@@ -1390,7 +1398,7 @@
         "name": "SAUSKA Extra Brut Rosé",
         "description": "A brilliant salmon with copper hues, and discreet bubbles. Scrumptious on the nose, with raspberries, blood orange and a touch of demerara sugar, and its warm spices. Good length, slowly unveiling orange and spices such as pepper and nutmeg. Stewed plums upheld by a crisp minerality.",
         "price": "11.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Sauska_extra_brut_rose.JPG",
         "image": "Sauska_extra_brut_rose.JPG",
         "category": 4,
         "winery": "Sauska Tokaj",
@@ -1409,7 +1417,7 @@
         "name": "Sauska Tokaj Cuvée 113 2019",
         "description": "Pale yellow with greenish reflexes. Elderberry and orange peel dominate the nose. Bold tropical fruits blends with mint in the mouth. Medium-bodied wine with a long aftertaste. Drink it now!",
         "price": "10.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Sauska_Tokaj_Cuvee_2019.JPG",
         "image": "Sauska_Tokaj_Cuvee_2019.JPG",
         "category": 2,
         "winery": "Sauska-Tokaj",
@@ -1428,7 +1436,7 @@
         "name": "Skizo Rosé 2020",
         "description": "A purplish-pink coloured rosé with aromas that are reminiscent of the forest, with sour cherry, cherry and redcurrant on the lean, dry palate.",
         "price": "5.25",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Skizo_Rose_2020.JPG",
         "image": "Skizo_Rose_2020.JPG",
         "category": 3,
         "winery": "Skizo",
@@ -1447,7 +1455,7 @@
         "name": "Skizo Irsai 2020",
         "description": "What a fruit explosion! Like biting into fresh grapes.",
         "price": "6.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Skizo_Irsai_2020.JPG",
         "image": "Skizo_Irsai_2020.JPG",
         "category": 2,
         "winery": "Skizo",
@@ -1466,7 +1474,7 @@
         "name": "ST. ANDREA Merengő 2017",
         "description": "OUR OPINION\r\nMerengő has been the winery’s top wine since 2004 – it’s a real icon among the high-end Bikavérs and big domestic reds. The base is Kékfrankos, Syrah and Merlot, which is topped off by the Cabernet Franc, the Pinot Noir and the Kadarka. It’s characterised by spiciness, complexity and elegance, plus the virtues of Eger wines: its texture, acidity and beautifully ripe tannins that assist in the long-term development. It’s already a rich experience on the palate, it’s harmonious and delicious, youthful and intensely fruity, with mineral character. A long, maturing and serious wine.",
         "price": "13.35",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/St_Andrea_Merengo_2017.JPG",
         "image": "St_Andrea_Merengo_2017.JPG",
         "category": 1,
         "winery": "St. Andrea / Lőrincz György",
@@ -1485,7 +1493,7 @@
         "name": "SZEPSY Édes Szamorodni 2016",
         "description": "A big smooth wine, serious and from rich material, which entices you already with its aromas. The 180 grams of residual sugar and the exciting acid backbone are in special harmony.",
         "price": "35.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Szepsy_edes_szamorodni_2016.JPG",
         "image": "Szepsy_edes_szamorodni_2016.JPG",
         "category": 4,
         "winery": "Szepsy István",
@@ -1504,7 +1512,7 @@
         "name": "TAKLER Regnum 2016",
         "description": "The blend of five varieties (Merlot, Cabernet Franc, Kékfrankos, Syrah and Cabernet Sauvignon) from the Alsónána, Szentavölgy and the Görögszó vineyards. It was selected from older, low-yield trained vines. A modern style with discreet oak notes, with good drinkability on the palate, lots of spices, with biteable, juicy fruit. It was fermented in tanks, then aged in Hungarian and French barrels for a year and a half.",
         "price": "19.99",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Takler_regnum.JPG",
         "image": "Takler_regnum.JPG",
         "category": 1,
         "winery": "Takler borbirtok",
@@ -1523,7 +1531,7 @@
         "name": "Takler Pinot Noir Rosé 2020",
         "description": "For many years, the Taklers have been making this pale coloured Szekszárd rosé, with restrained acidity, from Pinot Noir. They leave slightly more bunches on the vines that give the raw material of this wine – this way the pressed must is less thick, livelier and with fresh flavours. It was fermented in temperature-controlled tanks, then it was bottled after brief ageing.",
         "price": "6.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Takler_Pinot_Noir_Rose_2020.JPG",
         "image": "Takler_Pinot_Noir_Rose_2020.JPG",
         "category": 3,
         "winery": "Takler borbirtok",
@@ -1542,7 +1550,7 @@
         "name": "Tihany Rosé 2019",
         "description": "The palate is surprisingly substantial and broad with structure like a white wine, yet it remains within its style: a thirst-quenching, delicate wine with good drinkability. It can even be enjoyed it ice-cold, it’s worth sitting down and spending time with it.",
         "price": "10.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Tihany_Rose_2019.JPG",
         "image": "Tihany_Rose_2019.JPG",
         "category": 3,
         "winery": "Tihany",
@@ -1561,7 +1569,7 @@
         "name": "TOKAJ NOBILIS Barakonyi Hárslevelű 2018 (Bio)",
         "description": "2018 was an exceptionally dry and warm vintage, but thanks to an early harvest, the natural acidity of the grapes has been preserved. Gentle pressing was followed by spontaneous barrel fermentation and a five-month maturation process in Hungarian oak, producing a beautifully balanced wine. \r\n\r\nThe nose is dominated by pear, mint, and floral notes, with a hint of vanilla in the background. Rich palate with a long, intensely mineral finish. Perfect to drink now, this wine will show beautifully after a few more years of laying down.",
         "price": "14.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Tokaj_Nobilis_Harslevelu_2018.JPG",
         "image": "Tokaj_Nobilis_Harslevelu_2018.JPG",
         "category": 2,
         "winery": "Tokaj Nobilis - Bárdos Sarolta",
@@ -1580,7 +1588,7 @@
         "name": "TÜSKE PINCE Rosé 2020",
         "description": "As every year, Csaba Halmai’s wine made from the Kékfrankos, Merlot and Pinot Noir varieties comes from lighter pink-coloured rosés. It represents an elegant, lighter style with rich flavours of grapefruit, pineapple and fresh citrus fruit.",
         "price": "6.50",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Tuske_Rose_2020.JPG",
         "image": "Tuske_Rose_2020.JPG",
         "category": 3,
         "winery": "Tüske Cellar",
@@ -1599,7 +1607,7 @@
         "name": "VILLA TOLNAY Panoráma Zöldveltelini 2017",
         "description": "One of the highest locations of the Csobánc is the Panoráma, planted in 1987. The bunches harvested from here were put into the press, then fermented to dry in tanks and oval barrels. The variety’s lively acids mingle with the subtle barrel and the vibrant notes of the volcanic hill.",
         "price": "9.95",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Villa_Tolnay_Zold_Veltelini_2017.JPG",
         "image": "Villa_Tolnay_Zold_Veltelini_2017.JPG",
         "category": 2,
         "winery": "Villa Tolnay",
@@ -1618,7 +1626,7 @@
         "name": "Weninger Syrah 2018",
         "description": "Ripe, oily Syrah with flavors of black olives, dark fruit and spices and a funky, wild character. Made from biodynamically farmed grapes, using natural yeasts and minimal human intervention. Give it time to breathe after opening and let the layers of flavor develop in your glass.",
         "price": "12.00",
-        "image_url": null,
+        "image_url": "https://github.com/KittiKovacs/winenation/blob/398e56811df383c74c85c77d5bf59d5bf22ccb72/media/Weninger_Syrah_2018.JPG",
         "image": "Weninger_Syrah_2018.JPG",
         "category": 1,
         "winery": "Weninger",
@@ -4723,6 +4731,1356 @@
         "object_repr": "12-month Variety subscription",
         "action_flag": 2,
         "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 165,
+    "fields": {
+        "action_time": "2021-02-28T17:09:16.194Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "1",
+        "object_repr": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 166,
+    "fields": {
+        "action_time": "2021-02-28T17:09:28.338Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "2",
+        "object_repr": "BÖJT Kékfrankos 2017",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 167,
+    "fields": {
+        "action_time": "2021-02-28T17:09:34.958Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "3",
+        "object_repr": "CSANÁDI Chardonnay 2020",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 168,
+    "fields": {
+        "action_time": "2021-02-28T17:09:40.822Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "4",
+        "object_repr": "ETYEKI KÚRIA Rosé 2019",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 169,
+    "fields": {
+        "action_time": "2021-02-28T17:10:07.148Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "5",
+        "object_repr": "LÉGLI Villa Boclar 2015",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 170,
+    "fields": {
+        "action_time": "2021-02-28T17:10:30.628Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "6",
+        "object_repr": "BALASSA Édes Szamorodni Bomboly 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 171,
+    "fields": {
+        "action_time": "2021-02-28T17:10:45.400Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "1",
+        "object_repr": "BALASSA Betsek Édes Szamorodni \"Kvarc\" 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 172,
+    "fields": {
+        "action_time": "2021-02-28T17:10:57.890Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "2",
+        "object_repr": "BÖJT Kékfrankos 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 173,
+    "fields": {
+        "action_time": "2021-02-28T17:11:12.427Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "3",
+        "object_repr": "CSANÁDI Chardonnay 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 174,
+    "fields": {
+        "action_time": "2021-02-28T17:11:35.589Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "4",
+        "object_repr": "ETYEKI KÚRIA Rosé 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 175,
+    "fields": {
+        "action_time": "2021-02-28T17:11:53.760Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "5",
+        "object_repr": "LÉGLI Villa Boclar 2015",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 176,
+    "fields": {
+        "action_time": "2021-02-28T17:12:04.712Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "6",
+        "object_repr": "BALASSA Édes Szamorodni Bomboly 2017",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 177,
+    "fields": {
+        "action_time": "2021-02-28T17:12:22.088Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "7",
+        "object_repr": "BALLA Sziklabor Feketeleányka 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 178,
+    "fields": {
+        "action_time": "2021-02-28T17:12:39.550Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "8",
+        "object_repr": "Rosé Cuvée 2019 Ménes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 179,
+    "fields": {
+        "action_time": "2021-02-28T17:12:51.645Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "9",
+        "object_repr": "Bock  Kadarka 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 180,
+    "fields": {
+        "action_time": "2021-02-28T17:13:02.294Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "10",
+        "object_repr": "BOLYKI Rosé 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 181,
+    "fields": {
+        "action_time": "2021-02-28T17:13:18.241Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "11",
+        "object_repr": "Bolyki sauvignon Blanc 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 182,
+    "fields": {
+        "action_time": "2021-02-28T17:13:28.662Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "12",
+        "object_repr": "BOTT FRIGYES Just Enjoy Red Cuvée 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 183,
+    "fields": {
+        "action_time": "2021-02-28T17:13:40.539Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "13",
+        "object_repr": "CSANÁDI Sauvignon Blanc 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 184,
+    "fields": {
+        "action_time": "2021-02-28T17:13:55.977Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "14",
+        "object_repr": "DEMETER ZOLTÁN Rosé Brut",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 185,
+    "fields": {
+        "action_time": "2021-02-28T17:14:12.074Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "15",
+        "object_repr": "DEMETER ZOLTÁN Anett 2018 (0,5 l)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 186,
+    "fields": {
+        "action_time": "2021-02-28T17:14:23.069Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "16",
+        "object_repr": "DÚZSI Rosé Cuvée 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 187,
+    "fields": {
+        "action_time": "2021-02-28T17:14:48.898Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "17",
+        "object_repr": "ETYEKI KÚRIA Pinot Noir Válogatás 2016",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 188,
+    "fields": {
+        "action_time": "2021-02-28T17:15:04.157Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "18",
+        "object_repr": "Figula Rosé Cuvée 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 189,
+    "fields": {
+        "action_time": "2021-02-28T17:15:41.035Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "19",
+        "object_repr": "Sáfrán Olaszrizling 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 190,
+    "fields": {
+        "action_time": "2021-02-28T17:16:29.291Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "20",
+        "object_repr": "Gál Tibor Kadarka 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 191,
+    "fields": {
+        "action_time": "2021-02-28T17:16:45.725Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "21",
+        "object_repr": "Gere Olaszrizling 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 192,
+    "fields": {
+        "action_time": "2021-02-28T17:17:02.318Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "21",
+        "object_repr": "Gere Olaszrizling 2020",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 193,
+    "fields": {
+        "action_time": "2021-02-28T17:17:16.624Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "22",
+        "object_repr": "GERE Organic Portugieser 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 194,
+    "fields": {
+        "action_time": "2021-02-28T17:17:32.723Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "23",
+        "object_repr": "GÜNZER Lezser 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 195,
+    "fields": {
+        "action_time": "2021-02-28T17:17:46.332Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "24",
+        "object_repr": "GÜNZER Lezser Portugieser 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 196,
+    "fields": {
+        "action_time": "2021-02-28T17:18:02.863Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "27",
+        "object_repr": "GYÖRGYKOVÁCS Nagy-Somlói Tramini 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 197,
+    "fields": {
+        "action_time": "2021-02-28T17:19:13.289Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "26",
+        "object_repr": "IKON Tulipán 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 198,
+    "fields": {
+        "action_time": "2021-02-28T17:19:34.202Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "26",
+        "object_repr": "IKON Tulipán 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 199,
+    "fields": {
+        "action_time": "2021-02-28T17:19:49.785Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "25",
+        "object_repr": "HOMONNA Rány Furmint 2018",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 200,
+    "fields": {
+        "action_time": "2021-02-28T17:20:04.584Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "28",
+        "object_repr": "JÁSDI Rosé Cuvée 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 201,
+    "fields": {
+        "action_time": "2021-02-28T17:20:21.537Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "29",
+        "object_repr": "Jasdi Pinot Gris 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 202,
+    "fields": {
+        "action_time": "2021-02-28T17:20:35.314Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "30",
+        "object_repr": "KALÁKA Báthori Cuvée (Hárslevelű-Furmint) 2018",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 203,
+    "fields": {
+        "action_time": "2021-02-28T17:20:48.872Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "31",
+        "object_repr": "KÁRÁSZTELEK Carassia Classic Brut 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 204,
+    "fields": {
+        "action_time": "2021-02-28T17:21:18.427Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "32",
+        "object_repr": "KISS GÁBOR 364 Rosé 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 205,
+    "fields": {
+        "action_time": "2021-02-28T17:21:36.023Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "33",
+        "object_repr": "KONYÁRI Fecske Vörös 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 206,
+    "fields": {
+        "action_time": "2021-02-28T17:21:58.068Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "34",
+        "object_repr": "Kreinbacher Prestige Brut",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 207,
+    "fields": {
+        "action_time": "2021-02-28T17:22:20.945Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "35",
+        "object_repr": "KREINBACHER Nagy-Somlói Juhfark 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 208,
+    "fields": {
+        "action_time": "2021-02-28T18:09:05.268Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "36",
+        "object_repr": "LAPOSA Rosé 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 209,
+    "fields": {
+        "action_time": "2021-02-28T18:09:20.381Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "37",
+        "object_repr": "LAPOSA Hableány Brut 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 210,
+    "fields": {
+        "action_time": "2021-02-28T18:09:35.173Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "38",
+        "object_repr": "LAPOSA Szürkebarát 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 211,
+    "fields": {
+        "action_time": "2021-02-28T18:09:54.145Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "39",
+        "object_repr": "LÉGLI Blanc 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 212,
+    "fields": {
+        "action_time": "2021-02-28T18:10:09.338Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "40",
+        "object_repr": "LUKA Kékfrankos 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 213,
+    "fields": {
+        "action_time": "2021-02-28T18:10:31.045Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "41",
+        "object_repr": "MÁRKVÁRT Cabernet Sauvignon 2018",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 214,
+    "fields": {
+        "action_time": "2021-02-28T18:10:45.585Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "42",
+        "object_repr": "OREMUS 3 Puttonyos Aszú 2013",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 215,
+    "fields": {
+        "action_time": "2021-02-28T18:11:03.238Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "43",
+        "object_repr": "PÁLFFY Káli Rajnai Rizling 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 216,
+    "fields": {
+        "action_time": "2021-02-28T18:11:20.385Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "49",
+        "object_repr": "PÁLFFY Pinot Noir Brut Fehér Methode Traditionelle 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 217,
+    "fields": {
+        "action_time": "2021-02-28T18:11:39.026Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "44",
+        "object_repr": "Pannonhalmi St. Martinus 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 218,
+    "fields": {
+        "action_time": "2021-02-28T18:11:54.672Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "45",
+        "object_repr": "ROYAL TOKAJI Late Harvest Cuvée 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 219,
+    "fields": {
+        "action_time": "2021-02-28T18:12:10.052Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "44",
+        "object_repr": "Pannonhalmi St. Martinus 2020",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 220,
+    "fields": {
+        "action_time": "2021-02-28T18:12:36.110Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "45",
+        "object_repr": "ROYAL TOKAJI Late Harvest Cuvée 2017",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 221,
+    "fields": {
+        "action_time": "2021-02-28T18:12:54.700Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "46",
+        "object_repr": "Ruppert Cabernet Sauvignon 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 222,
+    "fields": {
+        "action_time": "2021-02-28T18:13:15.915Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "47",
+        "object_repr": "sauska Merlot Konkoly 2016",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 223,
+    "fields": {
+        "action_time": "2021-02-28T18:13:31.445Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "48",
+        "object_repr": "Sauska Siller 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 224,
+    "fields": {
+        "action_time": "2021-02-28T18:13:44.663Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "50",
+        "object_repr": "SAUSKA TOKAJ 6 puttonyos Aszú 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 225,
+    "fields": {
+        "action_time": "2021-02-28T18:15:02.272Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "51",
+        "object_repr": "Sauska Tokaj extra brut",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 226,
+    "fields": {
+        "action_time": "2021-02-28T18:15:21.055Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "52",
+        "object_repr": "SAUSKA Extra Brut Rosé",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 227,
+    "fields": {
+        "action_time": "2021-02-28T18:15:33.576Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "53",
+        "object_repr": "Sauska Tokaj Cuvée 113 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 228,
+    "fields": {
+        "action_time": "2021-02-28T18:15:47.976Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "54",
+        "object_repr": "Skizo Rosé 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 229,
+    "fields": {
+        "action_time": "2021-02-28T18:16:03.885Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "55",
+        "object_repr": "Skizo Irsai 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 230,
+    "fields": {
+        "action_time": "2021-02-28T18:16:18.528Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "56",
+        "object_repr": "ST. ANDREA Merengő 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 231,
+    "fields": {
+        "action_time": "2021-02-28T18:16:33.176Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "57",
+        "object_repr": "SZEPSY Édes Szamorodni 2016",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 232,
+    "fields": {
+        "action_time": "2021-02-28T18:16:45.277Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "58",
+        "object_repr": "TAKLER Regnum 2016",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 233,
+    "fields": {
+        "action_time": "2021-02-28T18:17:00.820Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "59",
+        "object_repr": "Takler Pinot Noir Rosé 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 234,
+    "fields": {
+        "action_time": "2021-02-28T18:17:13.989Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "60",
+        "object_repr": "Tihany Rosé 2019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 235,
+    "fields": {
+        "action_time": "2021-02-28T18:17:30.959Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "61",
+        "object_repr": "TOKAJ NOBILIS Barakonyi Hárslevelű 2018 (Bio)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 236,
+    "fields": {
+        "action_time": "2021-02-28T18:17:44.519Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "62",
+        "object_repr": "TÜSKE PINCE Rosé 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 237,
+    "fields": {
+        "action_time": "2021-02-28T18:18:03.050Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "62",
+        "object_repr": "TÜSKE PINCE Rosé 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 238,
+    "fields": {
+        "action_time": "2021-02-28T18:18:41.441Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "63",
+        "object_repr": "VILLA TOLNAY Panoráma Zöldveltelini 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 239,
+    "fields": {
+        "action_time": "2021-02-28T18:18:54.572Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "wine"
+        ],
+        "object_id": "64",
+        "object_repr": "Weninger Syrah 2018",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
     }
 }
 ]
