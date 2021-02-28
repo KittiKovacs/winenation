@@ -133,10 +133,13 @@ footer{
     padding:30px 0;
     background-color:#990705;
     color:white;
+    border:1px solid;
+    box-shadow: 5px 10px 8px #888888;
 }
 .page-subtitle{
     margin:60px 0;
     color:black;
+
 }
 
 .titles{
