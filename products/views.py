@@ -55,7 +55,8 @@ def all_wines(request):
         'current_sorting': current_sorting,
     }
 
-    return render(request, 'products/wines.html', context)
+    return render(request, 'products/wines.html',
+                  context)
 
 
 def wine_details(request, wine_id):

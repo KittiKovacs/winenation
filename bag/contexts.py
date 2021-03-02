@@ -13,16 +13,6 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for subscription_id, quantity in bag.items():
-        subscription = get_object_or_404(Subscription, pk=subscription_id)
-        total1 += quantity*subscription.price
-        product_count += quantity
-        bag_items.append({
-            'subscription_id': subscription_id,
-            'quantity': quantity,
-            'subscription': subscription,
-        })
-
     for wine_id, quantity in bag.items():
         wine = get_object_or_404(Wine, pk=wine_id)
         total2 += quantity * wine.price
@@ -31,6 +21,16 @@ def bag_contents(request):
             'wine_id': wine_id,
             'quantity': quantity,
             'wine': wine,
+        })
+
+    for subscription_id, quantity in bag.items():
+        subscription = get_object_or_404(Subscription, pk=subscription_id)
+        total1 += quantity*subscription.price
+        product_count += quantity
+        bag_items.append({
+            'subscription_id': subscription_id,
+            'quantity': quantity,
+            'subscription': subscription,
         })
 
     if subtotal < settings.FREE_DELIVERY_THRESHOLD:

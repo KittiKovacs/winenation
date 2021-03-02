@@ -1,38 +1,56 @@
-<!--From Boutique-ado project in CI course-->
+<!--Based on Boutique-ado project in CI course-->
 
 <script type="text/javascript">
 
     // Disable +/- buttons outside 1-99 range
-    function handleEnableDisable(itemId) {
-        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
-        var minusDisabled = currentValue < 2;
-        var plusDisabled = currentValue > 98;
-        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    function handleEnableDisable(wineId) {
+        let currentValue = parseInt($(`#id_qty_${wineId}`).val());
+        let minusDisabled = currentValue < 2;
+        let plusDisabled = currentValue > 98;
+        $(`.decrement-qty_${wineId}`).prop('disabled', minusDisabled);
+        $(`.increment-qty_${wineId}`).prop('disabled', plusDisabled);
     }
 
+    function handleEnableDisable(subscriptionId) {
+        let currentValue = parseInt($(`#id_qty_${subscriptionId}`).val());
+        let minusDisabled = currentValue < 2;
+        let plusDisabled = currentValue > 98;
+        $(`.decrement-qty_${subscriptionId}`).prop('disabled', minusDisabled);
+        $(`.increment-qty_${subscriptionId}`).prop('disabled', plusDisabled);
+    }
+
+
     // Ensure proper enabling/disabling of all inputs on page load
-    var allQtyInputs = $('.qty_input');
-    for(var i = 0; i < allQtyInputs.length; i++){
-        var itemId = $(allQtyInputs[i]).data('item_id');
-        handleEnableDisable(itemId);
+    let allQtyInputs = $('.qty_input');
+    for(let i = 0; i < allQtyInputs.length; i++){
+        let wineId = $(allQtyInputs[i]).data('wine_id');
+        handleEnableDisable(wineId);
+        let subscriptionId = $(allQtyInputs[i]).data('subscription_id');
+        handleEnableDisable(subscriptionId);
     }
 
     // Check enable/disable every time the input is changed
     $('.qty_input').change(function() {
-        var itemId = $(this).data('item_id');
-        handleEnableDisable(itemId);
+        let wineId = $(this).data('wine_id');
+        handleEnableDisable(wineId);
+
+        let subscriptionId = $(this).data('subscription_id');
+        handleEnableDisable(subscriptionId);
     });
 
     // Increment quantity
 
     $('.increment-qty').click(function(e) {
        e.preventDefault();
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-       var currentValue = parseInt($(closestInput).val());
+       let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       let currentValue = parseInt($(closestInput).val());
        $(closestInput).val(currentValue + 1);
-       var itemId = $(this).data('item_id');
-       handleEnableDisable(itemId);
+       let wineId = $(this).data('wine_id');
+        handleEnableDisable(wineId);
+
+        let subscriptionId = $(this).data('subscription_id');
+        handleEnableDisable(subscriptionId);
+
     });
 
     // Decrement quantity
@@ -41,7 +59,10 @@
        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
        var currentValue = parseInt($(closestInput).val());
        $(closestInput).val(currentValue - 1);
-       var itemId = $(this).data('item_id');
-       handleEnableDisable(itemId);
+       let wineId = $(this).data('wine_id');
+        handleEnableDisable(wineId);
+
+       let subscriptionId = $(this).data('subscription_id');
+       handleEnableDisable(subscriptionId);
     });
 </script>
