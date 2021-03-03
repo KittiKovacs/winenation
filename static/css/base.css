@@ -76,20 +76,34 @@ body {
     line-height: 2em;
 }
 
-#map{
-    max-height: 500px;
-}
 #landing-image-1{
-    max-height: 500px;
+    max-height: 300px;
+    border-radius: 10px;
 }
 #landing-image-2{
     max-height: 500px;
     margin: 60px;
+    border-radius: 10px;
 }
 footer{
-    align-items:center;
     color:white;
-    text-align:left;
+    font-size:1.5em;
+}
+footer ul li{
+    list-style-type: none;
+}
+.partners a{
+    color: white;
+
+}
+.social{
+    display:inline;
+}
+.social a{
+    color: white;
+}
+.contact{
+
 }
 
 

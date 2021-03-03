@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Wine, Subscription, Category
 from django.db.models.functions import Lower
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 
@@ -15,6 +16,8 @@ def all_wines(request):
     categories = None
     sort = None
     direction = None
+    page = request.GET.get('page', 1)
+    paginator = Paginator(wines, 16)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -47,6 +50,13 @@ def all_wines(request):
             wines = wines.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+
+    try:
+        wines = paginator.page(page)
+    except PageNotAnInteger:
+        wines = paginator.page(1)
+    except EmptyPage:
+        wines = paginator.page(paginator.num_pages)
 
     context = {
         'wines': wines,
