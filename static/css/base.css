@@ -78,15 +78,6 @@ body {
     line-height: 2em;
 }
 
-#landing-image-1{
-    max-height: 300px;
-    border-radius: 10px;
-}
-#landing-image-2{
-    max-height: 500px;
-    margin: 60px;
-    border-radius: 10px;
-}
 footer{
     color:white;
     font-size:1.5em;
@@ -96,7 +87,6 @@ footer ul li{
 }
 .partners a{
     color: white;
-
 }
 .social{
     display:inline;
@@ -104,10 +94,6 @@ footer ul li{
 .social a{
     color: white;
 }
-.contact{
-
-}
-
 
 /* from Bulma */
 .icon {
@@ -140,11 +126,12 @@ footer ul li{
 .dropdown-item:hover{
     background: #F9E784;
 }
-
 .bg-red{
     background:#990705 !important;
 }
-
+.bg-pink{
+    background: rgb(226, 84, 108);
+}
 .page-title{
     padding:30px 0;
     background-color:#990705;
@@ -155,7 +142,6 @@ footer ul li{
     color:black;
 
 }
-
 .titles{
     margin-bottom:30px;
 }
@@ -183,8 +169,6 @@ hr{
     max-width: 80%;
   }
 }
-
-/*Parallax background images*/
 
 @media (min-width: 992px){
 
@@ -217,30 +201,41 @@ hr{
   background-size: cover;
   margin:0;
 }
+#landing-image-1{
+    max-height: 300px;
+    border-radius: 10px;
+}
+#landing-image-2{
+    max-height: 500px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+}
 }  
-
+/*Wine details page*/
+.details-section{
+    margin:30px;
+}
+.purchase-section{
+    margin:30px;
+    justify-content: center;
+}
 
 /*Subscription table styling*/
 
 .subscription {
   list-style-type: none;
-  margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   height:350px;
 }
-
-.subscription:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-}
 .subscription .header {
   background-color: white;
-  color: rgb(201, 68, 90);
   font-size: 25px;
   padding: 20px;
-}
 
+}
 .subscription-intro{
     font-size:1.35em;
     margin: 60px 120px;
@@ -251,13 +246,14 @@ hr{
   border-bottom: none;
   text-align: center;
 }
-.subscription .pink {
-  background-color: rgb(201, 68, 90);
-  font-size: 1em;
-  color:white;
+.grey {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.75em;
+  color:#990705;
   padding: 20px;
+  font-weight: bold;
 }
-.subscription .white {
+.white {
   background-color: #ffffff;
   font-size: 1em;
   text-align: left;
@@ -266,6 +262,10 @@ hr{
 
 .form-group{
     margin: 10px 50px;
+}
+
+.input-group{
+    justify-content: center;
 }
 .benefits{
     font-size: 1.5em;    
