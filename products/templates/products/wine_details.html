@@ -10,25 +10,25 @@
         </div>
     </div>
     <div class="row details-section">
-        <div class="col-sm-6">
+        <div class="col-sm-12 col-md-6">
             {% if wine.image %}
-            <img class="img-fluid" src="{{ MEDIA_URL }}{{ wine.image.url }}" alt="{{ wine.name }}">
+            <img class="card-img-top img-fluid"  src="{{ MEDIA_URL }}{{ wine.image }}" alt="{{ wine.name }}" />
             {% else %}
-            <img class="img-fluid" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}">
+            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}" />
             {% endif %}
         </div>
-        <div class="col-sm-4 mx-3">
+        <div class="col-sm-12 col-md-4 mx-3">
             <p>{{ wine.description }}</p>
-            <p>Winery: {{ wine.winery }} from the {{ wine.region }} wine region.</p>
+            <p>Winery: {{ wine.winery }} from the {{ wine.region.friendly_name }} wine region.</p>
             <div class="row">
                 <div class="col-sm-12">
-                    <p>Variety: {{ wine.variety }}</p>
+                    <p>Variety: {{ wine.variety.friendly_name }}</p>
                     <p>Vintage: {{ wine.vintage }}</p>
                     <p>Alc.vol: {{ wine.alc_vol }} %</p>
-                    <p>pairing: {{ wine.pairing }}</p>
+                    <p>We recommend pairing with: {{ wine.pairing }}</p>
                 </div>
             </div>
-            <p>£ {{ wine.price }}</p>
+            <p id="price">£ {{ wine.price }}</p>
         </div>
     </div>
     <div class="row purchase-section">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 text-center mb-5">
-                    <a href="{% url 'wines' %}" class="btn btn-dark mt-5">
+                    <a href="{% url 'wines' %}" class="btn btn-outline-black mt-5">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>

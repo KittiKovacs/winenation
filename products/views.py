@@ -16,57 +16,56 @@ def all_wines(request):
     categories = None
     sort = None
     direction = None
-    page = request.GET.get('page', 1)
-    paginator = Paginator(wines, 16)
+    # page = request.GET.get('page', 1)
+    # paginator = Paginator(wines, 16)
 
-    if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                wines = wines.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            wines = wines.order_by(sortkey)
+    # if request.GET:
+    #     if 'sort' in request.GET:
+    #         sortkey = request.GET['sort']
+    #         sort = sortkey
+    #         if sortkey == 'name':
+    #             sortkey = 'lower_name'
+    #             wines = wines.annotate(lower_name=Lower('name'))
+    #         if sortkey == 'category':
+    #             sortkey = 'category__name'
+    #         if 'direction' in request.GET:
+    #             direction = request.GET['direction']
+    #             if direction == 'desc':
+    #                 sortkey = f'-{sortkey}'
+    #         wines = wines.order_by(sortkey)
 
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            wines = wines.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+    #     if 'category' in request.GET:
+    #         categories = request.GET['category'].split(',')
+    #         wines = wines.filter(category__name__in=categories)
+    #         categories = Category.objects.filter(name__in=categories)
 
-        if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request,
-                               "You didn't enter any search criteria!")
-                return redirect(reverse('wines'))
+    #     if 'q' in request.GET:
+    #         query = request.GET['q']
+    #         if not query:
+    #             messages.error(request,
+    #                            "You didn't enter any search criteria!")
+    #             return redirect(reverse('wines'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            wines = wines.filter(queries)
+    #         queries = Q(name__icontains=query) | Q(description__icontains=query)
+    #         wines = wines.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
+    # current_sorting = f'{sort}_{direction}'
 
-    try:
-        wines = paginator.page(page)
-    except PageNotAnInteger:
-        wines = paginator.page(1)
-    except EmptyPage:
-        wines = paginator.page(paginator.num_pages)
+    # try:
+    #     wines = paginator.get_page(page)
+    #except PageNotAnInteger:
+    #    wines = paginator.get_page(1)
+    #except EmptyPage:
+    #    wines = paginator.get_page(paginator.num_pages)
 
     context = {
         'wines': wines,
         'search_term': query,
         'current_categories': categories,
-        'current_sorting': current_sorting,
+        # 'current_sorting': current_sorting,
     }
 
-    return render(request, 'products/wines.html',
-                  context)
+    return render(request, 'products/winesv3.html', context)
 
 
 def wine_details(request, wine_id):

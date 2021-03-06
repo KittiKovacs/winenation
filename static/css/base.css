@@ -21,6 +21,48 @@ body {
     justify-content:center;
     top:100px;
 }
+/* -------------------------------- Navigation styling */
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.navbar-brand img{
+    width:140px;
+    height:120px;
+}
+.nav-link{
+    color:black;
+}
+.nav-link:hover{
+    color:#990705;
+}
+.menu{
+    font-size:1.5em;
+    color:black !important;
+}
+.menu:hover{
+    color:#990705 !important;
+}
+.menu:active{
+    color:#990705;
+}
+.dropdown-item:hover{
+    background: #F9E784;
+}
+.bg-red{
+    background:#990705 !important;
+}
+.bg-pink{
+    background: rgb(226, 84, 108);
+}
+
+/* -------------------------------- Buttons */
+
+
 .btn {
     background: #990705;
     color: white;
@@ -63,21 +105,7 @@ body {
     padding:10px;
 }
 
-.intro-text{
-    font-size:1.5em;
-    margin: 60px;
-    color:white;
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-}
-.intro-text-1{
-    margin: 100px 60px;
-    line-height: 2em;
-}
-.intro-text-2{
-    margin: 30px 60px;
-    line-height: 2em;
-}
-
+/* -------------------------------- Footer */
 footer{
     color:white;
     font-size:1.5em;
@@ -94,44 +122,8 @@ footer ul li{
 .social a{
     color: white;
 }
+/* -------------------------------- Page headers */
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-.navbar-brand img{
-    width:140px;
-    height:120px;
-}
-.nav-link{
-    color:black;
-}
-.nav-link:hover{
-    color:#990705;
-}
-.menu{
-    font-size:1.5em;
-    color:black !important;
-}
-.menu:hover{
-    color:#990705 !important;
-}
-.menu:active{
-    color:#990705;
-}
-.dropdown-item:hover{
-    background: #F9E784;
-}
-.bg-red{
-    background:#990705 !important;
-}
-.bg-pink{
-    background: rgb(226, 84, 108);
-}
 .page-title{
     padding:30px 0;
     background-color:#990705;
@@ -142,8 +134,37 @@ footer ul li{
     color:black;
 
 }
+.intro-text{
+    font-size:1.5em;
+    margin: 60px;
+    color:white;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+.intro-text-1{
+    margin: 100px 60px;
+    line-height: 2em;
+}
+.intro-text-2{
+    margin: 30px 60px;
+    line-height: 2em;
+}
 .titles{
     margin-bottom:30px;
+}
+
+
+/* -------------------------------- Wines and wine details page */
+.card-title{
+    color:#990705;
+    padding:10px;
+
+}
+.details-section{
+    margin:30px;
+}
+.purchase-section{
+    margin:30px;
+    justify-content: center;
 }
 
 .back-arrow > a >i{
@@ -159,6 +180,70 @@ hr{
     border:1px solid #990705;
     border-radius: 5px;
     margin: 0 120px;
+}
+#price{
+    font-size: 2em;
+    margin-top: 30px;
+}
+/* -------------------------------- Subscription page styling */
+
+.subscription {
+  list-style-type: none;
+  margin-bottom: 30px;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height:350px;
+}
+.subscription .header {
+  background-color: white;
+  font-size: 25px;
+  padding: 20px;
+
+}
+.subscription-intro{
+    font-size:1.35em;
+    margin: 60px 120px;
+    color:white;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+.subscription li {
+  border-bottom: none;
+  text-align: center;
+}
+.grey {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+  color:#990705;
+  padding: 20px;
+  font-weight: bold;
+  border-radius:10px;
+}
+.white {
+  background-color: #ffffff;
+  font-size: 1em;
+  text-align: left;
+  padding: 10px 20px 0 20px;
+}
+
+.form-group{
+    margin: 10px 50px;
+}
+
+.input-group{
+    justify-content: center;
+}
+.benefits{
+    font-size: 1.5em;    
+    margin: 20px 60px;
+    text-align:left;
+}
+.benefits h2{
+    margin-bottom: 60px;
+    text-decoration:underline;
+}
+.benefits ol li{
+    padding: 10px 0;
 }
 
 /* -------------------------------- Media Queries */
@@ -211,72 +296,4 @@ hr{
     border-radius: 10px;
 }
 }  
-/*Wine details page*/
-.details-section{
-    margin:30px;
-}
-.purchase-section{
-    margin:30px;
-    justify-content: center;
-}
-
-/*Subscription table styling*/
-
-.subscription {
-  list-style-type: none;
-  margin-bottom: 30px;
-  padding: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  height:350px;
-}
-.subscription .header {
-  background-color: white;
-  font-size: 25px;
-  padding: 20px;
-
-}
-.subscription-intro{
-    font-size:1.35em;
-    margin: 60px 120px;
-    color:white;
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-}
-.subscription li {
-  border-bottom: none;
-  text-align: center;
-}
-.grey {
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 1.75em;
-  color:#990705;
-  padding: 20px;
-  font-weight: bold;
-}
-.white {
-  background-color: #ffffff;
-  font-size: 1em;
-  text-align: left;
-  padding: 10px 20px 0 20px;
-}
-
-.form-group{
-    margin: 10px 50px;
-}
-
-.input-group{
-    justify-content: center;
-}
-.benefits{
-    font-size: 1.5em;    
-    margin: 20px 60px;
-    text-align:left;
-}
-.benefits h2{
-    margin-bottom: 60px;
-    text-decoration:underline;
-}
-.benefits ol li{
-    padding: 10px 0;
-}
 
