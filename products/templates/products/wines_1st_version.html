@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row mx-5">
+    <div class="row">
         <div class="col-sm-12 page-title text-center">
             <h2>Our wines</h2>
         </div>
@@ -56,34 +56,37 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="product-container mx-5 my-5">
-            <div class="row">
-                {% for wine in wines %}
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center my-2">
-                    <div class="card h-100 border-0">
-                        {% if wine.image %}
-                        <img class="image-fluid" src="{{ MEDIA_URL }}{{ wine.image }}" alt="{{ wine.name }}" />
-                        {% else %}
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}" />
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ wine.name }}</h5>
-                            <p>Variety: {{ wine.variety.friendly_name }}</p>
-                            <p>£ {{ wine.price }}</p>
-                            {% if wine.category %}
-                            <p><a class="text-muted" href="{% url 'wines' %}?category={{ wine.category.name }}">Type:
-                                    {{ wine.category.friendly_name }} Wines</a>
-                            </p>
-                            {% endif %}
-                            <a href="{% url 'wine_details' wine.id %}" class="btn btn-success">Learn more</a>
-                        </div>
-                    </div>
+    <div class="row">
+        {% for wine in wines %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card h-100 border-0">
+                {% if wine.image %}
+                <a href="{% url 'wine_details' wine.id %}">
+                    <img src="{{ wine.image.url }}" alt="{{ wine.name }}" />
+                </a>
+                {% else %}
+                <a href="{% url 'wine_details' wine.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}" />
+                </a>
+                {% endif %}
+                <div class="card-body">
+                    <a href="{% url 'wine_details' wine.id %}">
+                        <h5 class="card-title">{{ wine.name }}</h5>
+                    </a>
+                    <p class="card-text">Winery: {{ wine.winery }}</p>
+                    <p class="card-text">£ {{ wine.price }}</p>
+                    {% if wine.category %}
+                    <p>
+                        <a class="text-muted" href="{% url 'wines' %}?category={{ wine.category.name }}">Type:
+                            {{ wine.category.friendly_name }} Wines</a>
+                    </p>
+                    {% endif %}
                 </div>
-                {% endfor %}
             </div>
         </div>
+        {% endfor %}
     </div>
+
 <!--Source for Pagination:https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html-->
     <div class="row">
         <div class="col-sm-12" aria-label="Page navigation">

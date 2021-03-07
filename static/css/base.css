@@ -159,6 +159,15 @@ footer ul li{
     padding:10px;
 
 }
+
+.image-fluid{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height:250px;
+  width:auto;
+}
 .details-section{
     margin:30px;
 }
@@ -194,11 +203,14 @@ hr{
   -webkit-transition: 0.3s;
   transition: 0.3s;
   height:350px;
+  color:#990705;
+
 }
 .subscription .header {
   background-color: white;
   font-size: 25px;
   padding: 20px;
+  background-color: rgb(226, 84, 108);
 
 }
 .subscription-intro{
@@ -208,30 +220,22 @@ hr{
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
 }
 .subscription li {
-  border-bottom: none;
   text-align: center;
+  color:#990705;
+
 }
 .grey {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color:#bdb8b8;
   font-size: 1.5em;
   color:#990705;
   padding: 20px;
   font-weight: bold;
-  border-radius:10px;
 }
 .white {
   background-color: #ffffff;
   font-size: 1em;
   text-align: left;
   padding: 10px 20px 0 20px;
-}
-
-.form-group{
-    margin: 10px 50px;
-}
-
-.input-group{
-    justify-content: center;
 }
 .benefits{
     font-size: 1.5em;    
