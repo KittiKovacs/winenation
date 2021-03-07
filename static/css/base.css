@@ -135,28 +135,48 @@ footer ul li{
 
 }
 .intro-text{
-    font-size:1.5em;
+    font-size:1.75em;
     margin: 60px;
+    margin-bottom:140px;
     color:white;
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.3); 
+    text-align:center;
+    line-height: 2em;
 }
 .intro-text-1{
     margin: 100px 60px;
     line-height: 2em;
+    font-size:1.25em;
 }
 .intro-text-2{
     margin: 30px 60px;
     line-height: 2em;
 }
+.intro-text-3{
+    margin: 30px 60px;
+    line-height: 2em;
+}
 .titles{
     margin-bottom:30px;
+    margin-top:60px;
+    text-align:center;
+}
+.carousel .carousel-item {
+  height: 600px;
 }
 
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-    width: 70%;
-    margin: auto;
-  }
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 600px;
+}
+.carousel-caption{
+    font-size: 1.75em;
+    background: rgba(0, 0, 0, 0.3); 
+}
 
 
 /* -------------------------------- Wines and wine details page */
@@ -220,10 +240,12 @@ hr{
 
 }
 .subscription-intro{
-    font-size:1.35em;
+    font-size:2em;
     margin: 60px 120px;
     color:white;
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5); 
+    text-align:center;
 }
 .subscription li {
   text-align: center;
