@@ -152,6 +152,12 @@ footer ul li{
     margin-bottom:30px;
 }
 
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+  }
+
 
 /* -------------------------------- Wines and wine details page */
 .card-title{
