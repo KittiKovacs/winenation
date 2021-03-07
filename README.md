@@ -1,48 +1,162 @@
-# winenation 
-[![Build Status](https://travis-ci.org/KittiKovacs/winenation.svg?branch=master)](https://travis-ci.org/KittiKovacs/winenation)
+# Milestone 4 : Wine Nation 
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## 
 
-Welcome Kitti Kovacs,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+As the final project of the course, my aim is to create a full-stack site based around business logic used to control a centrally owned dataset and to provide paid access to the site's data and services using all technologies such as HTML, CSS, JAvascript, Python, Django, relational databases and Stripe payments.
 
-## Gitpod Reminders
+The project is an Ecommerce site for a wine shop specializing in Eastern European wines, which also has a subscription-based wine delivery service that allows shoppers to purchase wines at a better price than buying individual bottles, the longer the subscription period the lower the price per bottle.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Please see the link to the live page below:
 
-`python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
+## UX
 
-Another blue button should appear to click: *Open Browser*.
+### Project goals 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The user's goal is to find wine specialities they otherwise couldn't and make secure purchases through the authentication process.
 
-A blue button should appear to click: *Make Public*,
+The site oowner's goal is to promote their shop, their supplier's wines and to generate regular business via the subscription service.
 
-Another blue button should appear to click: *Open Browser*.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### User stories
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Design
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Wireframes
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Features
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Existing Features
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### On all pages:
 
---------
 
-Happy coding!
+
+#### Login
+
+
+
+
+#### Register
+
+
+
+#### Profile
+
+
+
+#### Boards
+
+
+
+#### Categories
+
+
+#### Creating Posts
+
+
+#### Updating Posts
+
+
+#### Deleting Posts
+
+#### Admin
+
+
+#### Error handling
+
+
+### Features left to implement
+
+
+
+## Information architecture
+
+### Database Choice
+
+
+### Data modelling
+
+![Schema](static/img/data/Schema_MS3.jpg)
+
+## Technologies Used
+
+### Languages
+
+- HTML5 
+
+- CSS3 
+
+- JavaScript
+
+- Python3
+
+- Jinja templating language
+
+### Libraries and frameworks
+
+
+
+### Tools
+
+- Balsamiq app for creating wireframes.
+
+- [Am I responsive?](http://ami.responsivedesign.is/) to demonstrate responsiveness in this README file.
+
+- [Font Awesome](https://fontawesome.com/) for icons.
+
+- [Google Fonts](https://fonts.google.com/)
+
+- [Icons 8](https://icons8.com/) for sidenav icons
+
+### Databases
+
+
+
+
+## Testing
+
+
+### Testing in different browsers
+
+
+
+### Testing against the user stories
+
+
+
+### Validation
+
+
+### Problems encountered
+
+
+## Deployment
+
+### Local deployment
+
+
+### Heroku deployment
+
+
+## Credits
+
+### Code
+
+
+
+### Content and Media
+
+
+
+## Acknowledgements
+
+
+## Disclaimer 
+
+
