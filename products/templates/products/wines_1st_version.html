@@ -143,3 +143,200 @@
     })
 </script>
 {% endblock %}
+
+
+{% endif %}
+                    {% if subscription in bag_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            <img class="img-fluid rounded" src="{{ item.subscription.image.url }}">
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.subscription.name }}</strong></p>
+                            <p class="my-0 small text-muted">SKU: {{ item.subscription.sku|upper }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">£{{ item.subscription.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <form class="form update-form" method="POST"
+                                action="{% url 'adjust_subscription_in_bag' item.subscription_id %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty decrement-qty_{{ item.subscription_id }} btn"
+                                                data-item_id="{{ item.subscription_id }}">
+                                                <span>
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control form-control-sm qty_input" type="number"
+                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                            data-item_id="{{ item.subscription_id }}"
+                                            id="id_qty_{{ item.subscription_id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty increment-qty_{{ item.subscription_id }} btn"
+                                                data-item_id="{{ item.subscription_id }}">
+                                                <span>
+                                                    <i class="fas fa-plus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <a class="update-link text-info"><small>Update</small></a>
+                            <a class="remove-item text-danger float-right"
+                                id="remove_{{ item.subscription_id }}"><small>Remove</small></a>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.subscription.price | calc_subtotal:item.subscription.quantity }}
+                            </p>
+                        </td>
+                    </tr>
+                    {% endif %}-->
+
+
+    def adjust_wine_in_bag(request, wine_id):
+
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    try:
+        if quantity > 0:
+            bag[wine_id] = quantity
+        else:
+            bag.pop(wine_id)
+
+        request.session['bag'] = bag
+        return redirect(reverse('view_bag'))
+
+    except Exception as e:
+        return HttpResponse(status=500)
+
+
+def adjust_subscription_in_bag(request, subscription_id):
+
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    try:
+        if quantity > 0:
+            bag[subscription_id] = quantity
+        else:
+            bag.pop(subscription_id)
+
+        request.session['bag'] = bag
+        return redirect(reverse('view_bag'))
+
+    except Exception as e:
+        return HttpResponse(status=500)
+
+
+def remove_wine_from_bag(request, wine_id):
+    """Remove the item from the shopping bag"""
+    bag = request.session.get('bag', {})
+
+    try:
+        bag.pop(wine_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
+
+
+def remove_subscription_from_bag(request, subscription_id):
+    """Remove the item from the shopping bag"""
+    bag = request.session.get('bag', {})
+
+    try:
+        bag.pop(subscription_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
+
+
+         path('adjust/<int:wine_id>/', views.adjust_wine_in_bag,
+         name='adjust_wine_in_bag'),
+    path('adjust/<int:subscription_id>/', views.adjust_subscription_in_bag,
+         name='adjust_subscription_in_bag'),
+    path('remove/<int:wine_id>/', views.remove_wine_from_bag,
+         name='remove_wine_from_bag'),
+    path('remove/<int:subscription_id>/', views.remove_subscription_from_bag,
+         name='remove_subscription_from_bag'),
+
+    def test_adjust_wine_in_bag_url_resolves(self):
+        url = reverse('adjust_wine_in_bag')
+        self.assertEquals(resolve(url).func, adjust_wine_in_bag)
+
+    def test_adjust_subscription_in_bag_url_resolves(self):
+        url = reverse('adjust_subscription_in_bag')
+        self.assertEquals(resolve(url).func, adjust_subscription_in_bag)
+
+    def test_remove_wine_from_bag_url_resolves(self):
+        url = reverse('remove_wine_from_bag')
+        self.assertEquals(resolve(url).func, remove_wine_from_bag)
+
+    def test_remove_subscription_from_bag_url_resolves(self):
+        url = reverse('remove_subscription_from_bag')
+        self.assertEquals(resolve(url).func, remove_subscription_from_bag)
+
+
+
+                           <!--  {% for item in bag_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            <img class="img-fluid rounded" src="{{ item.wine.image.url }}">
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.wine.name }}</strong></p>
+                            <p class="my-0 small text-muted">SKU: {{ item.wine.sku|upper }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">£{{ item.wine.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <form class="form update-form" method="POST"
+                                action="{% url 'adjust_wine_in_bag' item.wine_id %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty decrement-qty_{{ item.wine_id }} btn"
+                                                data-item_id="{{ item.wine_id }}">
+                                                <span>
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control form-control-sm qty_input" type="number"
+                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                            data-item_id="{{ item.wine_id }}" id="id_qty_{{ item.wine_id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty increment-qty_{{ item.wine_id }} btn"
+                                                data-item_id="{{ item.wine_id }}">
+                                                <span>
+                                                    <i class="fas fa-plus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <a class="update-link text-info"><small>Update</small></a>
+                            <a class="remove-item text-danger float-right"
+                                id="remove_{{ item.wine_id }}"><small>Remove</small></a>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">£{{ item.wine.price }}</p>
+                        </td>
+                    </tr>
+
+                    {% endfor %}-->
