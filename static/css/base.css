@@ -68,10 +68,11 @@ body {
     color: white;
 }
 
-.btn-outline-black{
+.btn-outline-red{
     background:white;
-    color:black !important;
-    border:1px solid black;
+    color:#990705 !important;
+    border:1px solid #990705;
+    font-weight:bold;
 }
 .btn:hover{
     color:white;

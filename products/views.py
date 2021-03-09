@@ -16,8 +16,8 @@ def all_wines(request):
     categories = None
     sort = None
     direction = None
-    page = request.GET.get('page', 1)
-    paginator = Paginator(wines, 16)
+    # page = request.GET.get('page', 1)
+    # paginator = Paginator(wines, 16)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -51,12 +51,12 @@ def all_wines(request):
 
     current_sorting = f'{sort}_{direction}'
 
-    try:
-        wines = paginator.get_page(page)
-    except PageNotAnInteger:
-        wines = paginator.get_page(1)
-    except EmptyPage:
-        wines = paginator.get_page(paginator.num_pages)
+    #try:
+    #    wines = paginator.get_page(page)
+    #except PageNotAnInteger:
+    #    wines = paginator.get_page(1)
+   # except EmptyPage:
+    #    wines = paginator.get_page(paginator.num_pages)
 
     context = {
         'wines': wines,
