@@ -199,78 +199,7 @@
                     {% endif %}-->
 
 
-    def adjust_wine_in_bag(request, wine_id):
 
-    quantity = int(request.POST.get('quantity'))
-    bag = request.session.get('bag', {})
-
-    try:
-        if quantity > 0:
-            bag[wine_id] = quantity
-        else:
-            bag.pop(wine_id)
-
-        request.session['bag'] = bag
-        return redirect(reverse('view_bag'))
-
-    except Exception as e:
-        return HttpResponse(status=500)
-
-
-def adjust_subscription_in_bag(request, subscription_id):
-
-    quantity = int(request.POST.get('quantity'))
-    bag = request.session.get('bag', {})
-
-    try:
-        if quantity > 0:
-            bag[subscription_id] = quantity
-        else:
-            bag.pop(subscription_id)
-
-        request.session['bag'] = bag
-        return redirect(reverse('view_bag'))
-
-    except Exception as e:
-        return HttpResponse(status=500)
-
-
-def remove_wine_from_bag(request, wine_id):
-    """Remove the item from the shopping bag"""
-    bag = request.session.get('bag', {})
-
-    try:
-        bag.pop(wine_id)
-
-        request.session['bag'] = bag
-        return HttpResponse(status=200)
-
-    except Exception as e:
-        return HttpResponse(status=500)
-
-
-def remove_subscription_from_bag(request, subscription_id):
-    """Remove the item from the shopping bag"""
-    bag = request.session.get('bag', {})
-
-    try:
-        bag.pop(subscription_id)
-
-        request.session['bag'] = bag
-        return HttpResponse(status=200)
-
-    except Exception as e:
-        return HttpResponse(status=500)
-
-
-         path('adjust/<int:wine_id>/', views.adjust_wine_in_bag,
-         name='adjust_wine_in_bag'),
-    path('adjust/<int:subscription_id>/', views.adjust_subscription_in_bag,
-         name='adjust_subscription_in_bag'),
-    path('remove/<int:wine_id>/', views.remove_wine_from_bag,
-         name='remove_wine_from_bag'),
-    path('remove/<int:subscription_id>/', views.remove_subscription_from_bag,
-         name='remove_subscription_from_bag'),
 
     def test_adjust_wine_in_bag_url_resolves(self):
         url = reverse('adjust_wine_in_bag')

@@ -7,18 +7,17 @@
         let currentValue = parseInt($(`#id_qty_${wineId}`).val());
         let minusDisabled = currentValue < 2;
         let plusDisabled = currentValue > 98;
-        $(`.decrement-qty_${wineId}`).prop('disabled', minusDisabled);
-        $(`.increment-qty_${wineId}`).prop('disabled', plusDisabled);
+        $(`#decrement-qty_${wineId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${wineId}`).prop('disabled', plusDisabled);
     }
 
     function handleEnableDisable(subscriptionId) {
         let currentValue = parseInt($(`#id_qty_${subscriptionId}`).val());
         let minusDisabled = currentValue < 2;
         let plusDisabled = currentValue > 98;
-        $(`.decrement-qty_${subscriptionId}`).prop('disabled', minusDisabled);
-        $(`.increment-qty_${subscriptionId}`).prop('disabled', plusDisabled);
+        $(`#decrement-qty_${subscriptionId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${subscriptionId}`).prop('disabled', plusDisabled);
     }
-
 
     // Ensure proper enabling/disabling of all inputs on page load
     let allQtyInputs = $('.qty_input');

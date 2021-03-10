@@ -21,7 +21,6 @@ def add_wine_to_bag(request, wine_id):
         bag[wine_id] = quantity
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
 
 
