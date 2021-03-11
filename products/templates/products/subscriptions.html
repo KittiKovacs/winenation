@@ -43,7 +43,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <form class="form text-center" action="{% url 'add_subscription_to_bag' subscription.id %}"
+                    <form class="form text-center" action="{% url 'add_to_bag' subscription.id %}"
                         method="POST">
                         {% csrf_token %}
                         <div class="form-row">

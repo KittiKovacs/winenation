@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import (Wine, Category, Variety,
-                     Wine_region, Subscription)
+from .models import (Product, Category, Variety,
+                     Wine_region)
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -24,7 +24,7 @@ class Wine_regionAdmin(admin.ModelAdmin):
     )
 
 
-class WineAdmin(admin.ModelAdmin):
+class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
@@ -43,19 +43,8 @@ class WineAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
 
-class SubscriptionAdmin(admin.ModelAdmin):
-    list_display = (
-        'sku',
-        'name',
-        'description',
-        'price',
-        'image',
-    )
-
-
 # Register your models here.
-admin.site.register(Wine, WineAdmin)
+admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Variety, VarietyAdmin)
 admin.site.register(Wine_region, Wine_regionAdmin)
-admin.site.register(Subscription, SubscriptionAdmin)

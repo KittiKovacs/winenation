@@ -44,9 +44,6 @@ class Wine_region(models.Model):
 
 class Product(models.Model):
 
-    class Meta:
-        abstract = True
-
     sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -54,15 +51,10 @@ class Product(models.Model):
     image_url = models.URLField(
         max_length=1024, null=True, blank=True)
     image = models.ImageField(upload_to='', null=True, blank=True)
-
-    def __str__(self):
-        return self.name
-
-
-class Wine(Product):
     category = models.ForeignKey('Category', null=True,
                                  blank=True, on_delete=models.SET_NULL)
-    winery = models.CharField(max_length=254)
+    winery = models.CharField(max_length=254, null=True,
+                                 blank=True)
     variety = models.ForeignKey('Variety', null=True, blank=True,
                                 on_delete=models.SET_NULL, max_length=254)
     vintage = models.IntegerField(null=True, blank=True)
@@ -71,13 +63,7 @@ class Wine(Product):
     alc_vol = models.DecimalField(null=True, blank=True,
                                   max_digits=6, decimal_places=2)
     pairing = models.CharField(null=True, blank=True, max_length=254)
+    is_a_subscription = models.BooleanField(default=False)
 
-
-class Subscription(Product):
-    sku = models.CharField(max_length=254)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    image_url = models.URLField(
-        max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    def __str__(self):
+        return self.name

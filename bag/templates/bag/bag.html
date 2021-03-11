@@ -25,15 +25,22 @@
                     </thead>
                     {% for item in bag_items %}
                     <tr>
+                        {% if product.image %}
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}{{ item.wine.image }}">
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}{{ item.product.image }}">
+                        </td>
+                        {% else %}
+                        <td class="p-3 w-25">
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}wine-blank.jpg">
+                        </td>
+                        {% endif %}
+
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0"><strong>{{ item.wine.name }}</strong></p>
-                            <p class="my-0 small text-muted">SKU: {{ item.wine.sku|upper }}</p>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.wine.price }}</p>
+                            <p class="my-0">£{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
                             <form class="form update-form" method="POST"
@@ -42,8 +49,8 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty decrement-qty_{{ item.wine_id }} btn"
-                                                data-item_id="{{ item.wine_id }}">
+                                            <button class="decrement-qty decrement-qty_{{ item.item_id }} btn"
+                                                data-item_id="{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
                                                 </span>
@@ -51,10 +58,10 @@
                                         </div>
                                         <input class="form-control form-control-sm qty_input" type="number"
                                             name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                            data-item_id="{{ item.wine_id }}" id="id_qty_{{ item.wine_id }}">
+                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty increment-qty_{{ item.wine_id }} btn"
-                                                data-item_id="{{ item.wine_id }}">
+                                            <button class="increment-qty increment-qty_{{ item.item_id }} btn"
+                                                data-item_id="{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
                                                 </span>
@@ -65,61 +72,10 @@
                             </form>
                             <a class="update-link text-info"><small>Update</small></a>
                             <a class="remove-item text-danger float-right"
-                                id="remove_{{ item.wine_id }}"><small>Remove</small></a>
+                                id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">£{{ item.wine.price }}</p>
-                        </td>
-                    </tr>
-                    {% endfor %}
-
-                    {% for s_item in bag_items %}
-                    <tr>
-                        <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}wine-blank.jpg">
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0"><strong>{{ s_item.subscription.name }}</strong></p>
-                            <p class="my-0 small text-muted">SKU: {{ s_item.subscription.sku|upper }}</p>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ s_item.subscription.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
-                            <form class="form update-form" method="POST"
-                                action="">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty decrement-qty_{{ s_item.subscription_id }} btn"
-                                                data-item_id="{{ s_item.subscription_id }}">
-                                                <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ s_item.quantity }}" min="1" max="99"
-                                            data-item_id="{{ s_item.subscription_id }}"
-                                            id="id_qty_{{ s_item.subscription_id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty increment-qty_{{ item.subscription_id }} btn"
-                                                data-item_id="{{ item.subscription_id }}">
-                                                <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-s_item text-danger float-right"
-                                id="remove_{{ item.subscription_id }}"><small>Remove</small></a>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ s_item.subscription.price }}</p>
+                            <p class="my-0">£{{ item.product.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -141,7 +97,7 @@
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+                                <span class="text-uppercase">Back to wine shop</span>
                             </a>
                             <a href="" class="btn btn-success">
                                 <span class="text-uppercase">Secure Checkout</span>
@@ -165,11 +121,23 @@
         </div>
     </div>
     {% endblock %}
+
     {% block postloadjs %}
     {{ block.super }}
+    <script type="text/javascript">
+
+        $('.up-link').click(function (e) {
+            window.scrollTo(0, 0)
+        })
+    </script>
+
     {% include 'products/includes/quantity_input_script.html' %}
 
     <script type="text/javascript">
+
+        $('.up-link').click(function (e) {
+            window.scrollTo(0, 0)
+        })
         // Update quantity on click
         $('.update-link').click(function (e) {
             var form = $(this).prev('.update-form');

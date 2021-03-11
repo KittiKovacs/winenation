@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Wine, Subscription, Category
+from .models import Product, Category
 from django.db.models.functions import Lower
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+#from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 
@@ -11,7 +11,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def all_wines(request):
     """ A view to show all products, including sorting and search queries """
 
-    wines = Wine.objects.all()
+    wines = Product.objects.filter(is_a_subscription=False)
     query = None
     categories = None
     sort = None
@@ -68,9 +68,10 @@ def all_wines(request):
     return render(request, 'products/wines.html', context)
 
 
-def wine_details(request, wine_id):
+def wine_details(request, product_id):
 
-    wine = get_object_or_404(Wine, pk=wine_id)
+    wines = Product.objects.filter(is_a_subscription=False)
+    wine = get_object_or_404(wines, pk=product_id)
 
     context = {
         'wine': wine,
@@ -82,7 +83,7 @@ def wine_details(request, wine_id):
 def all_subscriptions(request):
     """ A view to show all subscriptions """
 
-    subscriptions = Subscription.objects.all()
+    subscriptions = Product.objects.filter(is_a_subscription=True)
 
     context = {
         'subscriptions': subscriptions,

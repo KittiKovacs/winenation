@@ -3,38 +3,25 @@
 <script type="text/javascript">
 
     // Disable +/- buttons outside 1-99 range
-    function handleEnableDisable(wineId) {
-        let currentValue = parseInt($(`#id_qty_${wineId}`).val());
+    function handleEnableDisable(itemId) {
+        let currentValue = parseInt($(`#id_qty_${itemwineId}`).val());
         let minusDisabled = currentValue < 2;
         let plusDisabled = currentValue > 98;
-        $(`#decrement-qty_${wineId}`).prop('disabled', minusDisabled);
-        $(`#increment-qty_${wineId}`).prop('disabled', plusDisabled);
-    }
-
-    function handleEnableDisable(subscriptionId) {
-        let currentValue = parseInt($(`#id_qty_${subscriptionId}`).val());
-        let minusDisabled = currentValue < 2;
-        let plusDisabled = currentValue > 98;
-        $(`#decrement-qty_${subscriptionId}`).prop('disabled', minusDisabled);
-        $(`#increment-qty_${subscriptionId}`).prop('disabled', plusDisabled);
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
 
     // Ensure proper enabling/disabling of all inputs on page load
     let allQtyInputs = $('.qty_input');
     for(let i = 0; i < allQtyInputs.length; i++){
-        let wineId = $(allQtyInputs[i]).data('wine_id');
-        handleEnableDisable(wineId);
-        let subscriptionId = $(allQtyInputs[i]).data('subscription_id');
-        handleEnableDisable(subscriptionId);
+        let itemId = $(allQtyInputs[i]).data('item_id');
+        handleEnableDisable(itemId);
     }
 
     // Check enable/disable every time the input is changed
     $('.qty_input').change(function() {
-        let wineId = $(this).data('wine_id');
-        handleEnableDisable(wineId);
-
-        let subscriptionId = $(this).data('subscription_id');
-        handleEnableDisable(subscriptionId);
+        let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
     });
 
     // Increment quantity
@@ -44,11 +31,8 @@
        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
        let currentValue = parseInt($(closestInput).val());
        $(closestInput).val(currentValue + 1);
-       let wineId = $(this).data('wine_id');
-        handleEnableDisable(wineId);
-
-        let subscriptionId = $(this).data('subscription_id');
-        handleEnableDisable(subscriptionId);
+       let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
 
     });
 
@@ -58,10 +42,7 @@
        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
        var currentValue = parseInt($(closestInput).val());
        $(closestInput).val(currentValue - 1);
-       let wineId = $(this).data('wine_id');
-        handleEnableDisable(wineId);
-
-       let subscriptionId = $(this).data('subscription_id');
-       handleEnableDisable(subscriptionId);
+       let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
     });
 </script>
