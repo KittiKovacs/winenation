@@ -55,6 +55,8 @@ class Product(models.Model):
                                  blank=True, on_delete=models.SET_NULL)
     winery = models.CharField(max_length=254, null=True,
                                  blank=True)
+    country= models.CharField(max_length=254, null=True,
+                                 blank=True)
     variety = models.ForeignKey('Variety', null=True, blank=True,
                                 on_delete=models.SET_NULL, max_length=254)
     vintage = models.IntegerField(null=True, blank=True)

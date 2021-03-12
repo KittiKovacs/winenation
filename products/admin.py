@@ -32,6 +32,7 @@ class ProductAdmin(admin.ModelAdmin):
         'winery',
         'variety',
         'vintage',
+        'country',
         'region',
         'description',
         'alc_vol',
