@@ -147,27 +147,15 @@
         // Remove item and reload on click
         $('.remove-s_item').click(function (e) {
             let csrfToken = "{{ csrf_token }}";
-            let subscriptionId = $(this).attr('id').split('remove_')[1];
+            let itemId = $(this).attr('id').split('remove_')[1];
 
-            let url = `/bag/remove/${subscriptionId}/`;
+            let url = `/bag/remove/${itemId}/`;
             let data = { 'csrfmiddlewaretoken': csrfToken };
 
-            $.post(url, data)
-                .done(function () {
-                    location.reload();
-                });
-        })
-        $('.remove-item').click(function (e) {
-            let csrfToken = "{{ csrf_token }}";
-            let wineId = $(this).attr('id').split('remove_')[1];
-
-            let url = `/bag/remove/${wineId}/`;
-            let data = { 'csrfmiddlewaretoken': csrfToken };
-
-            $.post(url, data)
-                .done(function () {
-                    location.reload();
-                });
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
         })
     </script>
     {% endblock %}
