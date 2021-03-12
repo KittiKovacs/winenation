@@ -68,7 +68,7 @@
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}" />
                         {% endif %}
                         <div class="card-body">
-                            <h5 class="card-title">{{ product.name }}</h5>
+                            <h5 class="card-title">{{ wine.name }}</h5>
                             <p>Variety: {{ wine.variety.friendly_name }}</p>
                             <p>£ {{ wine.price }}</p>
                             {% if wine.category %}

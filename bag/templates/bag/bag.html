@@ -25,7 +25,7 @@
                     </thead>
                     {% for item in bag_items %}
                     <tr>
-                        {% if product.image %}
+                        {% if item.product.image %}
                         <td class="p-3 w-25">
                             <img class="img-fluid rounded" src="{{ MEDIA_URL }}{{ item.product.image }}">
                         </td>
