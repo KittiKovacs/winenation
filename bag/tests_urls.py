@@ -11,6 +11,3 @@ class TestBagUrls(TestCase):
         url = reverse('view_bag')
         self.assertEquals(resolve(url).func, view_bag)
 
-    def test_add_to_bag_url_resolves(self):
-        url = reverse('add_to_bag')
-        self.assertEquals(resolve(url).func, add_to_bag)
