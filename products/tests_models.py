@@ -5,7 +5,7 @@ from .models import Product
 class TestProductModels(TestCase):
 
     def test_product(self):
-        product = Products.objects.create(sku=25,
+        product = Product.objects.create(sku=25,
                                    name="Test wine",
                                    price=65,
                                    image="vineyard.jpg",

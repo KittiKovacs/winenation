@@ -105,15 +105,12 @@ body {
     border: 1px solid grey;
     padding:10px;
 }
-.form-control{
+.form-control-sm{
     max-width:50px;
     height:38px;
     text-align: center;
 }
-.form-control-search{
-    width:auto;
 
-}
 .input-group-append .btn,
 .input-group-prepend .btn{
     height:38px;
