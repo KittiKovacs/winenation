@@ -58,25 +58,26 @@
     </div>
     <div class="row">
         <div class="product-container mx-5 my-5">
-            <div class="row">
+            <div class="row  align-items-end">
                 {% for wine in wines %}
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center my-2">
-                    <div class="card h-100 border-0">
-                        {% if wine.image %}
-                        <img class="image-fluid" src="{{ MEDIA_URL }}{{ wine.image }}" alt="{{ wine.name }}" />
-                        {% else %}
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}" />
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ wine.name }}</h5>
-                            <p>Variety: {{ wine.variety.friendly_name }}</p>
-                            <p>£ {{ wine.price }}</p>
-                            {% if wine.category %}
-                            <p><a class="text-muted" href="{% url 'wines' %}?category={{ wine.category.name }}">Type:
-                                    {{ wine.category.friendly_name }} Wines</a>
-                            </p>
-                            {% endif %}
-                            <a href="{% url 'wine_details' wine.id %}" class="btn btn-success">Learn more</a>
+                <div class="col-sm-12 col-md-6 col-lg-4 text-center my-2">
+                    <div class="card h-100">
+                                {% if wine.image %}
+                                <img class="image-fluid" src="{{ MEDIA_URL }}{{ wine.image }}" alt="{{ wine.name }}" />
+                                {% else %}
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}wine-blank.jpg"
+                                    alt="{{ wine.name }}" />
+                                {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{ wine.name }}</h5>
+                                <p>£ {{ wine.price }}</p>
+                                {% if wine.category %}
+                                <p><a class="text-muted"
+                                        href="{% url 'wines' %}?category={{ wine.category.name }}">Type:
+                                        {{ wine.category.friendly_name }} Wine</a>
+                                </p>
+                                {% endif %}
+                                <a href="{% url 'wine_details' wine.id %}" class="btn btn-success">Learn more</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +85,7 @@
             </div>
         </div>
     </div>
-<!--Source for Pagination:https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
+    <!--Source for Pagination:https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
     <div class="row">
         <div class="col-sm-12" aria-label="Page navigation">
         {% if wines.has_other_pages %}
@@ -115,28 +116,28 @@
 </div>
 {% endblock %}-->
 
-{% block postloadjs %}
-{{ block.super }}
-<script type="text/javascript">
-    $('#sort-selector').change(function () {
-        var selector = $(this);
-        var currentUrl = new URL(window.location);
+    {% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#sort-selector').change(function () {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
 
-        var selectedVal = selector.val();
-        if (selectedVal != "reset") {
-            var sort = selectedVal.split("_")[0];
-            var direction = selectedVal.split("_")[1];
+            var selectedVal = selector.val();
+            if (selectedVal != "reset") {
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
 
-            currentUrl.searchParams.set("sort", sort);
-            currentUrl.searchParams.set("direction", direction);
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
 
-            window.location.replace(currentUrl);
-        } else {
-            currentUrl.searchParams.delete("sort");
-            currentUrl.searchParams.delete("direction");
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
 
-            window.location.replace(currentUrl);
-        }
-    })
-</script>
-{% endblock %}
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+    {% endblock %}

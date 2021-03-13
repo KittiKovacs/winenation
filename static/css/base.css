@@ -105,6 +105,21 @@ body {
     border: 1px solid grey;
     padding:10px;
 }
+.form-control{
+    max-width:50px;
+    height:38px;
+    text-align: center;
+}
+.form-control-search{
+    width:auto;
+
+}
+.input-group-append .btn,
+.input-group-prepend .btn{
+    height:38px;
+    border-radius:50%;
+}
+
 
 /* ------------------------------- toasts */
 
@@ -173,8 +188,10 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
-
+.bag-notification-wrapper .image-fluid{
+    height:auto;
+    width:75%;
+}
 
 /* -------------------------------- Footer */
 footer{
@@ -253,7 +270,7 @@ footer ul li{
 /* -------------------------------- Wines and wine details page */
 .card-title{
     color:#990705;
-    padding:10px;
+    padding:10px 0;
 
 }
 
@@ -262,7 +279,7 @@ footer ul li{
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  height:250px;
+  height:200px;
   width:auto;
 }
 .details-section{
@@ -399,4 +416,11 @@ hr{
     border-radius: 10px;
 }
 }  
-
+@media (max-width: 992px){
+    .input-group-append .btn,
+    .input-group-prepend .btn{
+    height:38px;
+    border-radius:0;
+    width:50px;
+}
+}

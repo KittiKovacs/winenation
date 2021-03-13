@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Wine
+from .models import Product
 
 
 class TestProductViews(TestCase):
@@ -9,7 +9,7 @@ class TestProductViews(TestCase):
         self.assertTemplateUsed(response, 'products/wines.html')
 
     def test_wine_details_page(self):
-        wine_details = Wine(name="Test wine", price=999.00,
+        wine_details = Product(name="Test wine", price=999.00,
                             sku=1,
                             winery="test", description="Test wine description")
         wine_details.save()

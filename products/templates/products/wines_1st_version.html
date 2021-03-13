@@ -200,25 +200,6 @@
 
 
 
-
-    def test_adjust_wine_in_bag_url_resolves(self):
-        url = reverse('adjust_wine_in_bag')
-        self.assertEquals(resolve(url).func, adjust_wine_in_bag)
-
-    def test_adjust_subscription_in_bag_url_resolves(self):
-        url = reverse('adjust_subscription_in_bag')
-        self.assertEquals(resolve(url).func, adjust_subscription_in_bag)
-
-    def test_remove_wine_from_bag_url_resolves(self):
-        url = reverse('remove_wine_from_bag')
-        self.assertEquals(resolve(url).func, remove_wine_from_bag)
-
-    def test_remove_subscription_from_bag_url_resolves(self):
-        url = reverse('remove_subscription_from_bag')
-        self.assertEquals(resolve(url).func, remove_subscription_from_bag)
-
-
-
                            <!--  {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
