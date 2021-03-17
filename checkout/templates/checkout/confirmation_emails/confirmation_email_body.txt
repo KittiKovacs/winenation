@@ -1,0 +1,21 @@
+Hello {{ order.full_name }}!
+
+Thank you for your order!
+
+This is a confirmation of your order {{ order.order_number }}. 
+
+Your order details are:
+
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order_total }}
+Delivery: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+Your order will be shipped to {{ order.street_address1 }}, {{ order.town_or_city }}, {{ order.country }}.
+
+Your coontact telephone number is {{ order.phone_number }}.
+
+If you have any questions, please feel free to contact us at {{ contact_email }}.
+
+Wine Nation Ltd.
