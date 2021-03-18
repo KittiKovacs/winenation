@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -18,7 +17,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-7">
+        <div class="col-sm-12 col-lg-7">
             <div class="order-confirmation-wrapper p-2 border">
                 <div class="row">
                     <div class="col">
@@ -183,8 +182,8 @@
         </div>
     </div>
 
-    <div class="row text-center">
-        <div class="col-12">
+    <div class="row">
+        <div class="col-sm-12">
             {% if from_profile %}
             <a href="{% url 'profile' %}" class="btn my-2">
                 <span class="icon mr-2">

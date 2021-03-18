@@ -421,7 +421,10 @@ hr{
     width:50px;
 }
 }
-
+.bag-img{
+    max-height:200px;
+    width:auto;
+}
 
 /* Allauth form formatting */
 
