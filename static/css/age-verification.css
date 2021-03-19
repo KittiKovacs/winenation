@@ -13,7 +13,7 @@
 }
 
 #modal_screen.nope {
-	background-color: #1e0924; 
+	background-color: rgba(228, 79, 79, 0.8); 
 }
 
 #modal_content {
@@ -55,7 +55,7 @@
 
 #modal_content nav {font-size: 16px; display:table; width: 282px;}
 #modal_content nav ul {display:table-row; width: 100%; margin:0; padding:0;}
-#modal_content nav li {display: table-cell; text-align: right; width: auto;}
+#modal_content nav li {display: table-cell; text-align: center; width: auto;}
 
 #modal_content nav:after {
 	content: "";
@@ -76,7 +76,6 @@
     margin:1em auto 0;
     width:50%;
 	text-decoration: none;
-	padding:1em;
 	color: #fff;
 	text-transform: none;
     letter-spacing: 0;
@@ -135,7 +134,7 @@
 	#modal_content nav {width: 396px;}
 
 	#modal_content nav a.av_btn {
-		padding:1em 2.5em;
+		padding:1em;
 		margin:1.6em auto 0;
 		font-size: 1em;
 	}
