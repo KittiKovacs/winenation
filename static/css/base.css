@@ -105,16 +105,18 @@ body {
     border: 1px solid grey;
     padding:10px;
 }
+.from-control,
 .form-control-sm{
-    max-width:50px;
     height:38px;
     text-align: center;
+}
+form-control qty_input{
+    max-width:50px;
 }
 
 .input-group-append .btn,
 .input-group-prepend .btn{
     height:38px;
-    border-radius:50%;
 }
 
 
@@ -275,7 +277,18 @@ footer ul li{
 .card-title{
     color:#990705;
     padding:10px 0;
-
+}
+.card-body{
+    height:220px;
+}
+.card{
+    transform-style: preserve-3d;
+    padding: 0rem 1rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1), 0px 0px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+a:hover{
+    color:#990705;
 }
 
 .image-fluid{
@@ -285,6 +298,7 @@ footer ul li{
   width: 50%;
   height:200px;
   width:auto;
+  padding:10px 0;
 }
 .details-section{
     margin:30px;
@@ -294,15 +308,13 @@ footer ul li{
     justify-content: center;
 }
 
-.back-arrow > a >i{
+.back-arrow  a i{
     padding:0 5px;
-
 }
 .back-arrow >a{
     color: black;
     text-decoration: none;
 }
-
 hr{
     border:1px solid #990705;
     border-radius: 5px;
