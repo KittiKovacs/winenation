@@ -27,11 +27,11 @@
                     <tr>
                         {% if item.product.image %}
                         <td class="p-3 w-25">
-                            <img class="img-fluid bag-img" src="{{ MEDIA_URL }}{{ item.product.image }}">
+                            <img class="img-fluid bag-img" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ wine.name }}">
                         </td>
                         {% else %}
                         <td class="p-3 w-25">
-                            <img class="img-fluid bag-img" src="{{ MEDIA_URL }}wine-blank.jpg">
+                            <img class="img-fluid bag-img" src="{{ MEDIA_URL }}wine-blank.jpg" alt="No product image found">
                         </td>
                         {% endif %}
 
