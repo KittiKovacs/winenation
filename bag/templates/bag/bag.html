@@ -48,10 +48,8 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty decrement-qty_{{ item.item_id }} btn"
-                                                data-item_id="{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
+                                            <button class="decrement-qty btn" id="decrement-qty_{{ item.item_id }}"
+                                                data-item_id="{{ item.item_id }}"><span><i class="fas fa-minus fa-sm"></i>
                                                 </span>
                                             </button>
                                         </div>
@@ -59,7 +57,7 @@
                                             name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                             data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty increment-qty_{{ item.item_id }} btn"
+                                            <button class="increment-qty btn" id="increment-qty_{{ item.item_id }}"
                                                 data-item_id="{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
@@ -74,7 +72,7 @@
                                 id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">£{{ item.product.price }}</p>
+                            <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -110,7 +108,7 @@
             </div>
             {% else %}
             <p class="lead mb-5 text-center">Your bag is empty!</p>
-            <a href="{% url 'wines' %}" class="btn mb-5">
+            <a href="{% url 'wines' %}" class="btn mx-3 mb-5">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
@@ -124,14 +122,13 @@
 
 {% block postloadjs %}
 {{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 <script type="text/javascript">
 
     $('.up-link').click(function (e) {
         window.scrollTo(0, 0)
     })
 </script>
-
-{% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
     // Update quantity on click
