@@ -4,13 +4,11 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from .forms import ProductForm
+from .forms import ProductForm, SubscriptionForm
 
 from django.contrib.auth.decorators import login_required
 
-#from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
-# Create your views here.
+# from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def all_wines(request):
@@ -53,14 +51,13 @@ def all_wines(request):
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             wines = wines.filter(queries)
-
     current_sorting = f'{sort}_{direction}'
 
-    #try:
+    # try:
     #    wines = paginator.get_page(page)
-    #except PageNotAnInteger:
+    # except PageNotAnInteger:
     #    wines = paginator.get_page(1)
-   # except EmptyPage:
+    # except EmptyPage:
     #    wines = paginator.get_page(paginator.num_pages)
 
     context = {
@@ -108,21 +105,36 @@ def add_product(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added product')
-        else:
-            messages.error(request, 'Failed to add product. \
-                Please ensure the form is valid.')
+        if 'wine' in request.POST:
+            product_form = ProductForm(request.POST, request.FILES,
+                                       prefix='wine')
+            if product_form.is_valid():
+                product_form.save()
+                messages.success(request, 'Successfully added product')
+                return redirect(reverse('wine_details', args=[wine.id]))
+            else:
+                messages.error(request, 'Failed to add product. \
+                    Please ensure the form is valid.')
+            subscription_form = SubscriptionForm(prefix='subscription')
+        elif 'subscription' in request.POST:
+            subscription_form = SubscriptionForm(request.POST, request.FILES,
+                                                 prefix='subscription')
+            if subscription_form.is_valid():
+                subscription_form.save()
+                messages.success(request, 'Successfully added product')
+                return redirect(reverse('subscriptions'))
+            else:
+                messages.error(request, 'Failed to add product. \
+                    Please ensure the form is valid.')
     else:
-        form = ProductForm()
+        product_form = ProductForm(prefix='wine')
+        subscription_form = SubscriptionForm(prefix='subscription')
 
     template = 'products/add_product.html'
     context = {
-        'form': form,
+        'product_form': product_form,
+        'subscription_form': subscription_form,
     }
 
     return render(request, template, context)
@@ -137,11 +149,12 @@ def edit_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
+        product_form = ProductForm(request.POST, request.FILES,
+                                       prefix='wine')
+        if product_form.is_valid():
+            product_form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('wines'))
+            return redirect(reverse('wine_details', args=[wine.id]))
         else:
             messages.error(request, 'Failed to update product. \
                 Please ensure the form is valid.')
