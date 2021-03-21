@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from .forms import ProductForm, SubscriptionForm
+from .forms import ProductForm
 
 from django.contrib.auth.decorators import login_required
 
@@ -101,40 +101,27 @@ def about(request):
 
 @login_required
 def add_product(request):
-
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, you dont have access to this feature.')
         return redirect(reverse('home'))
     if request.method == 'POST':
-        if 'wine' in request.POST:
-            product_form = ProductForm(request.POST, request.FILES,
-                                       prefix='wine')
-            if product_form.is_valid():
-                product_form.save()
-                messages.success(request, 'Successfully added product')
-                return redirect(reverse('wine_details', args=[wine.id]))
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            if 'wine' in request.POST:
+                return redirect(reverse('wine_details', args=[product.id]))
             else:
-                messages.error(request, 'Failed to add product. \
-                    Please ensure the form is valid.')
-            subscription_form = SubscriptionForm(prefix='subscription')
-        elif 'subscription' in request.POST:
-            subscription_form = SubscriptionForm(request.POST, request.FILES,
-                                                 prefix='subscription')
-            if subscription_form.is_valid():
-                subscription_form.save()
-                messages.success(request, 'Successfully added product')
                 return redirect(reverse('subscriptions'))
-            else:
-                messages.error(request, 'Failed to add product. \
-                    Please ensure the form is valid.')
+        else:
+            messages.error(request, 'Failed to add product.\
+                 Please ensure the form is valid.')
     else:
-        product_form = ProductForm(prefix='wine')
-        subscription_form = SubscriptionForm(prefix='subscription')
+        form = ProductForm()
 
     template = 'products/add_product.html'
     context = {
-        'product_form': product_form,
-        'subscription_form': subscription_form,
+        'form': form,
     }
 
     return render(request, template, context)
@@ -142,22 +129,23 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, you dont have access to this feature.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
-        product_form = ProductForm(request.POST, request.FILES,
-                                       prefix='wine')
-        if product_form.is_valid():
-            product_form.save()
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('wine_details', args=[wine.id]))
+            if 'wine' in request.POST:
+                return redirect(reverse('wine_details', args=[product.id]))
+            else:
+                return redirect(reverse('subscriptions'))
         else:
-            messages.error(request, 'Failed to update product. \
-                Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product.\
+                 Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
