@@ -27,7 +27,7 @@ SECRET_KEY = 'q$rt7t%1gh0+^7r9_rin6!=fcizpbae4hblg)#s93&z(g8(tck'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['winenation.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -126,8 +126,7 @@ DATABASES = {
  }
 
 # DATABASES = {
- #   'default': dj_database_url.parse('postgres://vqafhqfhxngrdf:c011a0c447ea929c691fb377f6ffe41c1abcf1f4246ceead5db5681e87603644@ec2-54-78-36-245.eu-west-1.compute.amazonaws.com:5432/dfptnq5jjinc2j')
-# }
+#    'default': dj_database_url.parse('postgres://vqafhqfhxngrdf:c011a0c447ea929c691fb377f6ffe41c1abcf1f4246ceead5db5681e87603644@ec2-54-78-36-245.eu-west-1.compute.amazonaws.com:5432/dfptnq5jjinc2j')}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
