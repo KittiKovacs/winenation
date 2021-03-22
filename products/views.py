@@ -8,8 +8,6 @@ from .forms import ProductForm
 
 from django.contrib.auth.decorators import login_required
 
-# from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
 
 def all_wines(request):
     """ A view to show all products, including sorting and search queries """
@@ -19,8 +17,6 @@ def all_wines(request):
     categories = None
     sort = None
     direction = None
-    # page = request.GET.get('page', 1)
-    # paginator = Paginator(wines, 16)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -52,13 +48,6 @@ def all_wines(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             wines = wines.filter(queries)
     current_sorting = f'{sort}_{direction}'
-
-    # try:
-    #    wines = paginator.get_page(page)
-    # except PageNotAnInteger:
-    #    wines = paginator.get_page(1)
-    # except EmptyPage:
-    #    wines = paginator.get_page(paginator.num_pages)
 
     context = {
         'wines': wines,
@@ -107,15 +96,13 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save()
+            form.save()
             messages.success(request, 'Successfully added product!')
-            if 'wine' in request.POST:
-                return redirect(reverse('wine_details', args=[product.id]))
-            else:
-                return redirect(reverse('subscriptions'))
+
+            return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'Failed to add product.\
-                 Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. \
+                           Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -141,7 +128,7 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             if 'wine' in request.POST:
                 return redirect(reverse('wine_details', args=[product.id]))
-            else:
+            elif 'subscription' in request.POST:
                 return redirect(reverse('subscriptions'))
         else:
             messages.error(request, 'Failed to update product.\
@@ -163,7 +150,7 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, you dont have access to this feature.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)

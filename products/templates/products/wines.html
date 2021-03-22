@@ -58,31 +58,31 @@
     </div>
     <div class="row">
         <div class="product-container mx-5 my-5">
-            <div class="row  align-items-end">
+            <div class="row align-items-end">
                 {% for wine in wines %}
                 <div class="col-sm-12 col-md-6 col-lg-3 text-center my-2">
                     <div class="card h-100">
                         {% if wine.image %}
-                        <img class="image-fluid" src="{{ MEDIA_URL }}{{ wine.image }}" alt="{{ wine.name }}" />
+                            <img class="image-fluid" src="{{ MEDIA_URL }}{{ wine.image }}" alt="{{ wine.name }}" />
                         {% else %}
-                        <img class="image-fluid" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}">
+                            <img class="image-fluid" src="{{ MEDIA_URL }}wine-blank.jpg" alt="{{ wine.name }}">
                         {% endif %}
                         <div class="card-body">
                             <a href="{% url 'wine_details' wine.id %}">
-                                <p class="card-title">{{ wine.name }}</p>
+                            <p class="card-title">{{ wine.name }}</p>
                             </a>
                             <p>£ {{ wine.price }}</p>
-                            {% if wine.category %}
+                        {% if wine.category %}
                             <p><a class="text-muted" href="{% url 'wines' %}?category={{ wine.category.name }}">Type:
-                                    {{ wine.category.friendly_name }} Wine</a>
+                            {{ wine.category.friendly_name }} Wine</a>
                             </p>
-                            {% endif %}
-                            {% if request.user.is_superuser %}
+                        {% endif %}
+                        {% if request.user.is_superuser %}
                             <small class="ml-3">
-                                <a href="{% url 'edit_product' wine.id %}">Edit</a> |
-                                <a class="text-danger" href="{% url 'delete_product' wine.id %}">Delete</a>
+                            <a href="{% url 'edit_product' wine.id %}">Edit</a> |
+                            <a class="text-danger" href="{% url 'delete_product' wine.id %}">Delete</a>
                             </small>
-                            {% endif %}
+                        {% endif %}
                         </div>
                     </div>
                 </div>
@@ -90,59 +90,33 @@
             </div>
         </div>
     </div>
-    <!--Source for Pagination:https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
-    <div class="row">
-        <div class="col-sm-12" aria-label="Page navigation">
-        {% if wines.has_other_pages %}
-        <ul class="pagination">
-            {% if wines.has_previous %}
-                <li class="page-item"><a class="page-link" href="?page={{ wines.previous_page_number }}">&laquo;</a></li>
-            {% else %}
-                <li class="page-item disabled"><span>&laquo;</span><span class="sr-only">Previous</span></li>
-            {% endif %}
+</div>
+{% endblock %}
 
-            {% for i in wines.paginator.page_range %}
-                {% if wines.number == i %}
-                    <li class="page-item active">{{ i }}<span class="sr-only">(current)</span></li>
-                {% else %}
-                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
-                {% endif %}
-            {% endfor %}
 
-            {% if wines.has_next %}
-                <li class="page-item"><a class="page-link" href="?page={{ wines.next_page_number }}">&raquo;</a></li>
-            {% else %}
-                <li class="page-item disabled"><span>&raquo;</span><span class="sr-only">Next</span></li>
-            {% endif %}
-        </ul>
-        {% endif %}
-        </div>
-    </div>
-</div>-->
-    {% endblock %}
 
-    {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        $('#sort-selector').change(function () {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
-            var selectedVal = selector.val();
-            if (selectedVal != "reset") {
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
 
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
 
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
 
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
-    {% endblock %}
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
+{% endblock %}

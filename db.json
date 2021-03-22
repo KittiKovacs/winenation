@@ -5,7 +5,7 @@ Entering DEBUG mode...
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$216000$zwzbeYx3Qcje$wYJ7Yea3MipNgrUjwHHKVT4kYdw1i3ayeIA3PFDREIQ=",
-        "last_login": "2021-03-12T21:00:23.230Z",
+        "last_login": "2021-03-21T08:31:50.553Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -16,6 +16,50 @@ Entering DEBUG mode...
         "date_joined": "2021-02-11T12:07:50.644Z",
         "groups": [],
         "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$Iz3LJGOqWzU9$9xAVjYfc9a6VF89rdJxjZP4YFx9DmER0iwUs9Qk8Zs0=",
+        "last_login": "2021-03-20T13:09:16.424Z",
+        "is_superuser": false,
+        "username": "testy",
+        "first_name": "",
+        "last_name": "",
+        "email": "test@test.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-03-17T20:10:57.603Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$tUudSDp16LFS$EXMRiNemMCXJ27SQWnVQBnyDqe3LboX/CFSZ6vqb/Lw=",
+        "last_login": "2021-03-22T20:35:10.651Z",
+        "is_superuser": false,
+        "username": "KK99",
+        "first_name": "",
+        "last_name": "",
+        "email": "popopo@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-03-20T13:27:00.078Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "13h5ucz2a8tlqhzrc21bwttyb01kghqh",
+    "fields": {
+        "session_data": ".eJxVjjEOgzAQBP_iOrJs7BhDmZ43oLvzHSaJQMJQIf6eIFEk7c7sanfVw7bmfiu89GNSrbLq9psh0IunE6QnTMOsaZ7WZUR9KvqiRXdz4vfjcv8GMpT8bYe7T4TBg5dgnQ0QK6EowMa5ZBglGmIXGhRJJOB8IELHFdRNbQ2drxAG1e7H8QEMrzuw:1lNdA6:c5dskeZRaQuqMZ97wzNcI5mHStueS7F-AJWLEGYMJeg",
+        "expire_date": "2021-04-03T15:05:10.771Z"
     }
 },
 {
@@ -76,10 +120,42 @@ Entering DEBUG mode...
 },
 {
     "model": "sessions.session",
+    "pk": "e7lclkg9zi8pn6u7q0zp72k7ymw108sa",
+    "fields": {
+        "session_data": "eyJzYXZlX2luZm8iOmZhbHNlfQ:1lMcKX:PX8cpe_GkY8Xes1P-PpnekgQNYjkhhHqq6pB7oxjax8",
+        "expire_date": "2021-03-31T19:59:45.959Z"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "fsh7meql3qyp8tedru1wfb2kb0iz5c2n",
     "fields": {
         "session_data": "eyJiYWciOnsiMyI6MX19:1lItQv:afiZe7fbn6pXTeb4brLX5f1AKYwcGN-0RXZudBD6BsA",
         "expire_date": "2021-03-21T13:26:57.025Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "hl3vx62lvpfcopz2goqc4hd3d6jbwcc8",
+    "fields": {
+        "session_data": "eyJzYXZlX2luZm8iOmZhbHNlLCJiYWciOnsiMjgiOjEsIjUiOjUsIjI0IjoxfX0:1lMx9X:15i1J4Big42kutTfulzln5FVxS2mIuEnlkVV0OPXgd8",
+        "expire_date": "2021-04-01T18:13:47.674Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "hwxs08hfxdtnojppkeje6p9nccxdh0co",
+    "fields": {
+        "session_data": ".eJxVjs0OwiAQhN-FsyFQkP4cvfsMZFl2LWrAlDbRGN9da3rQ63zfTOYpPCzz6JdKk09RDEKL3W8WAC-UVxDPkE9FYsnzlIJcFbnRKo8l0vWwuX8DI9Tx03Z7GzE4C5adNtpB1zB2DKSMiYoCdwrJuD4wR2Qw1iEGQw20fasVfl9VqjWV7Ol-S9NDDOr1Br4BQCE:1lO3kf:Qz_IgZUY8xeRfOj6xxK82JciOdImskIGR7emOSLi4hk",
+        "expire_date": "2021-04-04T19:28:41.341Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ip1ejwqk9nq1ov4khh1wuvt0tetzvkfa",
+    "fields": {
+        "session_data": ".eJxljEFugzAURO_y1wiBqTGwzL5nsD72OLgldmTjKFGUuzdUUaUqi9nMezN3YmNiCZu-IHnnYTVO7FeaQlnX6o-WjEQTCapIc9mW30J7-97NbL4RdmC_OBxjbWLYkp_rXalfNNef0WI9vNx_Bwvn5bkeZWOUES3UgL5VohlZobdWOsmtlKw65kZ0Y9fPrmMMH2KEHPAMSwcn99OMnH0MGtezTzeamooyX6B9cJGmLRU8fgD9pFbY:1lMdxm:HwrpjtsrCoAd2RdLCbY1VjGaZm9ias927oZBLjoUU9Y",
+        "expire_date": "2021-03-31T21:44:22.224Z"
     }
 },
 {
@@ -131,6 +207,14 @@ Entering DEBUG mode...
     }
 },
 {
+    "model": "sessions.session",
+    "pk": "thnhpttsrfmnab0enn7rr4ie6r2o36vl",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAURP-FtSE8yqtL934D4XGxqAEDrdEY_9026UKXM3PmvJF1yzzZpUOzOaIRcXT47bwLVyjbEC-unCsOtcwte7wheF87PtUIt-PO_gkm16f1PXjmKQDVMQqSDNNujVwpQTQnSiUThRy01EII4hMxNDFuqJQyMCUh0E3aofdci4XnPbcXGskBdfcAm0uqaJzbAp8vryNEJw:1lORHA:xMO-TdN2P781GyWIDLghZy0XurGB0KlvsEiwI6oYr3k",
+        "expire_date": "2021-04-05T20:35:48.983Z"
+    }
+},
+{
     "model": "sites.site",
     "pk": 1,
     "fields": {
@@ -146,6 +230,30 @@ Entering DEBUG mode...
             "admin"
         ],
         "email": "bambula86@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "testy"
+        ],
+        "email": "test@test.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "KK99"
+        ],
+        "email": "popopo@gmail.com",
         "verified": true,
         "primary": true
     }
@@ -607,7 +715,7 @@ Entering DEBUG mode...
     "pk": 5,
     "fields": {
         "sku": "1005",
-        "name": "LÉGLI Villa Boclar 2015",
+        "name": "LÉGLI Villa Boclar 2015 EDITED",
         "description": "The Léglis have been selecting the grapes for their traditional method sparkling base wine from the cool, tried and tested vineyard for years. In 2015, the Furmint and Riesling blend was put into the lean bottles, then the secondary fermentation was followed by long ageing. The bottles that have arrived now were disgorged after 37 months of ageing, and the mature traditional method sparkling wine is called Villa Boclar. The bubbles didn’t disappear during the long ageing, the wine only changed as the structure became layered, the palate creamy, and the mousse is now very nice.",
         "price": "15.50",
         "image_url": null,
@@ -1263,7 +1371,7 @@ Entering DEBUG mode...
         "price": "6.25",
         "image_url": null,
         "image": "Gunzer_Lezser_2020_46cXQ8q.JPG",
-        "category": 1,
+        "category": 2,
         "winery": "Günzer Családi Birtok",
         "country": "Hungary",
         "variety": 4,
@@ -1585,7 +1693,7 @@ Entering DEBUG mode...
         "vintage": 2020,
         "region": 1,
         "alc_vol": "12.00",
-        "pairing": "poultry, mushroom",
+        "pairing": "poultry, mushroom, fish",
         "is_a_subscription": false
     }
 },
@@ -1649,27 +1757,6 @@ Entering DEBUG mode...
         "region": 14,
         "alc_vol": "14.00",
         "pairing": "venison, beef",
-        "is_a_subscription": false
-    }
-},
-{
-    "model": "products.product",
-    "pk": 55,
-    "fields": {
-        "sku": "1042",
-        "name": "OREMUS 3 Puttonyos Aszú 2013",
-        "description": "From Oremus’s first growth, hillside vineyards in the heart of the Tokaj-Hegyalja appellation, the grapes for this wine were grown in volcanic tufa soils, similar to the Loire. Aszu (which means “noble rot” in Hungarian) wine production starts with specialized picking of botrytis affected grapes, which are then pounded into a paste and stored in 20-25kg tubs, called puttonyos. The tub’s contents are then mixed with the base wine in specific proportions; so this wine is three puttonyos per 136 liter cask of base wine.Plenty of cinnamon and orange highlight this rich, firmly structured wine. The intense sweetness is balanced by lively acidity, with a lingering aftertaste of orange and vanilla.(50cl bottle)",
-        "price": "16.55",
-        "image_url": null,
-        "image": "Oremus_3_puttonyos_aszu_2013_kg4dZc9.JPG",
-        "category": 4,
-        "winery": "Oremus",
-        "country": "Hungary",
-        "variety": 1,
-        "vintage": 2013,
-        "region": 16,
-        "alc_vol": "12.00",
-        "pairing": "dessert",
         "is_a_subscription": false
     }
 },
@@ -1746,7 +1833,7 @@ Entering DEBUG mode...
         "price": "16.49",
         "image_url": null,
         "image": "Rupper_Cab_Sav_2017_bPQyGen.JPG",
-        "category": 2,
+        "category": 1,
         "winery": "Ruppert Pince",
         "country": "Hungary",
         "variety": 3,
@@ -1839,6 +1926,972 @@ Entering DEBUG mode...
         "alc_vol": "10.50",
         "pairing": "desserts, cheese",
         "is_a_subscription": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 66,
+    "fields": {
+        "sku": "1051",
+        "name": "Sauska Tokaj extra brut",
+        "description": "Citrus yellow gold with a regular stream of bubbles. Alluring on the nose, intense, with notes of juicy peaches, apricot and honey. Beautiful aromatic complexity. A great presence in the mouth, with structure, intensity and an elegant acidity. Ripe citrus and tropical fruits, with a touch of tobacco and honey.",
+        "price": "18.50",
+        "image_url": null,
+        "image": "Sauska_Tokaj_Extra_brut_vQ7AOgR.JPG",
+        "category": 4,
+        "winery": "Sauska Tokaj",
+        "country": "Hungary",
+        "variety": 4,
+        "vintage": 2016,
+        "region": 16,
+        "alc_vol": "11.50",
+        "pairing": "desserts",
+        "is_a_subscription": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 67,
+    "fields": {
+        "sku": "1042",
+        "name": "SAUSKA Extra Brut Rosé",
+        "description": "A brilliant salmon with copper hues, and discreet bubbles. Scrumptious on the nose, with raspberries, blood orange and a touch of demerara sugar, and its warm spices. Good length, slowly unveiling orange and spices such as pepper and nutmeg. Stewed plums upheld by a crisp minerality.",
+        "price": "11.50",
+        "image_url": null,
+        "image": "Sauska_extra_brut_rose_Bx34xHU.JPG",
+        "category": 4,
+        "winery": "Sauska Tokaj",
+        "country": "2016",
+        "variety": 4,
+        "vintage": 2016,
+        "region": 16,
+        "alc_vol": "11.00",
+        "pairing": "fruit, desserts",
+        "is_a_subscription": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 68,
+    "fields": {
+        "sku": "1052",
+        "name": "Skizo Rosé 2020",
+        "description": "A purplish-pink coloured rosé with aromas that are reminiscent of the forest, with sour cherry, cherry and redcurrant on the lean, dry palate.",
+        "price": "5.25",
+        "image_url": null,
+        "image": "Skizo_Rose_2020_AnEvCY3.JPG",
+        "category": 3,
+        "winery": "Skizo",
+        "country": "Hungary",
+        "variety": 4,
+        "vintage": 2020,
+        "region": 1,
+        "alc_vol": "12.00",
+        "pairing": "poultry, fish",
+        "is_a_subscription": false
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 2,
+    "fields": {
+        "order_number": "5E607B81BBA44E01AC90DEC04E84714F",
+        "user_profile": null,
+        "full_name": "jnfkjvnfd cdsdjk",
+        "email": "ldsjvmlfv@fnvjfn.com",
+        "phone_number": "56165161",
+        "country": "US",
+        "postcode": null,
+        "town_or_city": "vnfkjvnf",
+        "street_address1": "xdscdscd",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-15T20:15:18.999Z",
+        "delivery_cost": "0.00",
+        "order_total": "350.00",
+        "grand_total": "350.00",
+        "original_bag": "",
+        "stripe_pid": ""
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 3,
+    "fields": {
+        "order_number": "D964B1030E6F48DAA4335237D3A8EC60",
+        "user_profile": null,
+        "full_name": "gfbgb",
+        "email": "vfvf@fdvf.c0m",
+        "phone_number": "2525",
+        "country": "US",
+        "postcode": null,
+        "town_or_city": "cdvfxv",
+        "street_address1": "bgfbgbgn",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-15T20:26:40.345Z",
+        "delivery_cost": "1.00",
+        "order_total": "10.00",
+        "grand_total": "11.00",
+        "original_bag": "",
+        "stripe_pid": ""
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 4,
+    "fields": {
+        "order_number": "5E2A38D2F4AD475FB41C79FB3720860D",
+        "user_profile": null,
+        "full_name": "sdfvbg",
+        "email": "sdxfv@dxfvgbhg.com",
+        "phone_number": "16165165",
+        "country": "US",
+        "postcode": null,
+        "town_or_city": "dcfvbgvnbmj",
+        "street_address1": "asdcfvbcgvnhbmjn",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-16T19:49:23.988Z",
+        "delivery_cost": "0.62",
+        "order_total": "6.20",
+        "grand_total": "6.82",
+        "original_bag": "",
+        "stripe_pid": ""
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 5,
+    "fields": {
+        "order_number": "49A32D4139444CE58AC42EDDF87C1788",
+        "user_profile": null,
+        "full_name": "dsfgh",
+        "email": "dsfgsddvfbgn@gmail.com",
+        "phone_number": "161651",
+        "country": "US",
+        "postcode": null,
+        "town_or_city": "dxsamdclkdsmv",
+        "street_address1": "xcsacddsc",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-16T20:15:05.605Z",
+        "delivery_cost": "0.00",
+        "order_total": "375.00",
+        "grand_total": "375.00",
+        "original_bag": "{\"12\": 1}",
+        "stripe_pid": "pi_1IVjHTL1nGFAF6x2Zz8CpDda"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 6,
+    "fields": {
+        "order_number": "BDEFED6D254942ABBC89E26993FC1343",
+        "user_profile": null,
+        "full_name": "cdvfbf",
+        "email": "bfxbcbg@fvfd.com",
+        "phone_number": "525256",
+        "country": "BH",
+        "postcode": null,
+        "town_or_city": "bgbgfnhnhgn",
+        "street_address1": "cxvxvxcdvf",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-16T20:37:15.866Z",
+        "delivery_cost": "1.55",
+        "order_total": "15.50",
+        "grand_total": "17.05",
+        "original_bag": "{\"5\": 1}",
+        "stripe_pid": "pi_1IVjd3L1nGFAF6x2YApPqBji"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 7,
+    "fields": {
+        "order_number": "E92B880B4800403AA3A5D5D8206481B6",
+        "user_profile": null,
+        "full_name": "sfdgbhnvj",
+        "email": "fdvgbh@sdfgb.com",
+        "phone_number": "265126514",
+        "country": "BH",
+        "postcode": null,
+        "town_or_city": "sdzxvfcbgvnhbmj",
+        "street_address1": "dfvbgnhmj",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-16T20:43:09.790Z",
+        "delivery_cost": "3.24",
+        "order_total": "32.40",
+        "grand_total": "35.64",
+        "original_bag": "{\"60\": 1, \"26\": 2}",
+        "stripe_pid": "pi_1IVjiqL1nGFAF6x20qWwfrFt"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 8,
+    "fields": {
+        "order_number": "A9D453C0EEFA49DA998ADDE189C49A42",
+        "user_profile": 2,
+        "full_name": "fjnjfb",
+        "email": "vfbg@gfvmf.com",
+        "phone_number": "56515561",
+        "country": "BD",
+        "postcode": null,
+        "town_or_city": "bcbgfbgf",
+        "street_address1": "vvfvfd",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-17T20:59:21.847Z",
+        "delivery_cost": "0.69",
+        "order_total": "6.90",
+        "grand_total": "7.59",
+        "original_bag": "{\"24\": 1}",
+        "stripe_pid": "pi_1IW6RvL1nGFAF6x2lrFWsVn8"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 9,
+    "fields": {
+        "order_number": "07999A9392324FA58DAD6F8A6CA2E7EC",
+        "user_profile": 2,
+        "full_name": "Kitti K",
+        "email": "test@test.com",
+        "phone_number": "56515561",
+        "country": "BD",
+        "postcode": null,
+        "town_or_city": "bcbgfbgf",
+        "street_address1": "vvfvfd",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-17T21:38:13.568Z",
+        "delivery_cost": "0.90",
+        "order_total": "8.99",
+        "grand_total": "9.89",
+        "original_bag": "{\"9\": 1}",
+        "stripe_pid": "pi_1IW73pL1nGFAF6x2zkRUr8sk"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 10,
+    "fields": {
+        "order_number": "2F59F0F2B6104912B251818B1B376991",
+        "user_profile": 2,
+        "full_name": "Kitti",
+        "email": "test@test.com",
+        "phone_number": "56515561",
+        "country": "BD",
+        "postcode": null,
+        "town_or_city": "bcbgfbgf",
+        "street_address1": "vvfvfd",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-17T21:40:47.308Z",
+        "delivery_cost": "0.00",
+        "order_total": "375.00",
+        "grand_total": "375.00",
+        "original_bag": "{\"12\": 1}",
+        "stripe_pid": "pi_1IW76QL1nGFAF6x2pULDUpDj"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 11,
+    "fields": {
+        "order_number": "1A7A60F051CA4EB3802295D4A07853F0",
+        "user_profile": 2,
+        "full_name": "Kitti",
+        "email": "test@test.com",
+        "phone_number": "56515561",
+        "country": "BD",
+        "postcode": null,
+        "town_or_city": "bcbgfbgf",
+        "street_address1": "vvfvfd",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-17T21:44:21.974Z",
+        "delivery_cost": "1.55",
+        "order_total": "15.50",
+        "grand_total": "17.05",
+        "original_bag": "{\"5\": 1}",
+        "stripe_pid": "pi_1IW79sL1nGFAF6x2RFMcC5Fh"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 12,
+    "fields": {
+        "order_number": "8AA17EBB776C42E88CB4D94FCEB48155",
+        "user_profile": null,
+        "full_name": "bgfbgv",
+        "email": "vfsss@gmail.com",
+        "phone_number": "6165161",
+        "country": "AZ",
+        "postcode": null,
+        "town_or_city": "vffdfdvdvf",
+        "street_address1": "vfdfdfdvfdvfdvf",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:22:21.651Z",
+        "delivery_cost": "1.00",
+        "order_total": "10.00",
+        "grand_total": "11.00",
+        "original_bag": "{\"2\": 1}",
+        "stripe_pid": "pi_1IWPXZL1nGFAF6x2uOyWUrN4"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 13,
+    "fields": {
+        "order_number": "C97791F7F54B4FF4BE80BDB583D0DC61",
+        "user_profile": null,
+        "full_name": "gtfhnj",
+        "email": "gfvfdv@gmail.com",
+        "phone_number": "0216516",
+        "country": "AM",
+        "postcode": null,
+        "town_or_city": "dvfdmvlkfdv",
+        "street_address1": "vjfnvkjndfvjkf",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:26:52.389Z",
+        "delivery_cost": "1.00",
+        "order_total": "10.00",
+        "grand_total": "11.00",
+        "original_bag": "{\"2\": 1}",
+        "stripe_pid": "pi_1IWPc5L1nGFAF6x2de4F2m80"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 14,
+    "fields": {
+        "order_number": "DEC33440BE0648F0B60703BDFEFF730F",
+        "user_profile": null,
+        "full_name": "cdxvfxvfb",
+        "email": "fbfdbfd@gmail.com",
+        "phone_number": "1451541641",
+        "country": "BS",
+        "postcode": null,
+        "town_or_city": "vfdvfdfdvfvf",
+        "street_address1": "cdcdsvcdsvvfdv",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:31:03.919Z",
+        "delivery_cost": "0.90",
+        "order_total": "8.99",
+        "grand_total": "9.89",
+        "original_bag": "{\"9\": 1}",
+        "stripe_pid": "pi_1IWPg9L1nGFAF6x2SFv8C5Qe"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 15,
+    "fields": {
+        "order_number": "364BB0D0C080431FBC2524C1F3A6F8B2",
+        "user_profile": null,
+        "full_name": "vc vc c",
+        "email": "cdcdd@gmail.com",
+        "phone_number": "561651651",
+        "country": "BS",
+        "postcode": null,
+        "town_or_city": "c vc v",
+        "street_address1": "cdxvcxv",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:32:02.531Z",
+        "delivery_cost": "2.00",
+        "order_total": "20.00",
+        "grand_total": "22.00",
+        "original_bag": "{\"1\": 1}",
+        "stripe_pid": "pi_1IWPgtL1nGFAF6x2DaPTVu6Z"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 16,
+    "fields": {
+        "order_number": "01BC191760554F8B9AB7BBDD8720CA05",
+        "user_profile": null,
+        "full_name": "cvfdvdf",
+        "email": "vcdvds@gmail.com",
+        "phone_number": "516516516",
+        "country": "AQ",
+        "postcode": null,
+        "town_or_city": "cdcscvdvfdvfd",
+        "street_address1": "dcmdscmlsdkmc",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:33:23.228Z",
+        "delivery_cost": "1.00",
+        "order_total": "10.00",
+        "grand_total": "11.00",
+        "original_bag": "{\"2\": 1}",
+        "stripe_pid": "pi_1IWPiML1nGFAF6x2vAap2en5"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 17,
+    "fields": {
+        "order_number": "1110A41B5A254CCEA7081654DB2426BD",
+        "user_profile": null,
+        "full_name": "cdsvf fdvfdvf",
+        "email": "frvfdv@gmail.com",
+        "phone_number": "165161651",
+        "country": "CD",
+        "postcode": null,
+        "town_or_city": "cdsdcdscds",
+        "street_address1": "vvffdvsfdvfv",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:34:42.851Z",
+        "delivery_cost": "1.96",
+        "order_total": "19.55",
+        "grand_total": "21.50",
+        "original_bag": "{\"27\": 1}",
+        "stripe_pid": "pi_1IWPjfL1nGFAF6x2C2kSFJgb"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 18,
+    "fields": {
+        "order_number": "1471A0E9E0674FD49E6CC60C5DF4DF87",
+        "user_profile": null,
+        "full_name": "cdsvf fdvfdvf",
+        "email": "frvfdv@gmail.com",
+        "phone_number": "165161651",
+        "country": "CD",
+        "postcode": null,
+        "town_or_city": "cdsdcdscds",
+        "street_address1": "vvffdvsfdvfv",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:34:48.524Z",
+        "delivery_cost": "1.96",
+        "order_total": "19.55",
+        "grand_total": "21.50",
+        "original_bag": "{\"27\": 1}",
+        "stripe_pid": "pi_1IWPjfL1nGFAF6x2C2kSFJgb"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 19,
+    "fields": {
+        "order_number": "51EF73ED98AC462A8A388D15297C1034",
+        "user_profile": null,
+        "full_name": "cdvfbgnhmjh",
+        "email": "dvfbg@gmail.com",
+        "phone_number": "51265165165",
+        "country": "AO",
+        "postcode": null,
+        "town_or_city": "dvsfdvfdbf",
+        "street_address1": "cddczdcsac",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:39:51.017Z",
+        "delivery_cost": "1.15",
+        "order_total": "11.50",
+        "grand_total": "12.65",
+        "original_bag": "{\"25\": 1}",
+        "stripe_pid": "pi_1IWPofL1nGFAF6x2CnDMBoIB"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 20,
+    "fields": {
+        "order_number": "18CC64B694B54BAB82ACE5AB7D28E08C",
+        "user_profile": null,
+        "full_name": "vfvfdvfd",
+        "email": "dvdsvds@gmail.com",
+        "phone_number": "165165165",
+        "country": "BD",
+        "postcode": null,
+        "town_or_city": "cdss",
+        "street_address1": "cscdcd",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:41:27.715Z",
+        "delivery_cost": "0.62",
+        "order_total": "6.20",
+        "grand_total": "6.82",
+        "original_bag": "{\"3\": 1}",
+        "stripe_pid": "pi_1IWPqEL1nGFAF6x28vBDcmNY"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 21,
+    "fields": {
+        "order_number": "34849A857BF844DC9FFBDCEA69E088D7",
+        "user_profile": null,
+        "full_name": "cdscdsvfdvfd",
+        "email": "fvdfdv@gmail.com",
+        "phone_number": "51651651",
+        "country": "CV",
+        "postcode": null,
+        "town_or_city": "cdsdcs",
+        "street_address1": "xsxdcdscd",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:49:23.237Z",
+        "delivery_cost": "0.57",
+        "order_total": "5.70",
+        "grand_total": "6.27",
+        "original_bag": "{\"4\": 1}",
+        "stripe_pid": "pi_1IWPxqL1nGFAF6x2SB113A9w"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 22,
+    "fields": {
+        "order_number": "177575EDE07643098EDFDD1CB60971FC",
+        "user_profile": null,
+        "full_name": "cdsnvkf",
+        "email": "vfdvdf@gmail.com",
+        "phone_number": "256156",
+        "country": "BH",
+        "postcode": null,
+        "town_or_city": "cssdcds",
+        "street_address1": "cdscsd",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T17:50:58.700Z",
+        "delivery_cost": "0.69",
+        "order_total": "6.90",
+        "grand_total": "7.59",
+        "original_bag": "{\"24\": 1}",
+        "stripe_pid": "pi_1IWPzSL1nGFAF6x2QtcBnWnL"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 23,
+    "fields": {
+        "order_number": "8662A1CAB52644F1B370C0F2DFD48941",
+        "user_profile": null,
+        "full_name": "gjbkjgfbgfb",
+        "email": "cdcsd@gmail.com",
+        "phone_number": "41115161",
+        "country": "BH",
+        "postcode": null,
+        "town_or_city": "vfdvdfv",
+        "street_address1": "cdcdsvsdv",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T18:03:48.308Z",
+        "delivery_cost": "2.14",
+        "order_total": "21.35",
+        "grand_total": "23.48",
+        "original_bag": "{\"6\": 1}",
+        "stripe_pid": "pi_1IWQBoL1nGFAF6x2ir4GwWjx"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 24,
+    "fields": {
+        "order_number": "03FE9C9A691C4AD3B951CEEF342AB9D0",
+        "user_profile": null,
+        "full_name": "gjbkjgfbgfb",
+        "email": "cdcsd@gmail.com",
+        "phone_number": "41115161",
+        "country": "BH",
+        "postcode": null,
+        "town_or_city": "vfdvdfv",
+        "street_address1": "cdcdsvsdv",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-18T18:03:54.149Z",
+        "delivery_cost": "2.14",
+        "order_total": "21.35",
+        "grand_total": "23.48",
+        "original_bag": "{\"6\": 1}",
+        "stripe_pid": "pi_1IWQBoL1nGFAF6x2ir4GwWjx"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 25,
+    "fields": {
+        "order_number": "3BFAB34BCD4E46A685F2F4927924C30E",
+        "user_profile": null,
+        "full_name": "nvkjnjkcnx",
+        "email": "cdscsd@dcnjkd.com",
+        "phone_number": "165165561",
+        "country": "AO",
+        "postcode": null,
+        "town_or_city": "ccxzczx",
+        "street_address1": "cx\\cdad",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-19T17:27:26.576Z",
+        "delivery_cost": "0.00",
+        "order_total": "793.80",
+        "grand_total": "793.80",
+        "original_bag": "{\"24\": 2, \"2\": 3, \"12\": 2}",
+        "stripe_pid": "pi_1IWm5zL1nGFAF6x2DZpPkugr"
+    }
+},
+{
+    "model": "checkout.order",
+    "pk": 26,
+    "fields": {
+        "order_number": "0C521703ADDF4B81879EB94FBCDDC8EA",
+        "user_profile": 3,
+        "full_name": "Kitti",
+        "email": "popopo@gmail.com",
+        "phone_number": "00369369369369",
+        "country": "LV",
+        "postcode": "99674",
+        "town_or_city": "Vilnius",
+        "street_address1": "6 Latvian",
+        "street_address2": null,
+        "county": null,
+        "date": "2021-03-22T20:35:48.714Z",
+        "delivery_cost": "1.55",
+        "order_total": "15.50",
+        "grand_total": "17.05",
+        "original_bag": "{\"5\": 1}",
+        "stripe_pid": "pi_1IXuTEL1nGFAF6x2cePRBrvD"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 5,
+    "fields": {
+        "order": 2,
+        "product": 13,
+        "quantity": 1,
+        "lineitem_total": "350.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 6,
+    "fields": {
+        "order": 3,
+        "product": 2,
+        "quantity": 1,
+        "lineitem_total": "10.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 7,
+    "fields": {
+        "order": 4,
+        "product": 3,
+        "quantity": 1,
+        "lineitem_total": "6.20"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 8,
+    "fields": {
+        "order": 5,
+        "product": 12,
+        "quantity": 1,
+        "lineitem_total": "375.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 9,
+    "fields": {
+        "order": 6,
+        "product": 5,
+        "quantity": 1,
+        "lineitem_total": "15.50"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 10,
+    "fields": {
+        "order": 7,
+        "product": 60,
+        "quantity": 1,
+        "lineitem_total": "22.50"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 11,
+    "fields": {
+        "order": 7,
+        "product": 26,
+        "quantity": 2,
+        "lineitem_total": "9.90"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 12,
+    "fields": {
+        "order": 8,
+        "product": 24,
+        "quantity": 1,
+        "lineitem_total": "6.90"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 13,
+    "fields": {
+        "order": 9,
+        "product": 9,
+        "quantity": 1,
+        "lineitem_total": "8.99"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 14,
+    "fields": {
+        "order": 10,
+        "product": 12,
+        "quantity": 1,
+        "lineitem_total": "375.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 15,
+    "fields": {
+        "order": 11,
+        "product": 5,
+        "quantity": 1,
+        "lineitem_total": "15.50"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 16,
+    "fields": {
+        "order": 12,
+        "product": 2,
+        "quantity": 1,
+        "lineitem_total": "10.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 17,
+    "fields": {
+        "order": 13,
+        "product": 2,
+        "quantity": 1,
+        "lineitem_total": "10.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 18,
+    "fields": {
+        "order": 14,
+        "product": 9,
+        "quantity": 1,
+        "lineitem_total": "8.99"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 19,
+    "fields": {
+        "order": 15,
+        "product": 1,
+        "quantity": 1,
+        "lineitem_total": "20.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 20,
+    "fields": {
+        "order": 16,
+        "product": 2,
+        "quantity": 1,
+        "lineitem_total": "10.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 21,
+    "fields": {
+        "order": 17,
+        "product": 27,
+        "quantity": 1,
+        "lineitem_total": "19.55"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 22,
+    "fields": {
+        "order": 18,
+        "product": 27,
+        "quantity": 1,
+        "lineitem_total": "19.55"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 23,
+    "fields": {
+        "order": 19,
+        "product": 25,
+        "quantity": 1,
+        "lineitem_total": "11.50"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 24,
+    "fields": {
+        "order": 20,
+        "product": 3,
+        "quantity": 1,
+        "lineitem_total": "6.20"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 25,
+    "fields": {
+        "order": 21,
+        "product": 4,
+        "quantity": 1,
+        "lineitem_total": "5.70"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 26,
+    "fields": {
+        "order": 22,
+        "product": 24,
+        "quantity": 1,
+        "lineitem_total": "6.90"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 27,
+    "fields": {
+        "order": 23,
+        "product": 6,
+        "quantity": 1,
+        "lineitem_total": "21.35"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 28,
+    "fields": {
+        "order": 24,
+        "product": 6,
+        "quantity": 1,
+        "lineitem_total": "21.35"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 29,
+    "fields": {
+        "order": 25,
+        "product": 24,
+        "quantity": 2,
+        "lineitem_total": "13.80"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 30,
+    "fields": {
+        "order": 25,
+        "product": 2,
+        "quantity": 3,
+        "lineitem_total": "30.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 31,
+    "fields": {
+        "order": 25,
+        "product": 12,
+        "quantity": 2,
+        "lineitem_total": "750.00"
+    }
+},
+{
+    "model": "checkout.orderlineitem",
+    "pk": 32,
+    "fields": {
+        "order": 26,
+        "product": 5,
+        "quantity": 1,
+        "lineitem_total": "15.50"
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "default_phone_number": null,
+        "default_street_address1": null,
+        "default_street_address2": null,
+        "default_town_or_city": null,
+        "default_county": null,
+        "default_postcode": null,
+        "default_country": null
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "testy"
+        ],
+        "default_phone_number": "56515561",
+        "default_street_address1": "vvfvfd",
+        "default_street_address2": null,
+        "default_town_or_city": "bcbgfbgf",
+        "default_county": null,
+        "default_postcode": null,
+        "default_country": "BD"
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "KK99"
+        ],
+        "default_phone_number": "00369369369369",
+        "default_street_address1": "6 Latvian",
+        "default_street_address2": null,
+        "default_town_or_city": "Vilnius",
+        "default_county": null,
+        "default_postcode": "99674",
+        "default_country": "LV"
     }
 },
 {
@@ -7977,6 +9030,96 @@ Entering DEBUG mode...
         "object_repr": "Pannonhalmi St. Martinus 2020",
         "action_flag": 2,
         "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 342,
+    "fields": {
+        "action_time": "2021-03-15T20:13:39.007Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "checkout",
+            "order"
+        ],
+        "object_id": "1",
+        "object_repr": "0AC8D57A81C54FD4B4687DE01EB4CB86",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"order line item\", \"object\": \"SKU 1002 on order 0AC8D57A81C54FD4B4687DE01EB4CB86\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 343,
+    "fields": {
+        "action_time": "2021-03-15T20:14:06.649Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "checkout",
+            "order"
+        ],
+        "object_id": "1",
+        "object_repr": "0AC8D57A81C54FD4B4687DE01EB4CB86",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 344,
+    "fields": {
+        "action_time": "2021-03-20T14:03:34.967Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "36",
+        "object_repr": "GÜNZER Lezser 2020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 345,
+    "fields": {
+        "action_time": "2021-03-20T14:03:52.290Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "59",
+        "object_repr": "Ruppert Cabernet Sauvignon 2017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 346,
+    "fields": {
+        "action_time": "2021-03-21T08:31:30.366Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "67",
+        "object_repr": "SAUSKA Extra Brut Rosé",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
     }
 }
 ]
