@@ -23,7 +23,8 @@ def profile(request):
                 Please check the fields for potential errors.')
     else:
         form = UserProfileForm(instance=profile)
-        orders = profile.orders.all()
+
+    orders = profile.orders.all()
 
     template = 'profiles/profile.html'
     context = {
