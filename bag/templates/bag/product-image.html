@@ -1,0 +1,5 @@
+{% if item.product.image %}
+<img class="img-fluid bag-img" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ wine.name }}">
+{% else %}
+    <img class="img-fluid bag-img" src="{{ MEDIA_URL }}wine-blank.jpg" alt="No product image found">
+{% endif %}
