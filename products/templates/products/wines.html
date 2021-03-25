@@ -91,6 +91,30 @@
         </div>
     </div>
 </div>
+<!-- Pagination to display 10 products per page -->       
+<section class="pagination-cotainer my-4">
+    <div class="container pb-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="pagination justify-content-center">
+                    <span class="step-links">
+                {% if wines.has_previous %}
+                <a class="pagination-space" href="?page=1">&laquo; first</a>
+                <a class="pagination-space" href="?page={{ wines.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current pagination-space">
+                Page {{ wines.number }} of {{ wines.paginator.num_pages }}.
+                </span> 
+                {% if wines.has_next %}
+                <a class="pagination-space" href="?page={{ wines.next_page_number }}">next</a>
+                <a href="?page={{ wines.paginator.num_pages }}">last &raquo;</a> {% endif %}
+                </span>
+            </div>
+        </div>
+     </div>
+  </div>
+</section>
 {% endblock %}
 
 

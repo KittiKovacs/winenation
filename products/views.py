@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -48,6 +49,16 @@ def all_wines(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             wines = wines.filter(queries)
     current_sorting = f'{sort}_{direction}'
+
+    paginator = Paginator(wines, 16)
+    page = request.GET.get('page')
+
+    try:
+        wines = paginator.page(page)
+    except PageNotAnInteger:
+        wines = paginator.page(1)
+    except EmptyPage:
+        wines = paginator.page(paginator.num_pages)
 
     context = {
         'wines': wines,
