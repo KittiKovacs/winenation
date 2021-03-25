@@ -10,8 +10,9 @@ class TestProductViews(TestCase):
 
     def test_wine_details_page(self):
         wine_details = Product(name="Test wine", price=999.00,
-                            sku=1,
-                            winery="test", description="Test wine description")
+                               sku=1,
+                               winery="test",
+                               description="Test wine description")
         wine_details.save()
 
         response = self.client.get("/products/wines")
