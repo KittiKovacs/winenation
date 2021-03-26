@@ -24,8 +24,8 @@
 	border:4px solid #990705;
 	border-radius: 100%;
 	font-size: 12px;
-	width:290px; /* if you adjust it from the original 290px, adjust the difference in the width of #modal_content nav too */
-	height: 290px; /* if you adjust it from the original 290px, adjust the difference in the width of #modal_content nav too */
+	width:290px; 
+	height: 290px; 
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -49,13 +49,26 @@
 }
 
 #modal_content p {
-	max-width: 75%;
-	margin: 1.2em auto 0;
+	max-width: 50%;
+	margin: 5px auto 0;
 }
 
-#modal_content nav {font-size: 16px; display:table; width: 282px;}
-#modal_content nav ul {display:table-row; width: 100%; margin:0; padding:0;}
-#modal_content nav li {display: table-cell; text-align: center; width: auto;}
+#modal_content nav {
+    font-size: 16px;
+    display:table;
+    width: 282px;
+}
+#modal_content nav ul {
+    display:table-row;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+#modal_content nav li {
+    display: table-cell; 
+    text-align: center; 
+    width: auto;
+}
 
 #modal_content nav:after {
 	content: "";
@@ -82,12 +95,7 @@
 }
 
 #modal_content nav .av_go {
-    background-color: rgb(226, 84, 108);
-    padding:0;
-}
-
-#modal_content nav .av_no {
-	background-color: green;
+    background-color:green;
 }
 
 #modal_content nav .av_btn:hover {
@@ -100,7 +108,7 @@
 	font-size: 0.8em;
 }
 
-@media (min-width: 688px) {
+@media (min-width: 576px) {
 	#modal_content {
 		top: 10em;
 		top: 30vh;
@@ -128,14 +136,11 @@
 
 	#modal_content p {
 		font-size: 1em;
-		line-height: 1.9em;
+        line-height: 1.9em;
 	}
 
-	#modal_content nav {width: 396px;}
+	#modal_content nav {
+        width: 396px;
+    }
 
-	#modal_content nav a.av_btn {
-		padding:1em;
-		margin:1.6em auto 0;
-		font-size: 1em;
-	}
 }

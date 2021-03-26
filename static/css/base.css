@@ -90,8 +90,8 @@ body {
     height: 60px;
     width: 60px;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
 }
 
 .up-link,
@@ -475,6 +475,49 @@ hr{
 }  
 
 @media (max-width: 991px){
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .display-4.logo-font.text-black {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-red,
+    .btn.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
     .input-group-append .btn,
     .input-group-prepend .btn{
     height:38px;
@@ -486,20 +529,36 @@ hr{
     max-height:200px;
     width:auto;
 }
-}
-@media (max-width: 575.98px){
 .subscription-intro{
-    font-size:1em;
+    font-size:1.5em;
     margin: 40px;
     color:black;
     font-weight: bold;
     text-align:center;
     background:white;
 }
+.intro-text{
+    font-size:1.25em;
+    margin: 60px 3rem 3rem 3rem;
+    text-align:center;
+    line-height: 2em;
+    color:black;
+    background:white;
+}
+}
+@media (max-width: 575.98px){
+
 .benefits{
     font-size: 1em;    
     margin: 20px;
     text-align:left;
+}
+.landing-text {
+    text-align: center;
+    color:white;
+    justify-content:center;
+    top:100px;
+    width:350px;
 }
 }
 
@@ -556,51 +615,4 @@ hr{
 
 .allauth-form-inner-content a {
     color: #17a2b8; /* text-info */
-}
-
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
-
-    .display-4.logo-font.text-black {
-        font-size: 2rem;
-    }
-
-    .nav-link {
-        padding: 0.15rem;
-    }
-
-    .nav-link i.fa-lg {
-        font-size: 1rem;
-    }
-
-    .navbar-toggler {
-        padding: .6rem .6rem;
-        font-size: 1rem;
-    }
-
-    #delivery-banner h4 {
-        font-size: .9rem;
-    }
-
-    .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
-        padding: .375rem .375rem;
-    }
-
-    .btn.btn-outline-red,
-    .btn.btn-lg {
-        padding: .375rem .375rem;
-        font-size: .75rem;
-    }
-
-    .increment-qty, .decrement-qty {
-        padding: .25rem .5rem !important;
-    }
 }
