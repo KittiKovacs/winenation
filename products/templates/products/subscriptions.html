@@ -9,8 +9,9 @@
         </div>
         <div class="row parallax">
             <div class="col-sm">
-                <p class="subscription-intro">Try our wine delivery subscription packages! Subscribe for 3 months or more and receive a case of wine each month!<br>
-            Pick a wine type, or choose the selection offer, and start your adventure in Wine Nation!</p>
+                <p class="subscription-intro">Try our wine delivery subscription packages! Subscribe for 3 months or
+                    more and receive a case of wine each month!<br>
+                    Pick a wine type, or choose the selection offer, and start your adventure in Wine Nation!</p>
             </div>
         </div>
     </div>
@@ -49,8 +50,7 @@
             {% endif %}
             <div class="row">
                 <div class="col-sm-12">
-                    <form class="form text-center" action="{% url 'add_to_bag' subscription.id %}"
-                        method="POST">
+                    <form class="form text-center" action="{% url 'add_to_bag' subscription.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row justify-content-center">
                             <div class="col-sm-12 text-center w-25">
@@ -93,9 +93,9 @@
 </div>
 
 
-    {% endblock %}
+{% endblock %}
 
-    {% block postloadjs %}
-    {{ block.super }}
-    {% include 'products/includes/quantity_input_script.html' %}
-    {% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}

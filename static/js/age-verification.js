@@ -2,7 +2,7 @@
  * Simple Age Verification (https://github.com/Herudea/age-verification))
  */
 
-var modal_content,
+let modal_content,
 modal_screen;
 
 // Start Working ASAP.
@@ -26,18 +26,18 @@ av_legality_check = function() {
 av_showmodal = function() {
 	modal_screen = $('<div id="modal_screen"></div>');
 	modal_content = $('<div id="modal_content" style="display:none"></div>');
-	var modal_content_wrapper = $('<div id="modal_content_wrapper" class="content_wrapper"></div>');
-	var modal_regret_wrapper = $('<div id="modal_regret_wrapper" class="content_wrapper" style="display:none;"></div>');
+	let modal_content_wrapper = $('<div id="modal_content_wrapper" class="content_wrapper"></div>');
+	let modal_regret_wrapper = $('<div id="modal_regret_wrapper" class="content_wrapper" style="display:none;"></div>');
 
 	// Question Content
-	var content_heading = $('<h6>Are you 18 or older?</h6>');
-	var content_buttons = $('<nav><ul><li><a href="#nothing" class="av_btn av_go btn" rel="yes">Yes</a></li><li><a href="#nothing" class="av_btn av_no btn" rel="no">No</a></li></nav>');
-	var content_text = $('<p>You must be at least 18 years old to enter this site.</p>');
+	let content_heading = $('<h6>Are you 18 or older?</h6>');
+	let content_buttons = $('<nav><ul><li><a href="#nothing" class="av_btn av_go btn" rel="yes">Yes</a></li><li><a href="#nothing" class="av_btn av_no btn" rel="no">No</a></li></nav>');
+	let content_text = $('<p>You must be at least 18 years old to enter this site.</p>');
 
 	// Regret Content
-	var regret_heading = $('<h4>We\'re Sorry!</h4>');
-	var regret_buttons = $('<nav><ul><li><button class="btn mt-1" onclick="self.close()" rel="yes">Close page</button></li></ul></nav>');
-	var regret_text = $('<p>You must verify that you are at least 18 years old to enter this site.</p>');
+	let regret_heading = $('<h4>We\'re Sorry!</h4>');
+	let regret_buttons = $('<nav><ul><li><button class="btn mt-1" onclick="self.close()" rel="yes">Close page</button></li></ul></nav>');
+	let regret_text = $('<p>You must verify that you are at least 18 years old to enter this site.</p>');
 
 	modal_content_wrapper.append(content_heading, content_buttons, content_text);
 	modal_regret_wrapper.append(regret_heading, regret_buttons, regret_text);
@@ -55,7 +55,7 @@ av_showmodal = function() {
 av_setCookie = function(e) {
 	e.preventDefault();
 
-	var is_legal = $(e.currentTarget).attr('rel');
+	let is_legal = $(e.currentTarget).attr('rel');
 
 	$.cookie('is_legal', is_legal, {
 		expires: 30,
@@ -82,14 +82,14 @@ av_showRegret = function() {
 };
 
 av_positionPrompt = function() {
-	var top = ($(window).outerHeight() - $('#modal_content').outerHeight()) / 2;
-	var left = ($(window).outerWidth() - $('#modal_content').outerWidth()) / 2;
+	let top = ($(window).outerHeight() - $('#modal_content').outerHeight()) / 2;
+	let left = ($(window).outerWidth() - $('#modal_content').outerWidth()) / 2;
 	modal_content.css({
 		'top': top,
 		'left': left
 	});
 
 	if (modal_content.is(':hidden') && ($.cookie('is_legal') != "yes")) {
-		modal_content.fadeIn('slow')
+		modal_content.fadeIn('slow');
 	}
 };
