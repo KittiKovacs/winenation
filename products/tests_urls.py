@@ -4,7 +4,7 @@ from products.views import (all_wines, wine_details,
                             all_subscriptions)
 
 
-class TestServiceUrls(SimpleTestCase):
+class TestProductUrls(SimpleTestCase):
 
     def test_all_wines_url_resolves(self):
         url = reverse('wines')
