@@ -132,19 +132,17 @@ I used the Bootstrap front-end framework throughout the development process, mai
 
 The website's colour scheme is in line with  the theme of the site with black and grey added for contrast. It is dominated by reds, yellow and pink to reflect the colours of red, white and rose wines.
 
-![colour scheme](/winenation/wireframes/colour_scheme.png)
-
 I am using a simple sans-serif font from Google Fonts called Raleway to create a modern look and and easy to read website.
 
 The website is responsive and works well on all viewports.
 
-![landing](winenation/wireframes/responsive_images/landing.JPG)
+![landing](//wireframes/responsive_images/landing.JPG)
 
-![wines](winenation/wireframes/responsive_images/Wines.JPG)
+![wines](/wireframes/responsive_images/Wines.JPG)
 
-![bag](winenation/wireframes/responsive_images/BAg_1.JPG)
+![bag](/wireframes/responsive_images/BAg_1.JPG)
 
-![checkout](winenation/wireframes/checkout.png)
+![checkout](/wireframes/responsive_images/Checkout.JPG)
 
 For more images click [here](https://github.com/KittiKovacs/winenation/blob/8c938122853a6ecc76094801e43e024f68bbcac3/wireframes/responsive_images)
 
@@ -172,7 +170,7 @@ If the user clicks "YES" the webste's landing page will display. If the user cli
 #### navigation
 
 On the top of the page the user can find the main navigation elements, such as the menu items, bag and profile icons and search bar.
-[header navigation](/wireframes/feature_images/header.JPG)
+![header navigation](/wireframes/feature_images/header.JPG)
 In the center of the page there's the logo and a slogan underneath. On clicking the logo the user can navigate back to the homepage.
 Some navigation elements have sub-elements which open in a dropdown, such as the wines page and the profile icon.
 
@@ -196,7 +194,7 @@ Another navigation feature on the all wines, red, white and sparkling and desser
 This is created to make a first impression to the user and also to act as a manifesto to the site. 
 It features all navigation elements and also a button to take the user straight to the all wines page.
 
-![landing](winenation/wireframes/feature_images/landing_image.JPG)
+![landing](/winenation/wireframes/feature_images/landing_image.JPG)
 
 #### About us page
 This page describes the purpose of the site with a short description on the top that has a scrolling image as a background,
@@ -235,6 +233,7 @@ for the user to choose a quantity by using the quantity selector and add the pro
 If the item is successfully added to the bag a toast message appears on the top. This gives the user a list of what's in the bag, the product prices and a total.
 
 It also has a link to the bag.
+
 ![success toast](/wireframes/feature_images/success-toast.JPG)
 
 #### Subscriptions
@@ -301,6 +300,7 @@ They are also presented with a table summarizing the order details:
 - Order number and date
 - Shipping details
 - Billing info 
+
 A button below the table redirects user to the All wines page.
 Also, a success toast message appears in the top right corner that includes the order number and confirmation email address.
 
@@ -318,6 +318,7 @@ The form contains fields for an email addres, email address confirmation, userna
 When adding a username, the code compares it against existing email to ensure that it is unique.
 
 ![registration form](/wireframes/feature_images/register.JPG)
+
 If user's input does not meet requirements, the form displays and error. 
 When the form is submitted, a verification email is sent to the user's email address to finish the registration process.
 
@@ -711,10 +712,10 @@ Setting up environment variables:
 You need to set the following environment variables in your Gitpod settings or in an env file created in the repository (add this to a gitignore file to make sure your secret keys are not exposed!)
 
 os.environ["DEVELOPMENT"] = "True"    
-os.environ["SECRET_KEY"] = "<Your Secret key>"    
-os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public key>"    
-os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret key>"    
-os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH_Secret key>"     
+os.environ["SECRET_KEY"] = "Your Secret key"    
+os.environ["STRIPE_PUBLIC_KEY"] = "Your Stripe Public key"    
+os.environ["STRIPE_SECRET_KEY"] = "Your Stripe Secret key"    
+os.environ["STRIPE_WH_SECRET"] = "Your Stripe WH_Secret key"     
 
 Install all requirements from the requirements.txt file putting this command into your terminal:
     
