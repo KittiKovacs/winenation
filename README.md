@@ -132,7 +132,7 @@ I used the Bootstrap front-end framework throughout the development process, mai
 
 The website's colour scheme is in line with  the theme of the site with black and grey added for contrast. It is dominated by reds, yellow and pink to reflect the colours of red, white and rose wines.
 
-![colour scheme](/workspace/winenation/wireframes/colour_scheme.png)
+![colour scheme](/winenation/wireframes/colour_scheme.png)
 
 I am using a simple sans-serif font from Google Fonts called Raleway to create a modern look and and easy to read website.
 
@@ -165,7 +165,8 @@ On the top of the page the user can find the main navigation elements, such as t
 In the center of the page there's the logo and a slogan underneath. On clicking the logo the user can navigate back to the homepage.
 Some navigation elements have sub-elements which open in a dropdown, such as the wines page and the profile icon.
 
-![menu dropdown](/wireframes/feature_images/wines_dropdown.JPG) [profile dropdown](/wireframes/feature_images/Profile_dropdown.JPG)
+![menu dropdown](/wireframes/feature_images/wines_dropdown.JPG)
+![profile dropdown](/wireframes/feature_images/Profile_dropdown.JPG)
 
 On mobile screens the menu items are condensed into a hamburger button and the search icon, profile and bag icons are displayed on top of the page.
 
@@ -184,14 +185,15 @@ Another navigation feature on the all wines, red, white and sparkling and desser
 This is created to make a first impression to the user and also to act as a manifesto to the site. 
 It features all navigation elements and also a button to take the user straight to the all wines page.
 
-![landing](/wireframes/feature_images/landing%20image%20and%20button.JPG)
+![landing](winenation/wireframes/feature_images/landing_image.JPG)
 
 #### About us page
 This page describes the purpose of the site with a short description on the top that has a scrolling image as a background,
 a more details description about wines and the area, and contains an image carousel on the bottom with user reviews.
 The carousel and the parallax scolling background are not displayed on small screens.
 
-![about us](/wireframes/feature_images/about-1.JPG)[!carousel](wireframes/feature_images/carousel.JPG)
+![about us](/wireframes/feature_images/about-1.JPG)
+![carousel](wireframes/feature_images/carousel.JPG)
 
 #### Wines page
 
@@ -348,7 +350,7 @@ A user can reset their password to be able to login by entering the email by cli
 If they enter their email address and click reset passsword, a link will be sent to the email provided.
 The user can create a new password and then login with a new password.
 
-![password reset](/wireframes/feature_images/password%20_reset.JPG)
+![password reset](winenation/wireframes/feature_images/password _reset.JPG)
 
 
 #### 404 and 500 error pages
@@ -359,7 +361,7 @@ Custom 404 and 500 pages are displayed when this error occurs which give the use
 
 The Product managment feature is available only for authenticated superusers. 
 
-![product management link](/winenation/wireframes/feature_images/admin1-product-management-link.JPG)
+![product management link](/workspace/winenation/wireframes/feature_images/admin1-product-management-link.JPG)
 
 The superuser has permission to add new products by filling in the Add New Product or Edit product forms. 
 
@@ -643,9 +645,19 @@ The Coverage library was used throughout testing to help keep track of how much 
 
 In order to generate  coverage report install the package: pip3 install coverage.
 
-To run the test: coverage run --source=winenation manage.py test.
-To view the report: coverage report 
-To create an interactive html report: coverage html which can be viewed by typing python3 -m http.server to the console.
+To run the test:
+
+    coverage run --source=winenation manage.py test.
+
+To view the report: 
+
+    coverage report 
+
+To create an interactive html report:
+
+    coverage html
+    
+which can be viewed by typing   python3 -m http.server  to the console.
 
 The current coverage rate is 65%
 
@@ -720,20 +732,27 @@ To access the admin panel, you can add the /admin path at the end of the url lin
 
 ### Heroku deployment
 
-I logged into my Heroku account and created a new app called winenation.
+I logged into my Heroku account and created a new app called "winenation".
 On the resources tab in the add-ons section I added a Heroku Postgres database to my application.
 To make sure Heroku installs all apps requirements when I deploy it, I installed dj_database_url and psycopg2 from the command line:
+    
     pip3 install dj_database_url
     pip3 install psycopg2-binary
+
 Then froze the requirements with
+
     pip3 freeze > requirements.txt
+
 I installed gunicorn to act as a webserver
+
     pip3 install gunicorn
+
 and froze the requirements into requirements.txt as well.
 
 I then created Procfile, that tells Heroku to create a web dyno and server our ap with the contents:    
     web: gunicorn boutique_ado.wsgi:application
 Then I logged into Heroku in the Terminal to temporarily disable collectstatic:
+
     heroku config:set DISABLE_COLLECTSTATIC=1 - -app winenation
 
 Added the hostname of my Heroku app to allowed hosts in settings.py :
@@ -747,11 +766,15 @@ Then to deploy to Heroku I entered into the terminal:
     heroku git:remote -a winenation
     git push heroku master
 
-In Heroku again, on the deploy tab, I linked my repository to the Heroku app.
-Choose connect to Github, search for repository name, click connect then enable automatic deploys.
+In Heroku again, on the deploy tab, I linked my repository to the Heroku app by choosing connect to Github,
+search for repository name, click connect then enable automatic deploys.
 
-Then I generated a secret key (from an online django secret key generator)  and added it to config vars in Heroku. I then replaced the secret key in settings.py with SECRET_KEY = os.environ.get('SECRET_KEY', '')
+Then I generated a secret key (from an online django secret key generator)  and added it to config vars in Heroku. 
+I then replaced the secret key in settings.py with 
+
+    SECRET_KEY = os.environ.get('SECRET_KEY', '')
 And:
+
     DEBUG = 'DEVELOPMENT' in os.environ
 
 Commited changes and pushed to Github.
@@ -789,13 +812,14 @@ Used an if statement in settings.py so that when our app is running on Heroku wh
         }
 
 
-Then I created an AWS account to store our static files and images on aws.amazon.com
+Then I created an AWS account to store my static files and images on aws.amazon.com
 
 #### Create a bucket
 
 I searched for s3 and created a new bucket. Unticked “block all public access” and acknowledged it will be public.
-On the Properties tab I turned on static website hosting  and chose host a static website.
+On the Properties tab I turned on static website hosting and chose host a static website.
 On the Permissions tab I pasted in a coors configuration which is going to set up the required access between our Heroku app and this s3 bucket. This code is from the course videos.
+    
     [
     {
         "AllowedHeaders": [
@@ -811,21 +835,27 @@ On the Permissions tab I pasted in a coors configuration which is going to set u
     }
     ]
 
-On the Bucket policy tab I  selected policy generator.  
+On the Bucket policy tab I  selected Policy generator.  
+
 Chose s3 bucket policy from dropdown list
+
 Set Principles to: *
+
 And Action to: get object
+
 I copied ARN ( amazon resource name) from the other tab and pasted it into the relevant field.
 
 Clicked on add statement then on generate policy. 
 
 Then I copied the generated policy into the bucket policy editor in the other tab. Added /*after the resource key.
+
 On the access control list tab:  set the list objects permission for everyone under the Public Access section.
 
 
 #### Create a user to access the bucket:
 
 Search for  IAM In the Services menu.
+
 First I created a **group**. Then I went to Policies.
 
 Here I created a **policy** that will be used to access our bucket.
@@ -834,7 +864,7 @@ On the JSON tab selected  “import managed policy”  searched for s3 and impor
 
 Got the bucket ARN from the bucket policy page and pasted like this:
 
-"Resource": [
+    "Resource": [
                 "arn:aws:s3:::kitti-boutique",
                 "arn:aws:s3:::kitti-boutique/*"
                 ]
@@ -845,7 +875,7 @@ Then clicked create policy.
 I then attached policy to the group created by going to Groups, selected manage-winenation group.
 On the permissions tab I clicked on attach policy and search for the policy I just created.
 
-Lastly I can create a **user** called winenation-staticfiles-user and gave them programmatic access.
+Lastly, I created a **user** called "winenation-staticfiles-user" and gave them programmatic access.
 
 Then I added the user to the group  by going back to Groups and select the user.
 
@@ -854,6 +884,7 @@ I then downloaded the CSV file which contains this users access key and secret a
 #### Connecting Django to the bucket in S3:
 
 I created 2 new packages in my app:
+    
     pip3 install boto3
 
     pip3 install django-storages
@@ -874,10 +905,13 @@ Also to settings.py I added:
 
 In Heroku, I added the AWS keys (AWS_ACCESS_KEY_ID  and AWS_SECRET_ACCESS_KEY  ) to the config variables,
 these are contained in the CSV files downloaded earlier. I also add to Heroku config vars:
+    
     USE_AWS= True
+
 and removed the disable collectstatic variable from config vars.
 
 In order to tell django where our static files will be coming from in production I added:
+    
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
 I then created a custom_storages.py in the main folder:
@@ -909,7 +943,8 @@ I committed all changes and pushed to Github. Now I had a new static folder in t
 
 
 To  tell the browser that it's okay to cache static files for a long time I added to if  USE_AWS
-	AWS_S3_OBJECT_PARAMETERS = {
+	
+    AWS_S3_OBJECT_PARAMETERS = {
 	'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
 	'CacheControl': 'max-age=94608000',
 	}
@@ -926,13 +961,11 @@ STRIPE_PUBLIC_KEY
 STRIPE_SECRET_KEY
 
 Then, In Stripe, I created a new webhook endpoint for my Heroku app.
-On the Developers tab Webhooks I added endpoint:   
-https://winenation.herokuapp.com/checkout/wh/    
+On the Developers tab Webhooks I added endpoint:https://winenation.herokuapp.com/checkout/wh/    
 I set receive all events.
 I then revealed my webhooks signing secret and added that to our Heroku config variables too as STRIPE_WH_SECRET.
 
 I then sent test webhook to test if it all works.
-
 
 ## Credits
 ### Code
