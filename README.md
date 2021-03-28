@@ -13,7 +13,7 @@ Please see the link to the live page here: https://winenation.herokuapp.com/
 
 
 1. [**UX**](#ux)
-    - [**Project goals**](#project goals) 
+    - [**Project goals**](#project-goals) 
     - [**User Stories**](#user-stories)
     - [**Design**](#desing)
     - [**Wireframes**](#wireframes)
@@ -359,7 +359,7 @@ Custom 404 and 500 pages are displayed when this error occurs which give the use
 
 The Product managment feature is available only for authenticated superusers. 
 
-![product management link](/wireframes/feature_images/admin1-product management link.JPG)
+![product management link](/winenation/wireframes/feature_images/admin1-product-management-link.JPG)
 
 The superuser has permission to add new products by filling in the Add New Product or Edit product forms. 
 
@@ -384,17 +384,17 @@ All these changed are confirmed in the form of toast messages as well.
 
 There are some more features that I feel would improve on the overall user experience and could be beneficial to a real-life shop owner I didn't feel important or got around to implement, but I intend to add them later.
 
-Rating and Customer Reviews
+**Rating and Customer Reviews**
 At the moment users have no means to give feedback to the store owner and to each other about the product, which is a quite important feature in a modern webshop.
 Users in the future would be able to create, edit and delete their reviews, and give a star (or wine glass)-based rating to each product which would display on the product details page along with the reviews.
 
-User uploaded photos
+**User uploaded photos**
 This feature would allow users to add photos to their reviews as well as an avatar to their profile.
 
-News section
+**News section**
 This would be a page for the store owner to potentially post updates, news and offers to the site.
 
-Social account login (Google and Facebook)
+**Social account login (Google and Facebook)**
 This feature would allow users to login using social networks accounts, such as Google and Facebook.
 
 
@@ -409,7 +409,7 @@ a PostgreSQL database which is provided by Heroku as an add-on.
 
 #### Product app
 
-Products
+**Products**
 
 Name | Key | Field Type | Validation
 ------------ | ------------- | ------------- | ------------- 
@@ -429,21 +429,21 @@ Alc_vol | alc_vol | models.DecimalField | null=True, blank=True, max_digits=6, d
 Pairing | pairing | models.CharField | max_length=254, null=True, blank=True
 Is_a_subscription | is_a_subscription | models.BooleanField | default=False
 
-Category
+**Category**
 
 Name | Key | Field Type | Validation
 ------------ | ------------- | ------------- | ------------- 
 Name | name | models.CharField | max_length=254
 Friendly_name | friendly_name | models.CharField | max_length=254
 
-Variety
+**Variety**
 
 Name | Key | Field Type | Validation
 ------------ | ------------- | ------------- | ------------- 
 Name | name | models.CharField | max_length=254
 Friendly_name | friendly_name | models.CharField | max_length=254
 
-Wine_region
+**Wine_region**
 
 Name | Key | Field Type | Validation
 ------------ | ------------- | ------------- | ------------- 
@@ -453,7 +453,7 @@ Friendly_name | friendly_name | models.CharField | max_length=254
 
 #### Profile app
 
-User Profile
+**User Profile**
 
 Name | Key | Field Type | Validation
 ------------ | ------------- | ------------- | ------------- 
@@ -468,7 +468,7 @@ Country| default_country | CountryField| blank_label='Country', null=True, blank
 
 #### Checkout app
 
-Order
+**Order**
 
 Name | Key | Field Type | Validation
 ------------ | ------------- | ------------- | ------------- 
@@ -491,7 +491,7 @@ Original bag | original_bag| models.TextField| null=False, blank=False, default=
 Stripe Pid | stripe_pid| models.models.CharField| max_length=254, null=False, blank=False, default=''
 
 
-Order Line item
+**Order Line item**
 
 Name | Key | Field Type | Validation
 ------------ | ------------- | ------------- | ------------- 
@@ -596,18 +596,18 @@ and lets me close the window.
 The external links in the footer and about us page are all opening in a separate window, there are no broken links.
 The carousel on the about us page is responsive and works in both direction, and doesn't render on small screens.
 
-Sorting and filtering:
+**Sorting and filtering:**
 
 I tested the sorting on the all wines and in each wine category with all available options and all works as intended.
 I can filter wines by keyword which was tested with the words "Sauska", "kadarka" and "tokaj".
 
-Authentication:
+**Authentication:**
 
 I've created 2 separate accounts to confirm that the authentication and validation for creating account worked as expected. I received a validation request email to the temporary email addresses I used for this purpose.
 I was able to log in and out with my credentials. Using a non-existing user or incorrect password are flagged up. Toast messages are being rendered as intended to confirm registration,login and logout.
 The password reset functionality has also been tested and works as intended.
 
-Shopping:
+**Shopping:**
 
 I tested the shopping bag by adding a single product; adding different quantities of the same product; adding several products and adding subscriptions.
 All works as intended and prices and totals are rendering correctly.
@@ -622,7 +622,7 @@ As a registered user I am able to view my profile where my details are prefilled
 
 From the checkout success page I can navigate back to the All wines page.
 
-Admin features/CRUD features:
+**Admin features/CRUD features:**
 
 I've created, edited and deleted multiple products and I was able to add them all in the shopping bag.
 Whenever I filled in the form with the incorrect or insufficient details I received an error message.
@@ -668,10 +668,10 @@ It is hosted on the Heroku platform, with static files and user-uploaded images 
 
 To be able to run this project, the following tools have to be installed:
 
--GitPod or any other IDE
--Git
--PIP
--Python3
+- GitPod or any other IDE
+- Git
+- PIP
+- Python3
 
 The following services were used:
 
@@ -679,7 +679,8 @@ The following services were used:
 - AWS to setup the S3 basket
 - Gmail or another email system.
 
-Directions
+Directions:
+
 You can clone this repository directly into the editor of your choice by pasting the following command into the terminal:
 git clone https://github.com/KittiKovacs/winenation
 
@@ -693,17 +694,28 @@ os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret key>"
 os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH_Secret key>"     
 
 Install all requirements from the requirements.txt file putting this command into your terminal:
-pip3 install -r requirements.txt
+    
+    pip3 install -r requirements.txt
+
 Migrate the models to crete a database using the following commands:
-python3 manage.py makemigrations
-python3 manage.py migrate
+
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+
 Load the data fixtures(categories, services, portfolio) in that order into the database using the following command:
-python3 manage.py loaddata <fixture_name>
+    
+    python3 manage.py loaddata <fixture_name>
+
 Create a superuser to have an access to the the admin panel(you need to follow the instructions then and insert username,email and password):
-python3 manage.py createsuperuser
+    
+    python3 manage.py createsuperuser
+
 You will now be able to run the application using the following command:
-python3 manage.py runserver
+
+    python3 manage.py runserver
+
 Open port 8000 in browser.
+
 To access the admin panel, you can add the /admin path at the end of the url link and login using your superuser credentials.
 
 ### Heroku deployment
@@ -728,7 +740,7 @@ Added the hostname of my Heroku app to allowed hosts in settings.py :
 
     ALLOWED_HOSTS = ['winenation.herokuapp.com', 'localhost']
 
-Committed changes and pushed to github.
+Committed changes and pushed to Github.
 
 Then to deploy to Heroku I entered into the terminal: 
 
@@ -755,6 +767,7 @@ Commented out the default database setting and created and env.py file and added
 
 
 I ran all migrations again to get the database set up
+
     python3 manage.py makemigrations
     python3 manage.py migrate
     run python3 manage.py loaddata db
@@ -778,7 +791,8 @@ Used an if statement in settings.py so that when our app is running on Heroku wh
 
 Then I created an AWS account to store our static files and images on aws.amazon.com
 
-1.	Create a bucket
+#### Create a bucket
+
 I searched for s3 and created a new bucket. Unticked “block all public access” and acknowledged it will be public.
 On the Properties tab I turned on static website hosting  and chose host a static website.
 On the Permissions tab I pasted in a coors configuration which is going to set up the required access between our Heroku app and this s3 bucket. This code is from the course videos.
@@ -812,9 +826,9 @@ On the access control list tab:  set the list objects permission for everyone un
 #### Create a user to access the bucket:
 
 Search for  IAM In the Services menu.
-First I created a group. Then I went to Policies.
+First I created a **group**. Then I went to Policies.
 
-Here I created a policy that will be used to access our bucket.
+Here I created a **policy** that will be used to access our bucket.
 
 On the JSON tab selected  “import managed policy”  searched for s3 and imported the Amazon S3 full access policy.
 
@@ -831,13 +845,14 @@ Then clicked create policy.
 I then attached policy to the group created by going to Groups, selected manage-winenation group.
 On the permissions tab I clicked on attach policy and search for the policy I just created.
 
-Lastly I can create a *user* called winenation-staticfiles-user and gave them programmatic access.
+Lastly I can create a **user** called winenation-staticfiles-user and gave them programmatic access.
 
 Then I added the user to the group  by going back to Groups and select the user.
 
 I then downloaded the CSV file which contains this users access key and secret access key which I used later to authenticate them from my Django app.
 
 #### Connecting Django to the bucket in S3:
+
 I created 2 new packages in my app:
     pip3 install boto3
 
