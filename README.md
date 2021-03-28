@@ -85,39 +85,37 @@ As a store owner I want to be able to delete products  to avoid I don’t advert
 
 ### Existing Features
 
-#### On all pages:
+#### Landing page
 
 
 
-#### Login
+
+#### About us page
 
 
+
+#### Wines page
+
+
+
+#### Wine details page
+
+
+
+#### Subscriptions
+
+
+#### Shopping bag
+
+
+#### Checkout
 
 
 #### Register
 
+#### Login
 
-
-#### Profile
-
-
-
-#### Boards
-
-
-
-#### Categories
-
-
-#### Creating Posts
-
-
-#### Updating Posts
-
-
-#### Deleting Posts
-
-#### Admin
+#### Admin functions
 
 
 #### Error handling
@@ -126,15 +124,108 @@ As a store owner I want to be able to delete products  to avoid I don’t advert
 ### Features left to implement
 
 
-
 ## Information architecture
 
 ### Database Choice
 
+During the development stage I worked with Django's default sqlite3 database, which I later changed to
+a PostgreSQL database which is provided by Heroku as an add-on.
 
 ### Data modelling
 
-![Schema](static/img/data/Schema_MS3.jpg)
+#### Product app
+
+Products
+
+Name | Key | Field Type | Validation
+------------ | ------------- | ------------- | ------------- 
+SKU | sku | models.CharField | max_length=254
+Name | name | models.CharField | max_length=254
+Description | description | models.TextField | ()
+Price | price | models.DecimalField | max_digits=6, decimal_places=2
+Image_url | image_url | models.URLField | max_length=1024, null=True, blank=True
+Image | image | models.ImageField | upload_to='', null=True, blank=True
+Category | category |models.ForeignKey | 'Category', null=True, blank=True, on_delete=models.SET_NULL
+Winery | winery | models.CharField | max_length=254, null=True, blank=True
+Country | country | models.CharField | max_length=254, null=True, blank=True
+Variety | variety | models.ForeignKey | 'Variety', null=True, blank=True, on_delete=models.SET_NULL, max_length=254
+Vintage | vintage | models.IntegerField | null=True, blank=True
+Region | region | models.ForeignKey | 'Wine_region', null=True, blank=True, on_delete=models.SET_NULL, max_length=254
+Alc_vol | alc_vol | models.DecimalField | null=True, blank=True, max_digits=6, decimal_places=2
+Pairing | pairing | models.CharField | max_length=254, null=True, blank=True
+Is_a_subscription | is_a_subscription | models.BooleanField | default=False
+
+Category
+
+Name | Key | Field Type | Validation
+------------ | ------------- | ------------- | ------------- 
+Name | name | models.CharField | max_length=254
+Friendly_name | friendly_name | models.CharField | max_length=254
+
+Variety
+
+Name | Key | Field Type | Validation
+------------ | ------------- | ------------- | ------------- 
+Name | name | models.CharField | max_length=254
+Friendly_name | friendly_name | models.CharField | max_length=254
+
+Wine_region
+
+Name | Key | Field Type | Validation
+------------ | ------------- | ------------- | ------------- 
+Name | name | models.CharField | max_length=254
+Friendly_name | friendly_name | models.CharField | max_length=254
+
+
+#### Profile app
+
+User Profile
+
+Name | Key | Field Type | Validation
+------------ | ------------- | ------------- | ------------- 
+User| user | models.OneToOneField | User, on_delete=models.CASCADE
+Phone Number | default_phone_number | models.CharField | max_length=20, null=True, blank=True
+Street Address 1| default_street_address1 | models.CharField | max_length=80, null=True, blank=True
+Street Address 2| default_street_address2 | models.CharField | max_length=80, null=True, blank=True
+Town or City| default_town_or_city | models.CharField | max_length=40, null=True, blank=True
+County, State or Locality| default_county | models.CharField | max_length=80, null=True, blank=True
+Postcode| default_postcode | models.CharField| max_length=20, null=True, blank=True
+Country| default_country | CountryField| blank_label='Country', null=True, blank=True
+
+#### Checkout app
+
+Order
+
+Name | Key | Field Type | Validation
+------------ | ------------- | ------------- | ------------- 
+Order number| order_number | models.CharField| max_length=32, null=False, editable=False
+User Profile| user_profile | models.ForeignKey  | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
+Full Name | full_name | models.CharField | max_length=50, null=True, blank=True
+Email| email | models.CharField | max_length=254, null=True, blank=True
+Phone number | phone_number | models.CharField | max_length=20, null=False, blank=False
+Country | country | CountryField| blank_label='Country *', null=True, blank=True
+Postcode| postcode | models.CharField| max_length=20, null=True, blank=True
+Town or City| town_or_city | models.CharField | max_length=40, null=True, blank=True
+Street Address 1| street_address1 | models.CharField | max_length=80, null=True, blank=True
+street_address2 | models.CharField | max_length=80, null=True, blank=True
+County | county | models.CharField | max_length=80, null=True, blank=True
+Date | date| models.DateTimeField| auto_now_add=True
+Delivery cost | delivery_cost| models.DecimalField| max_digits=6, decimal_places=2, null=False, default=0
+Order total | order_total| models.DecimalField| max_digits=10, decimal_places=2, null=False, default=0
+Grand total | grand_total| models.DecimalField| max_digits=10, decimal_places=2, null=False, default=0
+Original bag | original_bag| models.TextField| null=False, blank=False, default=''
+Stripe Pid | stripe_pid| models.models.CharField| max_length=254, null=False, blank=False, default=''
+
+
+Order Line item
+
+Name | Key | Field Type | Validation
+------------ | ------------- | ------------- | ------------- 
+Order | order | models.ForeignKey| Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'
+Product | product | models.ForeignKey  | Product, null=False, blank=False, on_delete=models.CASCADE
+Quantity | quantity | models.IntegerField | null=False, blank=False, default=0
+Item Total | lineitem_total | models.DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False
+
 
 ## Technologies Used
 
