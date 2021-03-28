@@ -97,24 +97,25 @@ The final website is slightly different from what I had in mind originally, as s
 
 When visiting the website the user is first asked to verify if they are over 18 years of age which is the legal age to purchase alcohol in the UK.
 This is to ensure that no underage user can purchase wine online.
-[!age verification]()
+[!age verification](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/age_verification.JPG)
+
 If the user clicks "YES" the webste's landing page will display. If the user clicks no, the only option the site offers is to close the page.
-[!age verification under 18]()
+[!age verification under 18](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/age_under_18.JPG)
 
 #### navigation
 
 On the top of the page the user can find the main navigation elements, such as the menu items, bag and profile icons and search bar.
-[!header navigation]()
+[!header navigation](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/header.JPG)
 In the center of the page there's the logo and a slogan underneath. On clicking the logo the user can navigate back to the homepage.
 Some navigation elements have sub-elements which open in a dropdown, such as the wines page and the profile icon.
-[!menu dropdown]() [!profile dropdown]()
+[!menu dropdown](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/wines_dropdown.JPG) [!profile dropdown](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/Profile_dropdown.JPG)
 
 On mobile screens the menu items are condensed into a hamburger button and the search icon, profile and bag icons are displayed on top of the page.
-[!mobile navigation]()
+[!mobile navigation](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/navigation_mobile.JPG)
 
 On the bottom of the page users can find a footer containing links to external partner sites, social media account and
 the shop's physical address and contact details.
-[!footer]()
+[!footer](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/footer.JPG)
 
 In the bottom right corner there is a an upward pointing arrow that takes the user back to the top of the page when clicked.
 
@@ -123,49 +124,175 @@ Another navigation feature on the all wines, red, white and sparkling and desser
 #### Landing page
 This is created to make a first impression to the user and also to act as a manifesto to the site. 
 It features all navigation elements and also a button to take the user straight to the all wines page.
-[!landing]()
+[!landing](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/landing%20image%20and%20button.JPG)
 
 #### About us page
 This page describes the purpose of the site with a short description on the top that has a scrolling image as a background,
 a more details description about wines and the area, and contains an image carousel on the bottom with user reviews.
 The carousel and the parallax scolling background are not displayed on small screens.
-[!about us]()[!carousel]()
+[!about us](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/about-1.JPG)[!carousel](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/carousel.JPG)
 
 #### Wines page
+
 This page contains 50 wines divided into 4 categories (Red, White, Rose, Dessert and Sparkling wines).
 The user can view all wines on the same page or by individual categories.
+[!all wines](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/all_wines.JPG)
 
 If the user is on a category page, they have an option to return to the All wines page.
+[!category](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/white_wines.JPG)
+
 There is a sorting option on the top right where the user can sort products alphabetically, by category or by price.
-The user is also able to search 
-The products are displayed on cards that display the product image, name and the category. On clicking the product name the user is taken to the product's details page.
+The user is also able to search by keyword.
+[!search results](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/search_results.JPG)
 
-
+The products are displayed on cards that contains the product image, name and the category.
+On clicking the product name the user is taken to the product's details page.
 
 #### Wine details page
 
+This page contains more details about the product and gives the opportunity
+for the user to choose a quantity by using the quantity selector and add the product to the shopping bag.
+[!wine details page](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/wine_details.JPG)
 
+If the item is successfully added to the bag a toast message appears on the top. This gives the user a list of what's in the bag, the product prices and a total.
+
+It also has a link to the bag.
+[!success toast](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/success-toast.JPG)
 
 #### Subscriptions
+
+The subscriptions page has a similar structure to the About page, it has a short introduction with a parallax scrolling background (visible on medium viewports and above ),
+then some text describing the service and the benefits it offers to users.
+[!sucbscription page](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/subscriptions.JPG)
+
+Below this the user can see the subscription types to choose from, each displayed on a card with a description and price.
+Here they also have a choice to adjust quantities and add the subscription type to the bag. There isn't a page for each subscription like there is for the wines,
+I created one initially but I felt it was redundant and went in a different direction.
+
+[!subscription types](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/subscription_types.JPG)
 
 
 #### Shopping bag
 
+The user is not automatically redirected to the shopping bag when placing an item in the bag. They can access it by clicking on the
+button in the toast message popping up, or by clicking on the bag icon in the top right corner.
+The bag page is available for both logged in and non-logged in users, so that it is possible to make purchase as a guest.
+The page contains a summary of the user's order: the item's image, name, sku, quantity, price and subtotal.
+Subscriptions do not have images so I set a default image to display in case there's no image associated with an item.
+[!bag]https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/bag.JPG)
+
+A user can update the item's quantity by using the quantity selector buttons, or remove items from their order. Toast messages will be displayed when a user updates/removes items in the bag.
+At the bottom of the page the subtotal, delivery coast and grand total are displayed.
+There is a checkout button that takes a user to the checkout page to proceed with the payment, 
+and there's also an option for returning to the all wines page in case the user wants to add more items to the bag.
+[!checkout button](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/checkout_button.JPG)
 
 #### Checkout
 
+The Checkout page contains the checkout form and the order summary.
+[!checkout page](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/checkout1.JPG)
+
+On the right side of the page, there is the Order summary.
+This includes short information about items in the order (image, name, quantity of each item in the bag, subtotal, delivery cost, total to pay.),
+and a button below this that redirects the users back to the bag in case they need so make some changes. 
+
+The checkout form on the left asks for the user's personal details and delivery address, and contains a field for the card details to be entered.
+The user is can double check how much the card will be charged as the total is displayed below the Complete order button
+[!checkout form](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/checkout2.JPG)
+
+If the user doesn't have an account or isn't logged in, there are links to the register and login pages for easier navigation.
+For logged in users, a save info checkbox allows the form information to be saved to their profile. For logged in users the form will be pre-populated with this information.
+
+The Stripe functionality is only for testing at the moment, so only entering 4242 4242 4242 4242 card number will result in successfull payment. Expiration date can be any date in future and CVC can be any numbers.
+The site is using webhooks to make sure that the order is processed even if when the payment process is interrupted (e.g. if a user accidentally closes the page or browser after clicking "Proceed to payment" button).
+
+If the form is submitted successfully and payment was processed, the user is taken to the checkout sucesss page and a confirmation email is sent to the user's email address at the same time.
+If there is something missing from the form, hints are displayed for the users on how to resolve the issue.
+
+#### Checkout Success page
+
+A thank you message informs the customer about the successful completion of the transaction and that they should receive a confirmation email soon.
+They are also presented with a table summarizing the order details:
+- Order number and date
+- Shipping details
+- Billing info 
+A button below the table redirects user to the All wines page.
+Also, a success toast message appears in the top right corner that includes the order number and confirmation email address.
+[!checkout success](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/checkout_success.JPG)
+
+### User authentication
+
+These are all part of the Django-allauth package.
 
 #### Register
 
+This allows a user to create a new account. In case the user already has an account, there is a link to the login page for existing users above the form.
+The Registration page is only available to non-logged in users.
+The form contains fields for an email addres, email address confirmation, username, password" and password (again).
+When adding a username, the code compares it against existing email to ensure that it is unique.
+[!registration form](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/register.JPG)
+If user's input does not meet requirements, the form displays and error. 
+When the form is submitted, a verification email is sent to the user's email address to finish the registration process.
+[!registration form error](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/registration_error.JPG)
+
 #### Login
+
+The login page features the form with username and password fields. There are 2 buttons below the form, one for logging in and one for returning to the home page. There is also a "remember me" tickbox under the form as well as a link to the reset password feature.
+[!login](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/login.JPG)
+If the login was successful, the user is redirected to the home page and a toast success message appears in the top right corner.
+Otherwise, the form displays a message about incorrect user input.
+There is also a link to the sign up page for new users above the form.
+
+#### Profile
+
+Logged in users are able to see their Profile which contains their saved details and order history (if any).
+The page displays the username on top, delivery information to the left with a button to update this information. It is pre-populated if the user already has saved information.
+To the right there is a short order history with order id, order date, items and order total.
+
+[!profile](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/profile.JPG)
+
+By clicking on the order number the same table displays the user would see after a successful checkout,
+and the Toast info message will tell the user that it's a past confirmation for the order number.
+The back to profile page button will redirect a user to the Profile page.
+[!order history](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/order_history.JPG)
+
+#### Logout
+
+Logged in users have the option to log out by clicking on the "logout" option underneath Profile on the top of the page.
+The user is redirected to the logout page where to user has to confirm they want tolog out. 
+It will end their session and a toast success message informs them about successful log out. The user is redirected to the home page.
+[!logout](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/logout.JPG)
+
+#### Password reset
+
+A user can reset their password to be able to login by entering the email by clicking on the Forgot password lon on the login page.
+If they enter their email address and click reset passsword, a link will be sent to the email provided.
+The user can create a new password and then login with a new password.
+[!password reset](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/password%20_reset.JPG)
+
+
+#### 404 and 500 error pages
+
+Custom 404 and 500 pages are displayed when this error occurs which give the users a chance to return to the homepage.
 
 #### Admin functions
 
+The Product managment feature is available only for authenticated superusers. 
+[!product management link](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/admin1-product%20management%20link.JPG)
+The superuser has permission to add new products by filling in the Add New Product or Edit product forms. 
 
-#### Error handling
-I created custom 404 and 500 pages to guide back the user to the home page in case of an error.
-The user also gets toast messages in case of an error while searching, or if a user who doesn't have admin rights tried to add or edit a product.
+By clicking on the Product management option the user can add a new product by filling in the form. They can upload a photo for each product.
+By ticking "is a subscription" they are also able to create a new subscription type.
+[!add product form](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/add_product.JPG)
 
+To edit a product, the superuser can click in the Edit option on the product's card. This feature is only visible for superusers.
+[! edit product1](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/edit_product.JPG)
+They will be taken to the edit product page where they can overwrite the existing details and add a new image.
+[! edit product form](https://github.com/KittiKovacs/winenation/blob/d99b7cdb531a29f928be75987bd74ca225cb9e49/wireframes/feature_images/edit_product_1.JPG)
+
+To delete a product the superuser can click on the delete link on the product card. This is also not visible for non-superusers.
+
+All these changed are confirmed in the form of toast messages as well.
 
 ### Features left to implement
 
