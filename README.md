@@ -3,7 +3,7 @@
 ## 
 
 
-As the final project of the course, my aim is to create a full-stack site based around business logic used to control a centrally owned dataset and to provide paid access to the site's data and services using all technologies such as HTML, CSS, JAvascript, Python, Django, relational databases and Stripe payments.
+As this is the final Milestone project of Code Institute's Full stack web developer course, my aim was to create a full-stack site based around business logic used to control a centrally owned dataset and to provide paid access to the site's data and services.
 
 The project is an Ecommerce site for a wine shop specializing in Eastern European wines, which also has a subscription-based wine delivery service that allows shoppers to purchase wines at a better price than buying individual bottles, the longer the subscription period the lower the price per bottle.
 
@@ -73,28 +73,72 @@ As a store owner I want to be able to edit/update products, change product detai
 As a store owner I want to be able to delete products  to avoid I don’t advertising items that are no longer available and misleading customers.
 
 
-
 ### Design
+
+I used the Bootstrap front-end framework throughout the development process, mainly for features such as navbar, cards, modals, carousel and the grid layout.
+
+The website's colour scheme is in line with  the theme of the site with black and grey added for contrast. It is dominated by reds, yellow and pink to reflect the colours of red, white and rose wines.
+![colour scheme]()
+
+I am using a simple sans-serif font from Google Fonts called Raleway to create a modern look and and easy to read website.
 
 
 ### Wireframes
 
+Wireframes for desktop, tablet and mobile can be found [here](https://github.com/KittiKovacs/winenation/tree/master/wireframes).
 
+The final website is slightly different from what I had in mind originally, as sometimes I found a different solution would be more suitable.
 
 ## Features
 
 ### Existing Features
 
+#### Age verification
+
+When visiting the website the user is first asked to verify if they are over 18 years of age which is the legal age to purchase alcohol in the UK.
+This is to ensure that no underage user can purchase wine online.
+[!age verification]()
+If the user clicks "YES" the webste's landing page will display. If the user clicks no, the only option the site offers is to close the page.
+[!age verification under 18]()
+
+#### navigation
+
+On the top of the page the user can find the main navigation elements, such as the menu items, bag and profile icons and search bar.
+[!header navigation]()
+In the center of the page there's the logo and a slogan underneath. On clicking the logo the user can navigate back to the homepage.
+Some navigation elements have sub-elements which open in a dropdown, such as the wines page and the profile icon.
+[!menu dropdown]() [!profile dropdown]()
+
+On mobile screens the menu items are condensed into a hamburger button and the search icon, profile and bag icons are displayed on top of the page.
+[!mobile navigation]()
+
+On the bottom of the page users can find a footer containing links to external partner sites, social media account and
+the shop's physical address and contact details.
+[!footer]()
+
+In the bottom right corner there is a an upward pointing arrow that takes the user back to the top of the page when clicked.
+
+Another navigation feature on the all wines, red, white and sparkling and dessert wines pages is pagination which is on the bottom of the page in the middle.
+
 #### Landing page
-
-
-
+This is created to make a first impression to the user and also to act as a manifesto to the site. 
+It features all navigation elements and also a button to take the user straight to the all wines page.
+[!landing]()
 
 #### About us page
-
-
+This page describes the purpose of the site with a short description on the top that has a scrolling image as a background,
+a more details description about wines and the area, and contains an image carousel on the bottom with user reviews.
+The carousel and the parallax scolling background are not displayed on small screens.
+[!about us]()[!carousel]()
 
 #### Wines page
+This page contains 50 wines divided into 4 categories (Red, White, Rose, Dessert and Sparkling wines).
+The user can view all wines on the same page or by individual categories.
+
+If the user is on a category page, they have an option to return to the All wines page.
+There is a sorting option on the top right where the user can sort products alphabetically, by category or by price.
+The user is also able to search 
+The products are displayed on cards that display the product image, name and the category. On clicking the product name the user is taken to the product's details page.
 
 
 
@@ -119,9 +163,26 @@ As a store owner I want to be able to delete products  to avoid I don’t advert
 
 
 #### Error handling
+I created custom 404 and 500 pages to guide back the user to the home page in case of an error.
+The user also gets toast messages in case of an error while searching, or if a user who doesn't have admin rights tried to add or edit a product.
 
 
 ### Features left to implement
+
+There are some more features that I feel would improve on the overall user experience and could be beneficial to a real-life shop owner I didn't feel important or got around to implement, but I intend to add them later.
+
+Rating and Customer Reviews
+At the moment users have no means to give feedback to the store owner and to each other about the product, which is a quite important feature in a modern webshop.
+Users in the future would be able to create, edit and delete their reviews, and give a star (or wine glass)-based rating to each product which would display on the product details page along with the reviews.
+
+User uploaded photos
+This feature would allow users to add photos to their reviews as well as an avatar to their profile.
+
+News section
+This would be a page for the store owner to potentially post updates, news and offers to the site.
+
+Social account login (Google and Facebook)
+This feature would allow users to login using social networks accounts, such as Google and Facebook.
 
 
 ## Information architecture
@@ -249,13 +310,11 @@ Item Total | lineitem_total | models.DecimalField | max_digits=6, decimal_places
 
 - Balsamiq app for creating wireframes.
 
-- [Am I responsive?](http://ami.responsivedesign.is/) to demonstrate responsiveness in this README file.
+- I used the responsive viewer extension in Google Chrome to demonstrate responsiveness in this README file.
 
 - [Font Awesome](https://fontawesome.com/) for icons.
 
 - [Google Fonts](https://fonts.google.com/)
-
-- [Icons 8](https://icons8.com/) for sidenav icons
 
 ### Databases
 
