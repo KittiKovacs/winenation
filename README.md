@@ -136,6 +136,17 @@ The website's colour scheme is in line with  the theme of the site with black an
 
 I am using a simple sans-serif font from Google Fonts called Raleway to create a modern look and and easy to read website.
 
+The website is responsive and works well on all viewports.
+
+![landing](winenation/wireframes/responsive_images/landing.JPG)
+
+![wines](winenation/wireframes/responsive_images/Wines.JPG)
+
+![bag](winenation/wireframes/responsive_images/BAg_1.JPG)
+
+![checkout](winenation/wireframes/checkout.png)
+
+For more images click [here](https://github.com/KittiKovacs/winenation/blob/8c938122853a6ecc76094801e43e024f68bbcac3/wireframes/responsive_images)
 
 ### Wireframes
 
@@ -361,7 +372,7 @@ Custom 404 and 500 pages are displayed when this error occurs which give the use
 
 The Product managment feature is available only for authenticated superusers. 
 
-![product management link](/workspace/winenation/wireframes/feature_images/admin1-product-management-link.JPG)
+![product management link](/wireframes/feature_images/admin1-product-management-link.JPG)
 
 The superuser has permission to add new products by filling in the Add New Product or Edit product forms. 
 
@@ -372,7 +383,7 @@ By ticking "is a subscription" they are also able to create a new subscription t
 
 To edit a product, the superuser can click in the Edit option on the product's card. This feature is only visible for superusers.
 
-![edit product1](wireframes/feature_images/edit_product.JPG)
+![edit product1](/wireframes/feature_images/edit_product.JPG)
 
 They will be taken to the edit product page where they can overwrite the existing details and add a new image.
 
