@@ -10,10 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-# try:
-#     import env
-# except ImportError:
-#     pass
+try:
+    import env
+except ImportError:
+    pass
 
 from pathlib import Path
 import os

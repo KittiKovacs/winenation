@@ -206,6 +206,8 @@ For logged in users, a save info checkbox allows the form information to be save
 The Stripe functionality is only for testing at the moment, so only entering 4242 4242 4242 4242 card number will result in successfull payment. Expiration date can be any date in future and CVC can be any numbers.
 The site is using webhooks to make sure that the order is processed even if when the payment process is interrupted (e.g. if a user accidentally closes the page or browser after clicking "Proceed to payment" button).
 
+While the payment is pending the user sees a spinner.
+
 If the form is submitted successfully and payment was processed, the user is taken to the checkout sucesss page and a confirmation email is sent to the user's email address at the same time.
 If there is something missing from the form, hints are displayed for the users on how to resolve the issue.
 
@@ -502,45 +504,347 @@ Errors not handled:
 - Ignore avoid using null=True on string-based fields such URLField and ImageField for the images.
 - Ignore missing html5 tag on templates that extend the base template.
 
-#### Manual testing
+### Manual testing
+
+Age verification works as intended, clicking on YES will take me to the homepage, No will give me an explanation why I can't access the site
+and lets me close the window.
+
+The external links in the footer and about us page are all opening in a separate window, there are no broken links.
+The carousel on the about us page is responsive and works in both direction, and doesn't render on small screens.
+
+Sorting and filtering:
+
+I tested the sorting on the all wines and in each wine category with all available options and all works as intended.
+I can filter wines by keyword which was tested with the words "Sauska", "kadarka" and "tokaj".
+
+Authentication:
+
+I've created 2 separate accounts to confirm that the authentication and validation for creating account worked as expected. I received a validation request email to the temporary email addresses I used for this purpose.
+I was able to log in and out with my credentials. Using a non-existing user or incorrect password are flagged up. Toast messages are being rendered as intended to confirm registration,login and logout.
+The password reset functionality has also been tested and works as intended.
+
+Shopping:
+
+I tested the shopping bag by adding a single product; adding different quantities of the same product; adding several products and adding subscriptions.
+All works as intended and prices and totals are rendering correctly.
+When free delivery threshold is reached the delivery cost changes to £0.
+
+I am able to adjust quantities in the bag and remove items entirely. Bag total updates accordingly.
+I can navigate back to the all wines page from the bag and proceed to checkout. 
+
+As a non-registered user I am able to make a purchase by filling in my details on the checkout page and I am receiving a verification email as well.
+Stripe webhooks show no errors in the log in Stripe.
+As a registered user I am able to view my profile where my details are prefilled in the form, and I can see the order history after making a purchase.
+
+From the checkout success page I can navigate back to the All wines page.
+
+Admin features/CRUD features:
+
+I've created, edited and deleted multiple products and I was able to add them all in the shopping bag.
+Whenever I filled in the form with the incorrect or insufficient details I received an error message.
+I tested and confirmed that these features are not available for non-superusers and they can't force the website to access these features.
+
+I submitted my code for peer code review in Slack as well.
 
 ### Testing in different browsers
+
+This site was tested across multiple browsers (Chrome, Safari, Internet Explorer, FireFox) and on multiple mobile devices (iPhone SE, XE) to ensure compatibility and responsiveness.
+Responsiveness has also been tested via the Google Chrome extension Responsive Viewer and during the development process via the developer tools.
 
 #### Automated testing
 
 In addition to the manual testing, I used Travis CI for Continuous Integration testing of my code.
 
-### Testing against the user stories
+The Coverage library was used throughout testing to help keep track of how much of my code was covered by the tests.
 
+In order to generate  coverage report install the package: pip3 install coverage.
 
+To run the test: coverage run --source=winenation manage.py test.
+To view the report: coverage report 
+To create an interactive html report: coverage html which can be viewed by typing python3 -m http.server to the console.
 
-### Validation
+The current coverage rate is 65%
 
 
 ### Problems encountered
 
+I was stuck for a while because my product images weren't rendering on the page. After reaching out to tutors and my mentor for help, the solution was to rebuild the wines.html page from scratch and discovered
+that the problem starts when I am using the images as a link to the wine details page. While I still haven't figured out why it's happening, 
+I worked around this by making the product name a link to the wine details page.
+
+Making the pagination feature work with sorting and filtering proved to be difficult, because as soon as I added the pagination script 
+and updated the view the sorting and filtering function stopped working.
+After spending quite some time reading Django documentation and Stack overflow as well as a fellow student's project I
+finally worked out how to write my all_wines view to make sure all features are working, and added pagination at the last minute.
 
 ## Deployment
 
 ### Local deployment
+The project was developed using the GitPod online IDE and using Git & GitHub for version control.
+It is hosted on the Heroku platform, with static files and user-uploaded images being hosted in AWS S3 Basket.
 
+To be able to run this project, the following tools have to be installed:
+
+-GitPod or any other IDE
+-Git
+-PIP
+-Python3
+
+The following services were used:
+
+- Stripe
+- AWS to setup the S3 basket
+- Gmail or another email system.
+
+Directions
+You can clone this repository directly into the editor of your choice by pasting the following command into the terminal:
+git clone https://github.com/KittiKovacs/winenation
+
+Setting up environment variables:
+You need to set the following environment variables in your Gitpod settings or in an env file created in the repository (add this to a gitignore file to make sure your secret keys are not exposed!)
+
+os.environ["DEVELOPMENT"] = "True"    
+os.environ["SECRET_KEY"] = "<Your Secret key>"    
+os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public key>"    
+os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret key>"    
+os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH_Secret key>"     
+
+Install all requirements from the requirements.txt file putting this command into your terminal:
+pip3 install -r requirements.txt
+Migrate the models to crete a database using the following commands:
+python3 manage.py makemigrations
+python3 manage.py migrate
+Load the data fixtures(categories, services, portfolio) in that order into the database using the following command:
+python3 manage.py loaddata <fixture_name>
+Create a superuser to have an access to the the admin panel(you need to follow the instructions then and insert username,email and password):
+python3 manage.py createsuperuser
+You will now be able to run the application using the following command:
+python3 manage.py runserver
+Open port 8000 in browser.
+To access the admin panel, you can add the /admin path at the end of the url link and login using your superuser credentials.
 
 ### Heroku deployment
 
+I logged into my Heroku account and created a new app called winenation.
+On the resources tab in the add-ons section I added a Heroku Postgres database to my application.
+To make sure Heroku installs all apps requirements when I deploy it, I installed dj_database_url and psycopg2 from the command line:
+    pip3 install dj_database_url
+    pip3 install psycopg2-binary
+Then froze the requirements with
+    pip3 freeze > requirements.txt
+I installed gunicorn to act as a webserver
+    pip3 install gunicorn
+and froze the requirements into requirements.txt as well.
+
+I then created Procfile, that tells Heroku to create a web dyno and server our ap with the contents:    
+    web: gunicorn boutique_ado.wsgi:application
+Then I logged into Heroku in the Terminal to temporarily disable collectstatic:
+    heroku config:set DISABLE_COLLECTSTATIC=1 - -app winenation
+
+Added the hostname of my Heroku app to allowed hosts in settings.py :
+
+    ALLOWED_HOSTS = ['winenation.herokuapp.com', 'localhost']
+
+Committed changes and pushed to github.
+
+Then to deploy to Heroku I entered into the terminal: 
+
+    heroku git:remote -a winenation
+    git push heroku master
+
+In Heroku again, on the deploy tab, I linked my repository to the Heroku app.
+Choose connect to Github, search for repository name, click connect then enable automatic deploys.
+
+Then I generated a secret key (from an online django secret key generator)  and added it to config vars in Heroku. I then replaced the secret key in settings.py with SECRET_KEY = os.environ.get('SECRET_KEY', '')
+And:
+    DEBUG = 'DEVELOPMENT' in os.environ
+
+Commited changes and pushed to Github.
+
+In my application’s settings.py I added
+    import dj_database_url   
+
+Commented out the default database setting and created and env.py file and added:
+
+    import os
+    os.environ.setdefault('DATABASE_URL', 'postgres:'YOUR CODE'')
+
+
+I ran all migrations again to get the database set up
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+    run python3 manage.py loaddata db
+    python3 manage.py createsuperuser
+
+
+Used an if statement in settings.py so that when our app is running on Heroku where the database URL environment variable will be defined we connect to Postgres and otherwise, we connect to sequel light.
+
+    if 'DATABASE_URL' in os.environ:
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+    else:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
+        }
+
+
+Then I created an AWS account to store our static files and images on aws.amazon.com
+
+1.	Create a bucket
+I searched for s3 and created a new bucket. Unticked “block all public access” and acknowledged it will be public.
+On the Properties tab I turned on static website hosting  and chose host a static website.
+On the Permissions tab I pasted in a coors configuration which is going to set up the required access between our Heroku app and this s3 bucket. This code is from the course videos.
+    [
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+            "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+    ]
+
+On the Bucket policy tab I  selected policy generator.  
+	Chose s3 bucket policy from dropdown list
+	Set Principles to: *
+	And Action to: get object
+            I copied ARN ( amazon resource name) from the other tab and pasted it into the relevant field.
+
+Clicked on add statement then on generate policy. 
+
+Then I copied the generated policy into the bucket policy editor in the other tab. Added /*after the resource key.
+On the access control list tab:  set the list objects permission for everyone under the Public Access section.
+
+
+2.	 Create a user to access the bucket:  through IAM (Identity access management)
+Search for  IAM In the Services menu.
+First I created a group for our new user to live in.
+Then I went to Policies . Here I created a policy that will be used to access our bucket . On the JSON tab selected   “import managed policy”  searched for s3 and imported the Amazon S3 full access policy.
+Got the bucket ARN from the bucket policy page and pasted like this:
+"Resource": [
+                "arn:aws:s3:::kitti-boutique",
+                "arn:aws:s3:::kitti-boutique/*"
+                ]
+Clicked on review policy, gave it a name winenation-policy and a description.
+Then clicked create policy.
+I then attached policy to the group created by going to Groups, selected manage-winenation group.
+On the permissions tab I clicked on attach policy and search for the policy I just created.
+
+Lastly I can create a user
+Clicked on Users then Create user called winenation-staticfiles-user  and gave them programmatic access. Click next.
+Then I added the user to the group  by going back to Groups and select the user.
+I then downloaded the CSV file which contains this users access key and secret access key which I used later to authenticate them from my Django app.
+
+3.	Connecting Django to the bucket in S3:
+I created 2 new packages in my app:
+    
+    pip3 install boto3
+    pip3 install django-storages
+
+Freeze requirements again   pip3 freeze > requirements.txt
+
+Then I added ‘storages’ to the installed apps in settings.py
+
+Also to settings.py I added:
+
+if 'USE_AWS' in os.environ:
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'winenation
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    
+
+In Heroku, I added the AWS keys (AWS_ACCESS_KEY_ID  and AWS_SECRET_ACCESS_KEY  ) to the config variables,
+these are contained in the CSV files downloaded earlier. I also add to Heroku config vars: USE_AWS= True, and removed the disable collectstatic variable from config vars.
+
+In order to tell django where our static files will be coming from in production I added:
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+I then created a custom_storages.py in the main folder:
+
+    from django.conf import settings
+    from storages.backends.s3boto3 import S3Boto3Storage
+
+    class StaticStorage(S3Boto3Storage):
+        location = settings.STATICFILES_LOCATION
+
+    class MediaStorage(S3Boto3Storage):
+        location = settings.MEDIAFILES_LOCATION
+
+
+And amended settings.py like so:
+
+# Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+# Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+
+I committed all changes and pushed to Github. Now I had a new static folder in the bucket with my static files.
+
+
+To  tell the browser that it's okay to cache static files for a long time I added to if  USE_AWS
+# Cache control	
+	AWS_S3_OBJECT_PARAMETERS = {
+	'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+	'CacheControl': 'max-age=94608000',
+	}
+
+Committed changes and push to Github again.
+
+To upload my media files, in S3 I created a new folder “media” where I uploaded all the product images and  granted public access to read the objects.
+
+I made sure to verify email address for the superuser via the admin panel.
+
+Finally, I added my stripe keys to Heroku config variables as well :
+These are found in Stripe on the Developers tab, API keys
+STRIPE_PUBLIC_KEY    
+STRIPE_SECRET_KEY
+
+Then, In Stripe, I created a new webhook endpoint for my Heroku app.
+On the Developers tab Webhooks I added endpoint:   
+https://winenation.herokuapp.com/checkout/wh/    
+I set receive all events.
+I then revealed my webhooks signing secret and added that to our Heroku config variables too as STRIPE_WH_SECRET.
+I then sent test webhook to test if it all works.
+
 
 ## Credits
-
 ### Code
 
-
+- The project's code is based on the Boutique Ado Django Mini-Project which is part of Code Institute’s video lessons. I customized this for my own purposes and extended it wherever necessary.
+- I regularly checked Stack Overflow , especially while I was researching how to combine sorting and filtering with pagination in Django.
+- This project helped me with the pagination issues https://github.com/stephyraju/ticktockwatches.
 
 ### Content and Media
 
+- The contents of the About us page are from: https://www.olivemagazine.com/drink/best-eastern-europe-wines/, and https://www.winefolly.com
+- Products content and images are taken from Bortarsasag.hu
+- Favicon and website logo are generated by me on https://www.graphicsprings.com/logo-maker
+- Other images used in the website(landing, about, event pages) are taken from Unsplash and Pexels 
+- Loading Spinner: Fontawesome
 
+###Acknowledgements
 
-## Acknowledgements
+I would like to thank everyone who has helped me throughout the development of this project:
+- My mentor Guido Cecilio Garcia Bernal for his continuous support and time dedicated to me and my project.
+- The Code Institute tutors for their help and encouragement whenever I needed it!
+- The Slack community where if often found answers to my questions quickly.
 
-
-## Disclaimer 
 
 
