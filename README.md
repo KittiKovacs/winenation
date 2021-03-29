@@ -136,7 +136,7 @@ I am using a simple sans-serif font from Google Fonts called Raleway to create a
 
 The website is responsive and works well on all viewports.
 
-![landing](//wireframes/responsive_images/landing.JPG)
+![landing](/wireframes/responsive_images/landing.JPG)
 
 ![wines](/wireframes/responsive_images/Wines.JPG)
 
@@ -194,7 +194,7 @@ Another navigation feature on the all wines, red, white and sparkling and desser
 This is created to make a first impression to the user and also to act as a manifesto to the site. 
 It features all navigation elements and also a button to take the user straight to the all wines page.
 
-![landing](/winenation/wireframes/feature_images/landing_image.JPG)
+![landing](/wireframes/feature_images/landing_image.JPG)
 
 #### About us page
 This page describes the purpose of the site with a short description on the top that has a scrolling image as a background,
@@ -604,7 +604,7 @@ Errors not handled:
 
 ### Manual testing
 
-Age verification works as intended, clicking on YES will take me to the homepage, No will give me an explanation why I can't access the site
+Age verification works as intended, clicking on YES will take me to the homepage, NO will give me an explanation why I can't access the site
 and lets me close the window.
 
 The external links in the footer and about us page are all opening in a separate window, there are no broken links.
@@ -618,7 +618,9 @@ I can filter wines by keyword which was tested with the words "Sauska", "kadarka
 **Authentication:**
 
 I've created 2 separate accounts to confirm that the authentication and validation for creating account worked as expected. I received a validation request email to the temporary email addresses I used for this purpose.
+
 I was able to log in and out with my credentials. Using a non-existing user or incorrect password are flagged up. Toast messages are being rendered as intended to confirm registration,login and logout.
+
 The password reset functionality has also been tested and works as intended.
 
 **Shopping:**
@@ -669,7 +671,11 @@ To create an interactive html report:
 
     coverage html
     
-which can be viewed by typing   python3 -m http.server  to the console.
+which can be viewed by typing
+
+	python3 -m http.server 
+
+into the console.
 
 The current coverage rate is 65%
 
@@ -728,7 +734,7 @@ Migrate the models to crete a database using the following commands:
 
 Load the data fixtures(categories, services, portfolio) in that order into the database using the following command:
     
-    python3 manage.py loaddata <fixture_name>
+    python3 manage.py loaddata < fixture_name >
 
 Create a superuser to have an access to the the admin panel(you need to follow the instructions then and insert username,email and password):
     
@@ -824,6 +830,7 @@ Used an if statement in settings.py so that when our app is running on Heroku wh
         }
 
 
+
 Then I created an AWS account to store my static files and images on aws.amazon.com
 
 #### Create a bucket
@@ -859,7 +866,7 @@ I copied ARN ( amazon resource name) from the other tab and pasted it into the r
 
 Clicked on add statement then on generate policy. 
 
-Then I copied the generated policy into the bucket policy editor in the other tab. Added /*after the resource key.
+Then I copied the generated policy into the bucket policy editor in the other tab. Added /* after the resource key.
 
 On the access control list tab:  set the list objects permission for everyone under the Public Access section.
 
@@ -881,7 +888,7 @@ Got the bucket ARN from the bucket policy page and pasted like this:
                 "arn:aws:s3:::kitti-boutique/*"
                 ]
 
-Clicked on review policy, gave it a name winenation-policy and a description.
+Clicked on review policy, gave it a name "winenation-policy" and a description.
 Then clicked create policy.
 
 I then attached policy to the group created by going to Groups, selected manage-winenation group.
@@ -892,6 +899,7 @@ Lastly, I created a **user** called "winenation-staticfiles-user" and gave them 
 Then I added the user to the group  by going back to Groups and select the user.
 
 I then downloaded the CSV file which contains this users access key and secret access key which I used later to authenticate them from my Django app.
+
 
 #### Connecting Django to the bucket in S3:
 
