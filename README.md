@@ -1,6 +1,7 @@
-# Milestone 4 : Wine Nation ![logo](/winenation/wireframes/Logo.JPG)
 
-## 
+![logo](/wireframes/Logo.JPG)
+# Milestone 4 : Wine Nation 
+
 
 
 As this is the final Milestone project of Code Institute's Full stack web developer course, my aim was to create a full-stack site based around business logic used to control a centrally owned dataset and to provide paid access to the site's data and services.
@@ -142,11 +143,7 @@ The website is responsive and works well on all viewports.
 
 ![bag](/wireframes/responsive_images/BAg_1.JPG)
 
-<<<<<<< HEAD
-![checkout](/workspace/winenation/wireframes/responsive_images/Checkout.JPG)
-=======
 ![checkout](/wireframes/responsive_images/Checkout.JPG)
->>>>>>> 823046dc0efc810853e974dec3168b09898a275e
 
 For more images click [here](https://github.com/KittiKovacs/winenation/blob/8c938122853a6ecc76094801e43e024f68bbcac3/wireframes/responsive_images)
 
