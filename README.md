@@ -1,4 +1,4 @@
-# Milestone 4 : Wine Nation 
+# Milestone 4 : Wine Nation ![logo](/winenation/wireframes/Logo.JPG)
 
 ## 
 
@@ -132,8 +132,6 @@ I used the Bootstrap front-end framework throughout the development process, mai
 
 The website's colour scheme is in line with  the theme of the site with black and grey added for contrast. It is dominated by reds, yellow and pink to reflect the colours of red, white and rose wines.
 
-![colour scheme](/winenation/wireframes/colour_scheme.png)
-
 I am using a simple sans-serif font from Google Fonts called Raleway to create a modern look and and easy to read website.
 
 The website is responsive and works well on all viewports.
@@ -144,7 +142,7 @@ The website is responsive and works well on all viewports.
 
 ![bag](winenation/wireframes/responsive_images/BAg_1.JPG)
 
-![checkout](winenation/wireframes/checkout.png)
+![checkout](/workspace/winenation/wireframes/responsive_images/Checkout.JPG)
 
 For more images click [here](https://github.com/KittiKovacs/winenation/blob/8c938122853a6ecc76094801e43e024f68bbcac3/wireframes/responsive_images)
 
@@ -255,7 +253,9 @@ I created one initially but I felt it was redundant and went in a different dire
 
 The user is not automatically redirected to the shopping bag when placing an item in the bag. They can access it by clicking on the
 button in the toast message popping up, or by clicking on the bag icon in the top right corner.
+
 The bag page is available for both logged in and non-logged in users, so that it is possible to make purchase as a guest.
+
 The page contains a summary of the user's order: the item's image, name, sku, quantity, price and subtotal.
 Subscriptions do not have images so I set a default image to display in case there's no image associated with an item.
 
@@ -314,7 +314,7 @@ These are all part of the Django-allauth package.
 
 This allows a user to create a new account. In case the user already has an account, there is a link to the login page for existing users above the form.
 The Registration page is only available to non-logged in users.
-The form contains fields for an email addres, email address confirmation, username, password" and password (again).
+The form contains fields for an email addres, email address confirmation, username, password and password (again).
 When adding a username, the code compares it against existing email to ensure that it is unique.
 
 ![registration form](/wireframes/feature_images/register.JPG)
@@ -494,7 +494,7 @@ Country | country | CountryField| blank_label='Country *', null=True, blank=True
 Postcode| postcode | models.CharField| max_length=20, null=True, blank=True
 Town or City| town_or_city | models.CharField | max_length=40, null=True, blank=True
 Street Address 1| street_address1 | models.CharField | max_length=80, null=True, blank=True
-street_address2 | models.CharField | max_length=80, null=True, blank=True
+Street Address 2 | street_address2 | models.CharField | max_length=80, null=True, blank=True
 County | county | models.CharField | max_length=80, null=True, blank=True
 Date | date| models.DateTimeField| auto_now_add=True
 Delivery cost | delivery_cost| models.DecimalField| max_digits=6, decimal_places=2, null=False, default=0
@@ -552,7 +552,7 @@ Item Total | lineitem_total | models.DecimalField | max_digits=6, decimal_places
 
 - Balsamiq app for creating wireframes.
 
-- I used the responsive viewer extension in Google Chrome to demonstrate responsiveness in this README file.
+- I used the Responsive Viewer extension in Google Chrome to demonstrate responsiveness in this README file.
 
 - [Font Awesome](https://fontawesome.com/) for icons.
 
@@ -900,7 +900,9 @@ I created 2 new packages in my app:
 
     pip3 install django-storages
 
-Freeze requirements again   pip3 freeze > requirements.txt
+Freeze requirements again:
+
+    pip3 freeze > requirements.txt
 
 Then I added ‘storages’ to the installed apps in settings.py
 
@@ -972,8 +974,7 @@ STRIPE_PUBLIC_KEY
 STRIPE_SECRET_KEY
 
 Then, In Stripe, I created a new webhook endpoint for my Heroku app.
-On the Developers tab Webhooks I added endpoint:https://winenation.herokuapp.com/checkout/wh/    
-I set receive all events.
+On the Developers tab Webhooks I added endpoint for the webhook: https://winenation.herokuapp.com/checkout/wh/ and set receive all events.
 I then revealed my webhooks signing secret and added that to our Heroku config variables too as STRIPE_WH_SECRET.
 
 I then sent test webhook to test if it all works.
@@ -981,21 +982,32 @@ I then sent test webhook to test if it all works.
 ## Credits
 ### Code
 
-- The project's code is based on the Boutique Ado Django Mini-Project which is part of Code Institute’s video lessons. I customized this for my own purposes and extended it wherever necessary.
+- The project's code is based on the Boutique Ado Django Mini-Project which is part of Code Institute’s video lessons. I customized this for my own purposes and extended it wherever it was necessary.
 - I regularly checked Stack Overflow , especially while I was researching how to combine sorting and filtering with pagination in Django.
 - This project helped me with the pagination issues https://github.com/stephyraju/ticktockwatches.
 
 ### Content and Media
 
-- The contents of the About us page are from: https://www.olivemagazine.com/drink/best-eastern-europe-wines/, and https://www.winefolly.com
-- Products content and images are taken from Bortarsasag.hu
-- Favicon and website logo are generated by me on https://www.graphicsprings.com/logo-maker
-- Other images used in the website(landing, about, event pages) are taken from Unsplash and Pexels 
-- Loading Spinner: Fontawesome
+- The contents of the About us page are from [Olive Magazine](https://www.olivemagazine.com/drink/best-eastern-europe-wines/) and 
+[Wine Folly](https://www.winefolly.com)
+- Individual wine details and images are taken from [Bortarsasag.hu](https://www.bortarsasag.hu/en/)
+- Favicon and website logo are generated by me on [Graphic Springs](https://www.graphicsprings.com/logo-maker)
+- landing image from [Unsplash](https://unsplash.com/photos/hupBI0Doj9o)
+- Carousel images from [Unsplash](https://unsplash.com/):
+  - [1](https://unsplash.com/photos/O3osJ17G1UAwhite)
+  - [2](https://unsplash.com/photos/6ciLddToTgM )
+  - [3](https://unsplash.com/photos/9nGnd9o-DJM)
+- Subscription image from [Pexels](https://www.pexels.com/photo/brown-corks-on-clear-wine-glass-36741/)
+- About us page images:
+  - [Borkostolunk.hu](https://i0.wp.com/bortkostolunk.hu/wp-content/uploads/2018/01/landscape_fourth.jpg?resize=1000%2C400&ssl=1)
+  - [Pexels](https://www.pexels.com/photo/green-plant-field-near-house-442116/)
+  - [Pexels](https://www.pexels.com/photo/food-city-man-people-6760888/)
+- Loading Spinner source: Fontawesome
 
 ### Acknowledgements
 
 I would like to thank everyone who has helped me throughout the development of this project:
 - My mentor Guido Cecilio Garcia Bernal for his continuous support and time dedicated to me and my project.
-- The Code Institute tutors for their help and encouragement whenever I needed it!
-- The Slack community where if often found answers to my questions quickly.
+- The Code Institute tutors for their help and encouragement whenever I needed it! 
+- The Slack community
+- My partner who put up with me when I was stressed and believed in me all along.
