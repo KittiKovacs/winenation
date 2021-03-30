@@ -16,7 +16,7 @@ Please see the link to the live page here: https://winenation.herokuapp.com/
 1. [**UX**](#ux)
     - [**Project goals**](#project-goals) 
     - [**User Stories**](#user-stories)
-    - [**Design**](#desing)
+    - [**Design**](#design)
     - [**Wireframes**](#wireframes)
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
@@ -172,7 +172,7 @@ If the user clicks "YES" the webste's landing page will display. If the user cli
 
 On the top of the page the user can find the main navigation elements, such as the menu items, bag and profile icons and search bar.
 ![header navigation](/wireframes/feature_images/header.JPG)
-In the center of the page there's the logo and a slogan underneath. On clicking the logo the user can navigate back to the homepage.
+In the center of the page there's the logo and a slogan underneath. On clicking the logo the user can navigate back to the homepage from any site on medium and large screens.
 Some navigation elements have sub-elements which open in a dropdown, such as the wines page and the profile icon.
 
 ![menu dropdown](/wireframes/feature_images/wines_dropdown.JPG)
@@ -288,7 +288,7 @@ The user is can double check how much the card will be charged as the total is d
 If the user doesn't have an account or isn't logged in, there are links to the register and login pages for easier navigation.
 For logged in users, a save info checkbox allows the form information to be saved to their profile. For logged in users the form will be pre-populated with this information.
 
-The Stripe functionality is only for testing at the moment, so only entering 4242 4242 4242 4242 card number will result in successfull payment. Expiration date can be any date in future and CVC can be any numbers.
+The Stripe functionality is only for testing at the moment, so only entering 4242 4242 4242 4242 card number will result in successfull payment. Expiration date and CVC are 04/24 2424. This is provided by Stripe for testing purposes.
 The site is using webhooks to make sure that the order is processed even if when the payment process is interrupted (e.g. if a user accidentally closes the page or browser after clicking "Proceed to payment" button).
 
 While the payment is pending the user sees a spinner.
